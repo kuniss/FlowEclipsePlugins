@@ -1,0 +1,98 @@
+grammar de.grammarcraft.flow.Flow with org.eclipse.xtext.xbase.Xbase
+// grammar de.grammarcraft.flow.Flow with org.eclipse.xtext.common.Terminals
+
+generate flow "http://www.grammarcraft.de/flow/Flow"
+
+Model:
+    ('package' name=QualifiedName)?
+    imports+=Import*
+    
+    functionUnits += FunctionUnit*
+;
+
+FunctionUnit:
+	Flow | Operation
+;
+
+
+
+
+/**
+ * The framework automatically treats properties with the name 'importedNamespace' as imports. 
+ */
+Import:
+    'import' importedNamespace=QualifiedName
+;
+	
+Flow:
+    'flow' name=ID 
+    streams += Stream*
+;
+
+Stream:
+    leftPort=LeftPort '>' message=JvmTypeReference '>' rightPort=RightPort ';'
+;
+
+LeftPort:
+    GlobalInputPort |
+    UnnamedSubFlowPort |
+    Port	
+;
+
+GlobalInputPort:
+	'.' 'in' {GlobalInputPort}
+;
+
+
+UnnamedSubFlowPort:
+    '.' {UnnamedSubFlowPort}
+;
+
+
+RightPort:
+    GlobalOutputPort |
+    UnnamedSubFlowPort |
+	Port
+;
+
+GlobalOutputPort:
+	'.' 'out' {GlobalOutputPort}
+;
+
+
+Port:
+    ( functionUnit=[FunctionUnit] ) port=NamedPort?
+;
+
+NamedPort:
+    '.' name=ID
+;
+
+
+Operation:
+    (
+        EbcOperation |
+        MethodOperation
+    )
+;
+
+EbcOperation:
+    'ebc' name=ID '=' class=NativeClass
+;
+
+NativeClass:
+	reference=JvmTypeReference
+;
+
+
+MethodOperation:
+	'method' name=ID '=' class=NativeClass '#' method=NativeMethod
+;
+
+NativeMethod:
+	name=ID
+;
+
+
+
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.grammarcraft.csflow/src-gen"
+    editDirectory="/de.grammarcraft.csflow.edit/src" editorDirectory="/de.grammarcraft.csflow.editor/src"
+    modelPluginID="de.grammarcraft.csflow" forceOverwrite="true" modelName="Flow"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="de.grammarcraft.csflow.edit"
+    editorPluginID="de.grammarcraft.csflow.editor">
+  <genPackages prefix="Flow" basePackage="de.grammarcraft.csflow" disposableProviderFactory="true"
+      ecorePackage="Flow.ecore#/">
+    <genClasses ecoreClass="Flow.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Model/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Model/functionUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//FunctionUnit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//FunctionUnit/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//Import/importedNamespace"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//Flow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Flow/streams"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//Stream">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Stream/leftPort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//Stream/message"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Stream/rightPort"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//LeftPort"/>
+    <genClasses ecoreClass="Flow.ecore#//GlobalInputPort"/>
+    <genClasses ecoreClass="Flow.ecore#//UnnamedSubFlowPort"/>
+    <genClasses ecoreClass="Flow.ecore#//RightPort"/>
+    <genClasses ecoreClass="Flow.ecore#//GlobalOutputPort"/>
+    <genClasses ecoreClass="Flow.ecore#//Port">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Flow.ecore#//Port/functionUnit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Port/port"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//NamedPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//NamedPort/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Operation/class"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//EbcOperation"/>
+    <genClasses ecoreClass="Flow.ecore#//NativeClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//NativeClass/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//MethodOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//MethodOperation/method"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//NativeMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//NativeMethod/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

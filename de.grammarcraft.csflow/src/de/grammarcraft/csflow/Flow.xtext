@@ -1,0 +1,97 @@
+grammar de.grammarcraft.csflow.Flow with org.eclipse.xtext.common.Terminals
+
+generate flow "http://www.grammarcraft.de/csflow/Flow"
+
+Model:
+    ('package' name=QualifiedName)?
+    imports+=Import*
+    
+    functionUnits += FunctionUnit*
+;
+
+QualifiedName:
+	ID ('.' ID)*
+;
+
+
+FunctionUnit:
+	Flow | Operation
+;
+
+
+Import:
+    'import' importedNamespace=QualifiedName
+;
+	
+Flow:
+    'flow' name=ID 
+    streams += Stream*
+;
+
+Stream:
+    leftPort=LeftPort '>' message=QualifiedName '>' rightPort=RightPort ';'
+;
+
+LeftPort:
+    GlobalInputPort |
+    UnnamedSubFlowPort |
+    Port	
+;
+
+GlobalInputPort:
+	'.' 'in' {GlobalInputPort}
+;
+
+
+UnnamedSubFlowPort:
+    '.' {UnnamedSubFlowPort}
+;
+
+
+RightPort:
+    GlobalOutputPort |
+    UnnamedSubFlowPort |
+	Port
+;
+
+GlobalOutputPort:
+	'.' 'out' {GlobalOutputPort}
+;
+
+
+Port:
+    ( functionUnit=[FunctionUnit] ) port=NamedPort?
+;
+
+NamedPort:
+    '.' name=ID
+;
+
+
+Operation:
+    (
+        EbcOperation |
+        MethodOperation
+    )
+;
+
+EbcOperation:
+    'ebc' name=ID '=' class=NativeClass
+;
+
+NativeClass:
+	reference=QualifiedName
+;
+
+
+MethodOperation:
+	'method' name=ID '=' class=NativeClass '#' method=NativeMethod
+;
+
+NativeMethod:
+	name=ID
+;
+
+
+
+

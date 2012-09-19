@@ -6,10 +6,67 @@ package de.grammarcraft.csflow.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import de.grammarcraft.csflow.flow.Model
+import de.grammarcraft.csflow.flow.Flow
+import de.grammarcraft.csflow.flow.LeftPort
+import de.grammarcraft.csflow.flow.GlobalInputPort
+import de.grammarcraft.csflow.flow.UnnamedSubFlowPort
+import de.grammarcraft.csflow.flow.Port
+import de.grammarcraft.csflow.flow.RightPort
+import de.grammarcraft.csflow.flow.GlobalOutputPort
 
 class FlowGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		//TODO implement me
+		val model = resource.contents.head as Model
+		fsa.generateFile(model.name + ".cs", model.compile)
 	}
+	
+	def compile(Model model) ''' 
+			namespace «model.name» {
+				static void Main(string[] args)
+				{
+					var config = new FlowRuntimeConfiguration();
+					config.AddStreamsFrom(@"/
+        				«FOR functionUnit:model.functionUnits»
+        					«IF functionUnit instanceof Flow»
+        						«val flow = functionUnit as Flow»
+        						// a «flow.name» flow definition comes here
+		       	 				«FOR stream:flow.streams»
+		       	 					«stream.leftPort.determinePortName»,«stream.rightPort.determinePortName» 
+	        					«ENDFOR»
+   	     					«ENDIF»
+        				«ENDFOR»
+					");
+				}
+			}
+	'''
+	
+	def determinePortName(LeftPort leftPort) '''
+		«IF leftPort instanceof Port»
+			«val port = leftPort as Port»«port.functionUnit.name»
+			«IF port.port != null»
+				.«port.port.name»
+			«ENDIF»
+		«ENDIF»
+		«IF leftPort instanceof UnnamedSubFlowPort».«ENDIF»
+		«IF leftPort instanceof GlobalInputPort».in«ENDIF»
+	'''
+
+	def determinePortName(RightPort rightPort) '''
+		«IF rightPort instanceof Port»
+			«val port = rightPort as Port»
+			«port.functionUnit.name»
+			«IF port.port != null»
+				.«port.port.name»
+			«ENDIF»
+		«ENDIF»
+		«IF rightPort instanceof UnnamedSubFlowPort»
+			.
+		«ENDIF»
+		«IF rightPort instanceof GlobalOutputPort»
+			.out
+		«ENDIF»
+	'''
+
 }

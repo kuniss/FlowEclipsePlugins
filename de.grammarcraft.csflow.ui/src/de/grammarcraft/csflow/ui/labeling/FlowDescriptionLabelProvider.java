@@ -5,12 +5,18 @@ package de.grammarcraft.csflow.ui.labeling;
 
 import org.eclipse.xtext.ui.label.DefaultDescriptionLabelProvider;
 
+import de.grammarcraft.csflow.flow.Flow;
+
 /**
  * Provides labels for a IEObjectDescriptions and IResourceDescriptions.
  * 
  * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#labelProvider
  */
 public class FlowDescriptionLabelProvider extends DefaultDescriptionLabelProvider {
+
+	String text(Flow ele) {
+		  return "Flow " + ele.getName();
+		}
 
 /*
 	//Labels and icons can be computed like this:

@@ -8,6 +8,12 @@ import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 
 import com.google.inject.Inject;
 
+import de.grammarcraft.csflow.flow.EbcOperation;
+import de.grammarcraft.csflow.flow.Flow;
+import de.grammarcraft.csflow.flow.Import;
+import de.grammarcraft.csflow.flow.MethodOperation;
+import de.grammarcraft.csflow.flow.NamedPort;
+
 /**
  * Provides labels for a EObjects.
  * 
@@ -18,6 +24,26 @@ public class FlowLabelProvider extends DefaultEObjectLabelProvider {
 	@Inject
 	public FlowLabelProvider(AdapterFactoryLabelProvider delegate) {
 		super(delegate);
+	}
+
+	String text(Import element) {
+		return "import " + element.getImportedNamespace();
+	}
+	
+	String text(Flow element) {
+		return "flow " + element.getName();
+	}
+	
+ 	String text(NamedPort element) {
+		return "port " + element.getName();
+	}
+	
+ 	String text(EbcOperation element) {
+		return "EBC operation " + element.getName();
+	}
+
+ 	String text(MethodOperation element) {
+		return "Method operation " + element.getName();
 	}
 
 /*

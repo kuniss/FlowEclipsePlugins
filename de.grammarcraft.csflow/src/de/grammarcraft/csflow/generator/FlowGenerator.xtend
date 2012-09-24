@@ -28,45 +28,37 @@ class FlowGenerator implements IGenerator {
 				{
 					var config = new FlowRuntimeConfiguration();
 					config.AddStreamsFrom(@"/
-        				«FOR functionUnit:model.functionUnits»
-        					«IF functionUnit instanceof Flow»
-        						«val flow = functionUnit as Flow»
-        						// a «flow.name» flow definition comes here
-		       	 				«FOR stream:flow.streams»
-		       	 					«stream.leftPort.determinePortName»,«stream.rightPort.determinePortName» 
-	        					«ENDFOR»
-   	     					«ENDIF»
-        				«ENDFOR»
+						«FOR functionUnit:model.functionUnits»
+							«IF functionUnit instanceof Flow»
+								«val flow = functionUnit as Flow»
+								// «flow.name» flow definition comes here
+								«flow.name»
+								«FOR stream:flow.streams»
+									«stream.leftPort.determinePortName»,«stream.rightPort.determinePortName»
+								«ENDFOR»
+							«ENDIF»
+						«ENDFOR»
 					");
 				}
 			}
 	'''
 	
-	def determinePortName(LeftPort leftPort) '''
-		«IF leftPort instanceof Port»
-			«val port = leftPort as Port»«port.functionUnit.name»
-			«IF port.port != null»
-				.«port.port.name»
-			«ENDIF»
-		«ENDIF»
-		«IF leftPort instanceof UnnamedSubFlowPort».«ENDIF»
-		«IF leftPort instanceof GlobalInputPort».in«ENDIF»
-	'''
+	def determinePortName(LeftPort leftPort) {
+		switch leftPort {
+			Port case leftPort.port!=null: '''«leftPort.functionUnit.name».«leftPort.port.name»'''
+			Port: '''«leftPort.functionUnit.name»'''
+			UnnamedSubFlowPort: "."
+			GlobalInputPort: ".in"
+		}
+	}
 
-	def determinePortName(RightPort rightPort) '''
-		«IF rightPort instanceof Port»
-			«val port = rightPort as Port»
-			«port.functionUnit.name»
-			«IF port.port != null»
-				.«port.port.name»
-			«ENDIF»
-		«ENDIF»
-		«IF rightPort instanceof UnnamedSubFlowPort»
-			.
-		«ENDIF»
-		«IF rightPort instanceof GlobalOutputPort»
-			.out
-		«ENDIF»
-	'''
+	def determinePortName(RightPort rightPort) {
+		switch rightPort {
+			Port case rightPort.port!=null: '''«rightPort.functionUnit.name».«rightPort.port.name»'''
+			Port: '''«rightPort.functionUnit.name»'''
+			UnnamedSubFlowPort: "."
+			GlobalOutputPort: ".out"
+		}
+	}
 
 }

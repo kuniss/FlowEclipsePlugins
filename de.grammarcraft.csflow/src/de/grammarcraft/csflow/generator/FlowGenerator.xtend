@@ -14,6 +14,9 @@ import de.grammarcraft.csflow.flow.UnnamedSubFlowPort
 import de.grammarcraft.csflow.flow.Port
 import de.grammarcraft.csflow.flow.RightPort
 import de.grammarcraft.csflow.flow.GlobalOutputPort
+import de.grammarcraft.csflow.flow.EbcOperation
+import de.grammarcraft.csflow.flow.MethodOperation
+import de.grammarcraft.csflow.flow.Operation
 
 class FlowGenerator implements IGenerator {
 	
@@ -27,6 +30,8 @@ class FlowGenerator implements IGenerator {
 				static void Main(string[] args)
 				{
 					var config = new FlowRuntimeConfiguration();
+					
+					// registration of streams
 					config.AddStreamsFrom(@"/
 						«FOR functionUnit:model.functionUnits»
 							«IF functionUnit instanceof Flow»
@@ -39,9 +44,36 @@ class FlowGenerator implements IGenerator {
 							«ENDIF»
 						«ENDFOR»
 					");
+					
+					// registration of operations
+					config
+						«FOR functionUnit:model.functionUnits»
+							«IF functionUnit instanceof Operation»
+								«val operation = functionUnit as Operation»
+								«operation.synthesizeOperationRegistration»
+							«ENDIF»
+						«ENDFOR»
 				}
 			}
 	'''
+	def synthesizeOperationRegistration(Operation operation) {
+		switch operation {
+			EbcOperation: operation.synthesizeEBCOperationRegistration
+			MethodOperation: operation.synthesizeMethodOperationRegistration
+			default: "unknown op type"
+		}
+	}
+	
+	
+	
+	def synthesizeEBCOperationRegistration(EbcOperation ebcOperation) {
+		'''.addOperation("«ebcOperation.name»", new «ebcOperation.class_.reference»())'''
+	}
+	
+	
+	def synthesizeMethodOperationRegistration(MethodOperation methodOperation) {
+		'''.addAction<int,int>("«methodOperation.name»", «methodOperation.class_.reference».«methodOperation.method.name»)'''	
+	}
 	
 	def determinePortName(LeftPort leftPort) {
 		switch leftPort {

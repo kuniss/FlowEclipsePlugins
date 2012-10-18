@@ -2,6 +2,9 @@
 package de.grammarcraft.csflow.ui.quickfix;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.jface.text.BadLocationException;
+import org.eclipse.xtext.ui.editor.model.IXtextDocument;
+import org.eclipse.xtext.ui.editor.model.edit.IModification;
 import org.eclipse.xtext.ui.editor.model.edit.IModificationContext;
 import org.eclipse.xtext.ui.editor.model.edit.ISemanticModification;
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider;
@@ -36,6 +39,21 @@ public class FlowQuickfixProvider extends DefaultQuickfixProvider {
 //		);
 	} 
 
+
+	@Fix(FlowJavaValidator.NAME_IS_UNUSED)
+	public void RemoveUnsed(final Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, 
+				"Remove",    // label
+				"Remove unused name '" + issue.getData()[0] + "'", // description
+				"upcase.png",           // icon 
+			    new IModification() {
+					public void apply(IModificationContext context) throws BadLocationException {
+						IXtextDocument xtextDocument = context.getXtextDocument();
+						xtextDocument.replace(issue.getOffset(), issue.getLength(), "");
+					}
+				}
+		);
+	} 
 
 //	@Fix(MyJavaValidator.INVALID_NAME)
 //	public void capitalizeName(final Issue issue, IssueResolutionAcceptor acceptor) {

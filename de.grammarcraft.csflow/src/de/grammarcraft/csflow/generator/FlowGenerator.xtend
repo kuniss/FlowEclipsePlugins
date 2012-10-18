@@ -3,20 +3,24 @@
  */
 package de.grammarcraft.csflow.generator
 
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.xtext.generator.IFileSystemAccess
-import de.grammarcraft.csflow.flow.Model
+import de.grammarcraft.csflow.flow.EbcOperation
 import de.grammarcraft.csflow.flow.Flow
-import de.grammarcraft.csflow.flow.LeftPort
+import de.grammarcraft.csflow.flow.GenericType
 import de.grammarcraft.csflow.flow.GlobalInputPort
-import de.grammarcraft.csflow.flow.UnnamedSubFlowPort
+import de.grammarcraft.csflow.flow.GlobalOutputPort
+import de.grammarcraft.csflow.flow.LeftPort
+import de.grammarcraft.csflow.flow.MethodOperation
+import de.grammarcraft.csflow.flow.Model
+import de.grammarcraft.csflow.flow.Operation
+import de.grammarcraft.csflow.flow.OperationTypeParameters
 import de.grammarcraft.csflow.flow.Port
 import de.grammarcraft.csflow.flow.RightPort
-import de.grammarcraft.csflow.flow.GlobalOutputPort
-import de.grammarcraft.csflow.flow.EbcOperation
-import de.grammarcraft.csflow.flow.MethodOperation
-import de.grammarcraft.csflow.flow.Operation
+import de.grammarcraft.csflow.flow.UnnamedSubFlowPort
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.IGenerator
+import de.grammarcraft.csflow.flow.TypeParameter
+import de.grammarcraft.csflow.flow.Type
 
 class FlowGenerator implements IGenerator {
 	
@@ -50,30 +54,12 @@ class FlowGenerator implements IGenerator {
 						«FOR functionUnit:model.functionUnits»
 							«IF functionUnit instanceof Operation»
 								«val operation = functionUnit as Operation»
-								«operation.synthesizeOperationRegistration»
+								«operation.synthesizeRegistration»
 							«ENDIF»
 						«ENDFOR»
 				}
 			}
 	'''
-	def synthesizeOperationRegistration(Operation operation) {
-		switch operation {
-			EbcOperation: operation.synthesizeEBCOperationRegistration
-			MethodOperation: operation.synthesizeMethodOperationRegistration
-			default: "unknown op type"
-		}
-	}
-	
-	
-	
-	def synthesizeEBCOperationRegistration(EbcOperation ebcOperation) {
-		'''.addOperation("«ebcOperation.name»", new «ebcOperation.class_.reference»())'''
-	}
-	
-	
-	def synthesizeMethodOperationRegistration(MethodOperation methodOperation) {
-		'''.addAction<int,int>("«methodOperation.name»", «methodOperation.class_.reference».«methodOperation.method.name»)'''	
-	}
 	
 	def determinePortName(LeftPort leftPort) {
 		switch leftPort {
@@ -92,5 +78,50 @@ class FlowGenerator implements IGenerator {
 			GlobalOutputPort: ".out"
 		}
 	}
+	
+	def synthesizeRegistration(Operation operation) {
+		switch operation {
+			EbcOperation: operation.synthesizeRegistration
+			MethodOperation: operation.synthesizeRegistration
+			default: "unknown op type"
+		}
+	}
+	
+	
+	
+	def synthesizeRegistration(EbcOperation ebcOperation) {
+		'''.addOperation("«ebcOperation.name»", new «ebcOperation.class_.reference»())'''
+	}
+	
+	
+	def synthesizeRegistration(MethodOperation methodOperation) {
+		'''.add«methodOperation.signature.type.synthesizeRegistration»("«methodOperation.name»", «methodOperation.class_.reference».«methodOperation.method.name»)'''	
+	}
+	
+	def synthesizeRegistration(GenericType genericType) {
+		switch genericType.operationType.name {
+			case 'Action': 
+				'''Action«genericType.operationTypeParameters?.synthesizeRegistration»'''
+			case 'Func': 
+				'''Func«genericType.operationTypeParameters?.synthesizeRegistration»'''
+			default:
+				'''[unknown operation type «genericType.operationType.name»]'''
+		}
+	}
+	
+	def synthesizeRegistration(OperationTypeParameters typeParameters) {
+		'''<«typeParameters.typeParameter.synthesizeRegistration»«FOR typeParameter:typeParameters.typeParameters»,«typeParameter?.typeParameter.synthesizeRegistration»«ENDFOR»>'''
+	}
+	
+	def synthesizeRegistration(TypeParameter typeParameter) {
+		switch typeParameter {
+			GenericType: typeParameter.synthesizeRegistration
+			Type: typeParameter.reference
+			default:
+				"[unknown type parameter]"
+		}		
+	}
+	
+	
 
 }

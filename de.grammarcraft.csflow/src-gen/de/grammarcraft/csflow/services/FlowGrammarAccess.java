@@ -469,12 +469,14 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNumberSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cMethodAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cMethodNativeMethodParserRuleCall_5_0 = (RuleCall)cMethodAssignment_5.eContents().get(0);
+		private final Assignment cSignatureAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cSignatureSignatureParserRuleCall_6_0 = (RuleCall)cSignatureAssignment_6.eContents().get(0);
 		
 		//MethodOperation:
-		//	"method" name=ID "=" class=NativeClass "#" method=NativeMethod;
+		//	"method" name=ID "=" class=NativeClass "#" method=NativeMethod signature=Signature;
 		public ParserRule getRule() { return rule; }
 
-		//"method" name=ID "=" class=NativeClass "#" method=NativeMethod
+		//"method" name=ID "=" class=NativeClass "#" method=NativeMethod signature=Signature
 		public Group getGroup() { return cGroup; }
 
 		//"method"
@@ -503,6 +505,184 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 
 		//NativeMethod
 		public RuleCall getMethodNativeMethodParserRuleCall_5_0() { return cMethodNativeMethodParserRuleCall_5_0; }
+
+		//signature=Signature
+		public Assignment getSignatureAssignment_6() { return cSignatureAssignment_6; }
+
+		//Signature
+		public RuleCall getSignatureSignatureParserRuleCall_6_0() { return cSignatureSignatureParserRuleCall_6_0; }
+	}
+
+	public class SignatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Signature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeGenericTypeParserRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
+		
+		//Signature:
+		//	"as" type=GenericType;
+		public ParserRule getRule() { return rule; }
+
+		//"as" type=GenericType
+		public Group getGroup() { return cGroup; }
+
+		//"as"
+		public Keyword getAsKeyword_0() { return cAsKeyword_0; }
+
+		//type=GenericType
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
+
+		//GenericType
+		public RuleCall getTypeGenericTypeParserRuleCall_1_0() { return cTypeGenericTypeParserRuleCall_1_0; }
+	}
+
+	public class GenericTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GenericType");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cOperationTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cOperationTypeOperationTypeParserRuleCall_0_0 = (RuleCall)cOperationTypeAssignment_0.eContents().get(0);
+		private final Assignment cOperationTypeParametersAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOperationTypeParametersOperationTypeParametersParserRuleCall_1_0 = (RuleCall)cOperationTypeParametersAssignment_1.eContents().get(0);
+		
+		//GenericType:
+		//	operationType=OperationType operationTypeParameters=OperationTypeParameters?;
+		public ParserRule getRule() { return rule; }
+
+		//operationType=OperationType operationTypeParameters=OperationTypeParameters?
+		public Group getGroup() { return cGroup; }
+
+		//operationType=OperationType
+		public Assignment getOperationTypeAssignment_0() { return cOperationTypeAssignment_0; }
+
+		//OperationType
+		public RuleCall getOperationTypeOperationTypeParserRuleCall_0_0() { return cOperationTypeOperationTypeParserRuleCall_0_0; }
+
+		//operationTypeParameters=OperationTypeParameters?
+		public Assignment getOperationTypeParametersAssignment_1() { return cOperationTypeParametersAssignment_1; }
+
+		//OperationTypeParameters
+		public RuleCall getOperationTypeParametersOperationTypeParametersParserRuleCall_1_0() { return cOperationTypeParametersOperationTypeParametersParserRuleCall_1_0; }
+	}
+
+	public class OperationTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OperationType");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cNameAlternatives_0 = (Alternatives)cNameAssignment.eContents().get(0);
+		private final Keyword cNameActionKeyword_0_0 = (Keyword)cNameAlternatives_0.eContents().get(0);
+		private final Keyword cNameFuncKeyword_0_1 = (Keyword)cNameAlternatives_0.eContents().get(1);
+		
+		//OperationType:
+		//	name=("Action" | "Func");
+		public ParserRule getRule() { return rule; }
+
+		//name=("Action" | "Func")
+		public Assignment getNameAssignment() { return cNameAssignment; }
+
+		//"Action" | "Func"
+		public Alternatives getNameAlternatives_0() { return cNameAlternatives_0; }
+
+		//"Action"
+		public Keyword getNameActionKeyword_0_0() { return cNameActionKeyword_0_0; }
+
+		//"Func"
+		public Keyword getNameFuncKeyword_0_1() { return cNameFuncKeyword_0_1; }
+	}
+
+	public class OperationTypeParametersElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OperationTypeParameters");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLessThanSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cTypeParameterAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeParameterTypeParameterParserRuleCall_1_0 = (RuleCall)cTypeParameterAssignment_1.eContents().get(0);
+		private final Assignment cTypeParametersAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeParametersCSTypeParameterParserRuleCall_2_0 = (RuleCall)cTypeParametersAssignment_2.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//OperationTypeParameters:
+		//	"<" typeParameter=TypeParameter typeParameters+=CSTypeParameter* ">";
+		public ParserRule getRule() { return rule; }
+
+		//"<" typeParameter=TypeParameter typeParameters+=CSTypeParameter* ">"
+		public Group getGroup() { return cGroup; }
+
+		//"<"
+		public Keyword getLessThanSignKeyword_0() { return cLessThanSignKeyword_0; }
+
+		//typeParameter=TypeParameter
+		public Assignment getTypeParameterAssignment_1() { return cTypeParameterAssignment_1; }
+
+		//TypeParameter
+		public RuleCall getTypeParameterTypeParameterParserRuleCall_1_0() { return cTypeParameterTypeParameterParserRuleCall_1_0; }
+
+		//typeParameters+=CSTypeParameter*
+		public Assignment getTypeParametersAssignment_2() { return cTypeParametersAssignment_2; }
+
+		//CSTypeParameter
+		public RuleCall getTypeParametersCSTypeParameterParserRuleCall_2_0() { return cTypeParametersCSTypeParameterParserRuleCall_2_0; }
+
+		//">"
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+	}
+
+	public class TypeParameterElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypeParameter");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGenericTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//TypeParameter:
+		//	GenericType | Type;
+		public ParserRule getRule() { return rule; }
+
+		//GenericType | Type
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//GenericType
+		public RuleCall getGenericTypeParserRuleCall_0() { return cGenericTypeParserRuleCall_0; }
+
+		//Type
+		public RuleCall getTypeParserRuleCall_1() { return cTypeParserRuleCall_1; }
+	}
+
+	public class CSTypeParameterElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CSTypeParameter");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCommaKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cTypeParameterAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeParameterTypeParameterParserRuleCall_1_0 = (RuleCall)cTypeParameterAssignment_1.eContents().get(0);
+		
+		//CSTypeParameter:
+		//	"," typeParameter=TypeParameter;
+		public ParserRule getRule() { return rule; }
+
+		//"," typeParameter=TypeParameter
+		public Group getGroup() { return cGroup; }
+
+		//","
+		public Keyword getCommaKeyword_0() { return cCommaKeyword_0; }
+
+		//typeParameter=TypeParameter
+		public Assignment getTypeParameterAssignment_1() { return cTypeParameterAssignment_1; }
+
+		//TypeParameter
+		public RuleCall getTypeParameterTypeParameterParserRuleCall_1_0() { return cTypeParameterTypeParameterParserRuleCall_1_0; }
+	}
+
+	public class TypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Type");
+		private final Assignment cReferenceAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cReferenceQualifiedNameParserRuleCall_0 = (RuleCall)cReferenceAssignment.eContents().get(0);
+		
+		//Type:
+		//	reference=QualifiedName;
+		public ParserRule getRule() { return rule; }
+
+		//reference=QualifiedName
+		public Assignment getReferenceAssignment() { return cReferenceAssignment; }
+
+		//QualifiedName
+		public RuleCall getReferenceQualifiedNameParserRuleCall_0() { return cReferenceQualifiedNameParserRuleCall_0; }
 	}
 
 	public class NativeMethodElements extends AbstractParserRuleElementFinder {
@@ -539,6 +719,13 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 	private EbcOperationElements pEbcOperation;
 	private NativeClassElements pNativeClass;
 	private MethodOperationElements pMethodOperation;
+	private SignatureElements pSignature;
+	private GenericTypeElements pGenericType;
+	private OperationTypeElements pOperationType;
+	private OperationTypeParametersElements pOperationTypeParameters;
+	private TypeParameterElements pTypeParameter;
+	private CSTypeParameterElements pCSTypeParameter;
+	private TypeElements pType;
 	private NativeMethodElements pNativeMethod;
 	
 	private final GrammarProvider grammarProvider;
@@ -723,13 +910,83 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MethodOperation:
-	//	"method" name=ID "=" class=NativeClass "#" method=NativeMethod;
+	//	"method" name=ID "=" class=NativeClass "#" method=NativeMethod signature=Signature;
 	public MethodOperationElements getMethodOperationAccess() {
 		return (pMethodOperation != null) ? pMethodOperation : (pMethodOperation = new MethodOperationElements());
 	}
 	
 	public ParserRule getMethodOperationRule() {
 		return getMethodOperationAccess().getRule();
+	}
+
+	//Signature:
+	//	"as" type=GenericType;
+	public SignatureElements getSignatureAccess() {
+		return (pSignature != null) ? pSignature : (pSignature = new SignatureElements());
+	}
+	
+	public ParserRule getSignatureRule() {
+		return getSignatureAccess().getRule();
+	}
+
+	//GenericType:
+	//	operationType=OperationType operationTypeParameters=OperationTypeParameters?;
+	public GenericTypeElements getGenericTypeAccess() {
+		return (pGenericType != null) ? pGenericType : (pGenericType = new GenericTypeElements());
+	}
+	
+	public ParserRule getGenericTypeRule() {
+		return getGenericTypeAccess().getRule();
+	}
+
+	//OperationType:
+	//	name=("Action" | "Func");
+	public OperationTypeElements getOperationTypeAccess() {
+		return (pOperationType != null) ? pOperationType : (pOperationType = new OperationTypeElements());
+	}
+	
+	public ParserRule getOperationTypeRule() {
+		return getOperationTypeAccess().getRule();
+	}
+
+	//OperationTypeParameters:
+	//	"<" typeParameter=TypeParameter typeParameters+=CSTypeParameter* ">";
+	public OperationTypeParametersElements getOperationTypeParametersAccess() {
+		return (pOperationTypeParameters != null) ? pOperationTypeParameters : (pOperationTypeParameters = new OperationTypeParametersElements());
+	}
+	
+	public ParserRule getOperationTypeParametersRule() {
+		return getOperationTypeParametersAccess().getRule();
+	}
+
+	//TypeParameter:
+	//	GenericType | Type;
+	public TypeParameterElements getTypeParameterAccess() {
+		return (pTypeParameter != null) ? pTypeParameter : (pTypeParameter = new TypeParameterElements());
+	}
+	
+	public ParserRule getTypeParameterRule() {
+		return getTypeParameterAccess().getRule();
+	}
+
+	//CSTypeParameter:
+	//	"," typeParameter=TypeParameter;
+	public CSTypeParameterElements getCSTypeParameterAccess() {
+		return (pCSTypeParameter != null) ? pCSTypeParameter : (pCSTypeParameter = new CSTypeParameterElements());
+	}
+	
+	public ParserRule getCSTypeParameterRule() {
+		return getCSTypeParameterAccess().getRule();
+	}
+
+	//Type:
+	//	reference=QualifiedName;
+	public TypeElements getTypeAccess() {
+		return (pType != null) ? pType : (pType = new TypeElements());
+	}
+	
+	public ParserRule getTypeRule() {
+		return getTypeAccess().getRule();
 	}
 
 	//NativeMethod:

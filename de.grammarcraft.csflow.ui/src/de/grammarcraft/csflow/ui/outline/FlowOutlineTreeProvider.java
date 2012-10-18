@@ -7,12 +7,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 
+import de.grammarcraft.csflow.flow.CSTypeParameter;
 import de.grammarcraft.csflow.flow.Flow;
+import de.grammarcraft.csflow.flow.GenericType;
 import de.grammarcraft.csflow.flow.GlobalInputPort;
 import de.grammarcraft.csflow.flow.GlobalOutputPort;
 import de.grammarcraft.csflow.flow.LeftPort;
 import de.grammarcraft.csflow.flow.NativeClass;
 import de.grammarcraft.csflow.flow.NativeMethod;
+import de.grammarcraft.csflow.flow.OperationTypeParameters;
 import de.grammarcraft.csflow.flow.Port;
 import de.grammarcraft.csflow.flow.RightPort;
 import de.grammarcraft.csflow.flow.Stream;
@@ -83,4 +86,18 @@ public class FlowOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		return "method " + method.getName();
 	}
 
+	protected Object _text(GenericType genericType) {
+		return "generic type " + genericType.getOperationType().getName();
+	}
+
+	protected void _createChildren(IOutlineNode parent, GenericType genericType) {
+		createNode(parent, genericType.getOperationTypeParameters());
+	}
+
+	protected void _createChildren(IOutlineNode parent, OperationTypeParameters operationTypeParameters) {
+		createNode(parent, operationTypeParameters.getTypeParameter());
+		for (CSTypeParameter operationTypeParameter : operationTypeParameters.getTypeParameters()) {
+			createNode(parent, operationTypeParameter.getTypeParameter());
+		}
+	}
 }

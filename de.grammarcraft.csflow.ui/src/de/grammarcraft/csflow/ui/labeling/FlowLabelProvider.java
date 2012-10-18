@@ -13,6 +13,9 @@ import de.grammarcraft.csflow.flow.Flow;
 import de.grammarcraft.csflow.flow.Import;
 import de.grammarcraft.csflow.flow.MethodOperation;
 import de.grammarcraft.csflow.flow.NamedPort;
+import de.grammarcraft.csflow.flow.OperationType;
+import de.grammarcraft.csflow.flow.OperationTypeParameters;
+import de.grammarcraft.csflow.flow.Signature;
 
 /**
  * Provides labels for a EObjects.
@@ -43,7 +46,19 @@ public class FlowLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
  	String text(MethodOperation element) {
-		return "Method operation " + element.getName();
+		return "method operation " + element.getName();
+	}
+
+ 	String text(Signature element) {
+		return "signature";
+	}
+ 	
+ 	String text(OperationTypeParameters element) {
+		return "parameter types";
+	}
+
+ 	String text(OperationType element) {
+		return element.getName();
 	}
 
 /*

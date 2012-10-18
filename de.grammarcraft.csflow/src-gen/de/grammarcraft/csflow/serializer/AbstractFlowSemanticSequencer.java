@@ -2,9 +2,11 @@ package de.grammarcraft.csflow.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import de.grammarcraft.csflow.flow.CSTypeParameter;
 import de.grammarcraft.csflow.flow.EbcOperation;
 import de.grammarcraft.csflow.flow.Flow;
 import de.grammarcraft.csflow.flow.FlowPackage;
+import de.grammarcraft.csflow.flow.GenericType;
 import de.grammarcraft.csflow.flow.GlobalInputPort;
 import de.grammarcraft.csflow.flow.GlobalOutputPort;
 import de.grammarcraft.csflow.flow.Import;
@@ -13,8 +15,12 @@ import de.grammarcraft.csflow.flow.Model;
 import de.grammarcraft.csflow.flow.NamedPort;
 import de.grammarcraft.csflow.flow.NativeClass;
 import de.grammarcraft.csflow.flow.NativeMethod;
+import de.grammarcraft.csflow.flow.OperationType;
+import de.grammarcraft.csflow.flow.OperationTypeParameters;
 import de.grammarcraft.csflow.flow.Port;
+import de.grammarcraft.csflow.flow.Signature;
 import de.grammarcraft.csflow.flow.Stream;
+import de.grammarcraft.csflow.flow.Type;
 import de.grammarcraft.csflow.flow.UnnamedSubFlowPort;
 import de.grammarcraft.csflow.services.FlowGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -57,6 +63,12 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == FlowPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case FlowPackage.CS_TYPE_PARAMETER:
+				if(context == grammarAccess.getCSTypeParameterRule()) {
+					sequence_CSTypeParameter(context, (CSTypeParameter) semanticObject); 
+					return; 
+				}
+				else break;
 			case FlowPackage.EBC_OPERATION:
 				if(context == grammarAccess.getEbcOperationRule() ||
 				   context == grammarAccess.getFunctionUnitRule() ||
@@ -69,6 +81,13 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 				if(context == grammarAccess.getFlowRule() ||
 				   context == grammarAccess.getFunctionUnitRule()) {
 					sequence_Flow(context, (Flow) semanticObject); 
+					return; 
+				}
+				else break;
+			case FlowPackage.GENERIC_TYPE:
+				if(context == grammarAccess.getGenericTypeRule() ||
+				   context == grammarAccess.getTypeParameterRule()) {
+					sequence_GenericType(context, (GenericType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -124,6 +143,18 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 					return; 
 				}
 				else break;
+			case FlowPackage.OPERATION_TYPE:
+				if(context == grammarAccess.getOperationTypeRule()) {
+					sequence_OperationType(context, (OperationType) semanticObject); 
+					return; 
+				}
+				else break;
+			case FlowPackage.OPERATION_TYPE_PARAMETERS:
+				if(context == grammarAccess.getOperationTypeParametersRule()) {
+					sequence_OperationTypeParameters(context, (OperationTypeParameters) semanticObject); 
+					return; 
+				}
+				else break;
 			case FlowPackage.PORT:
 				if(context == grammarAccess.getLeftPortRule() ||
 				   context == grammarAccess.getPortRule() ||
@@ -132,9 +163,22 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 					return; 
 				}
 				else break;
+			case FlowPackage.SIGNATURE:
+				if(context == grammarAccess.getSignatureRule()) {
+					sequence_Signature(context, (Signature) semanticObject); 
+					return; 
+				}
+				else break;
 			case FlowPackage.STREAM:
 				if(context == grammarAccess.getStreamRule()) {
 					sequence_Stream(context, (Stream) semanticObject); 
+					return; 
+				}
+				else break;
+			case FlowPackage.TYPE:
+				if(context == grammarAccess.getTypeRule() ||
+				   context == grammarAccess.getTypeParameterRule()) {
+					sequence_Type(context, (Type) semanticObject); 
 					return; 
 				}
 				else break;
@@ -149,6 +193,22 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     typeParameter=TypeParameter
+	 */
+	protected void sequence_CSTypeParameter(EObject context, CSTypeParameter semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.CS_TYPE_PARAMETER__TYPE_PARAMETER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.CS_TYPE_PARAMETER__TYPE_PARAMETER));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getCSTypeParameterAccess().getTypeParameterTypeParameterParserRuleCall_1_0(), semanticObject.getTypeParameter());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -174,6 +234,15 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 	 *     (name=ID streams+=Stream*)
 	 */
 	protected void sequence_Flow(EObject context, Flow semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (operationType=OperationType operationTypeParameters=OperationTypeParameters?)
+	 */
+	protected void sequence_GenericType(EObject context, GenericType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -214,7 +283,7 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID class=NativeClass method=NativeMethod)
+	 *     (name=ID class=NativeClass method=NativeMethod signature=Signature)
 	 */
 	protected void sequence_MethodOperation(EObject context, MethodOperation semanticObject) {
 		if(errorAcceptor != null) {
@@ -224,12 +293,15 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.OPERATION__CLASS));
 			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.METHOD_OPERATION__METHOD) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.METHOD_OPERATION__METHOD));
+			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.METHOD_OPERATION__SIGNATURE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.METHOD_OPERATION__SIGNATURE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getMethodOperationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getMethodOperationAccess().getClassNativeClassParserRuleCall_3_0(), semanticObject.getClass_());
 		feeder.accept(grammarAccess.getMethodOperationAccess().getMethodNativeMethodParserRuleCall_5_0(), semanticObject.getMethod());
+		feeder.accept(grammarAccess.getMethodOperationAccess().getSignatureSignatureParserRuleCall_6_0(), semanticObject.getSignature());
 		feeder.finish();
 	}
 	
@@ -293,6 +365,24 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (typeParameter=TypeParameter typeParameters+=CSTypeParameter*)
+	 */
+	protected void sequence_OperationTypeParameters(EObject context, OperationTypeParameters semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='Action' | name='Func')
+	 */
+	protected void sequence_OperationType(EObject context, OperationType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (functionUnit=[FunctionUnit|ID] port=NamedPort?)
 	 */
 	protected void sequence_Port(EObject context, Port semanticObject) {
@@ -306,6 +396,22 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 	 */
 	protected void sequence_RightPort(EObject context, GlobalOutputPort semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     type=GenericType
+	 */
+	protected void sequence_Signature(EObject context, Signature semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.SIGNATURE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.SIGNATURE__TYPE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSignatureAccess().getTypeGenericTypeParserRuleCall_1_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	
@@ -327,6 +433,22 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 		feeder.accept(grammarAccess.getStreamAccess().getLeftPortLeftPortParserRuleCall_0_0(), semanticObject.getLeftPort());
 		feeder.accept(grammarAccess.getStreamAccess().getMessageQualifiedNameParserRuleCall_2_0(), semanticObject.getMessage());
 		feeder.accept(grammarAccess.getStreamAccess().getRightPortRightPortParserRuleCall_4_0(), semanticObject.getRightPort());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     reference=QualifiedName
+	 */
+	protected void sequence_Type(EObject context, Type semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.TYPE__REFERENCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.TYPE__REFERENCE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTypeAccess().getReferenceQualifiedNameParserRuleCall_0(), semanticObject.getReference());
 		feeder.finish();
 	}
 }

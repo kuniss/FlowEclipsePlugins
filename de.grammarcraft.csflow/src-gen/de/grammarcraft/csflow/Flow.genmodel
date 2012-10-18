@@ -49,6 +49,28 @@
     </genClasses>
     <genClasses ecoreClass="Flow.ecore#//MethodOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//MethodOperation/method"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//MethodOperation/signature"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//Signature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//Signature/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//GenericType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//GenericType/operationType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//GenericType/operationTypeParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//OperationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//OperationType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//OperationTypeParameters">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//OperationTypeParameters/typeParameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//OperationTypeParameters/typeParameters"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//TypeParameter"/>
+    <genClasses ecoreClass="Flow.ecore#//CSTypeParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//CSTypeParameter/typeParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//Type/reference"/>
     </genClasses>
     <genClasses ecoreClass="Flow.ecore#//NativeMethod">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//NativeMethod/name"/>

@@ -545,13 +545,227 @@ public interface FlowPackage extends EPackage
   int METHOD_OPERATION__METHOD = OPERATION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Signature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHOD_OPERATION__SIGNATURE = OPERATION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Method Operation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHOD_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 1;
+  int METHOD_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.SignatureImpl <em>Signature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.SignatureImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getSignature()
+   * @generated
+   */
+  int SIGNATURE = 16;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIGNATURE__TYPE = 0;
+
+  /**
+   * The number of structural features of the '<em>Signature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIGNATURE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.TypeParameterImpl <em>Type Parameter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.TypeParameterImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getTypeParameter()
+   * @generated
+   */
+  int TYPE_PARAMETER = 20;
+
+  /**
+   * The number of structural features of the '<em>Type Parameter</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_PARAMETER_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.GenericTypeImpl <em>Generic Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.GenericTypeImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getGenericType()
+   * @generated
+   */
+  int GENERIC_TYPE = 17;
+
+  /**
+   * The feature id for the '<em><b>Operation Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_TYPE__OPERATION_TYPE = TYPE_PARAMETER_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Operation Type Parameters</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_TYPE__OPERATION_TYPE_PARAMETERS = TYPE_PARAMETER_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Generic Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERIC_TYPE_FEATURE_COUNT = TYPE_PARAMETER_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.OperationTypeImpl <em>Operation Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.OperationTypeImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getOperationType()
+   * @generated
+   */
+  int OPERATION_TYPE = 18;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_TYPE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Operation Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_TYPE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.OperationTypeParametersImpl <em>Operation Type Parameters</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.OperationTypeParametersImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getOperationTypeParameters()
+   * @generated
+   */
+  int OPERATION_TYPE_PARAMETERS = 19;
+
+  /**
+   * The feature id for the '<em><b>Type Parameter</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_TYPE_PARAMETERS__TYPE_PARAMETER = 0;
+
+  /**
+   * The feature id for the '<em><b>Type Parameters</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_TYPE_PARAMETERS__TYPE_PARAMETERS = 1;
+
+  /**
+   * The number of structural features of the '<em>Operation Type Parameters</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION_TYPE_PARAMETERS_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.CSTypeParameterImpl <em>CS Type Parameter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.CSTypeParameterImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getCSTypeParameter()
+   * @generated
+   */
+  int CS_TYPE_PARAMETER = 21;
+
+  /**
+   * The feature id for the '<em><b>Type Parameter</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CS_TYPE_PARAMETER__TYPE_PARAMETER = 0;
+
+  /**
+   * The number of structural features of the '<em>CS Type Parameter</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CS_TYPE_PARAMETER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.TypeImpl <em>Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.TypeImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getType()
+   * @generated
+   */
+  int TYPE = 22;
+
+  /**
+   * The feature id for the '<em><b>Reference</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE__REFERENCE = TYPE_PARAMETER_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FEATURE_COUNT = TYPE_PARAMETER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.NativeMethodImpl <em>Native Method</em>}' class.
@@ -561,7 +775,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getNativeMethod()
    * @generated
    */
-  int NATIVE_METHOD = 16;
+  int NATIVE_METHOD = 23;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -908,6 +1122,175 @@ public interface FlowPackage extends EPackage
   EReference getMethodOperation_Method();
 
   /**
+   * Returns the meta object for the containment reference '{@link de.grammarcraft.csflow.flow.MethodOperation#getSignature <em>Signature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Signature</em>'.
+   * @see de.grammarcraft.csflow.flow.MethodOperation#getSignature()
+   * @see #getMethodOperation()
+   * @generated
+   */
+  EReference getMethodOperation_Signature();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.Signature <em>Signature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Signature</em>'.
+   * @see de.grammarcraft.csflow.flow.Signature
+   * @generated
+   */
+  EClass getSignature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.grammarcraft.csflow.flow.Signature#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see de.grammarcraft.csflow.flow.Signature#getType()
+   * @see #getSignature()
+   * @generated
+   */
+  EReference getSignature_Type();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.GenericType <em>Generic Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Generic Type</em>'.
+   * @see de.grammarcraft.csflow.flow.GenericType
+   * @generated
+   */
+  EClass getGenericType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.grammarcraft.csflow.flow.GenericType#getOperationType <em>Operation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Type</em>'.
+   * @see de.grammarcraft.csflow.flow.GenericType#getOperationType()
+   * @see #getGenericType()
+   * @generated
+   */
+  EReference getGenericType_OperationType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.grammarcraft.csflow.flow.GenericType#getOperationTypeParameters <em>Operation Type Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operation Type Parameters</em>'.
+   * @see de.grammarcraft.csflow.flow.GenericType#getOperationTypeParameters()
+   * @see #getGenericType()
+   * @generated
+   */
+  EReference getGenericType_OperationTypeParameters();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.OperationType <em>Operation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Operation Type</em>'.
+   * @see de.grammarcraft.csflow.flow.OperationType
+   * @generated
+   */
+  EClass getOperationType();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.grammarcraft.csflow.flow.OperationType#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.grammarcraft.csflow.flow.OperationType#getName()
+   * @see #getOperationType()
+   * @generated
+   */
+  EAttribute getOperationType_Name();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.OperationTypeParameters <em>Operation Type Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Operation Type Parameters</em>'.
+   * @see de.grammarcraft.csflow.flow.OperationTypeParameters
+   * @generated
+   */
+  EClass getOperationTypeParameters();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.grammarcraft.csflow.flow.OperationTypeParameters#getTypeParameter <em>Type Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type Parameter</em>'.
+   * @see de.grammarcraft.csflow.flow.OperationTypeParameters#getTypeParameter()
+   * @see #getOperationTypeParameters()
+   * @generated
+   */
+  EReference getOperationTypeParameters_TypeParameter();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.grammarcraft.csflow.flow.OperationTypeParameters#getTypeParameters <em>Type Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Type Parameters</em>'.
+   * @see de.grammarcraft.csflow.flow.OperationTypeParameters#getTypeParameters()
+   * @see #getOperationTypeParameters()
+   * @generated
+   */
+  EReference getOperationTypeParameters_TypeParameters();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.TypeParameter <em>Type Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Parameter</em>'.
+   * @see de.grammarcraft.csflow.flow.TypeParameter
+   * @generated
+   */
+  EClass getTypeParameter();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.CSTypeParameter <em>CS Type Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>CS Type Parameter</em>'.
+   * @see de.grammarcraft.csflow.flow.CSTypeParameter
+   * @generated
+   */
+  EClass getCSTypeParameter();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.grammarcraft.csflow.flow.CSTypeParameter#getTypeParameter <em>Type Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type Parameter</em>'.
+   * @see de.grammarcraft.csflow.flow.CSTypeParameter#getTypeParameter()
+   * @see #getCSTypeParameter()
+   * @generated
+   */
+  EReference getCSTypeParameter_TypeParameter();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type</em>'.
+   * @see de.grammarcraft.csflow.flow.Type
+   * @generated
+   */
+  EClass getType();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.grammarcraft.csflow.flow.Type#getReference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Reference</em>'.
+   * @see de.grammarcraft.csflow.flow.Type#getReference()
+   * @see #getType()
+   * @generated
+   */
+  EAttribute getType_Reference();
+
+  /**
    * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.NativeMethod <em>Native Method</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1230,6 +1613,148 @@ public interface FlowPackage extends EPackage
      * @generated
      */
     EReference METHOD_OPERATION__METHOD = eINSTANCE.getMethodOperation_Method();
+
+    /**
+     * The meta object literal for the '<em><b>Signature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference METHOD_OPERATION__SIGNATURE = eINSTANCE.getMethodOperation_Signature();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.SignatureImpl <em>Signature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.SignatureImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getSignature()
+     * @generated
+     */
+    EClass SIGNATURE = eINSTANCE.getSignature();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SIGNATURE__TYPE = eINSTANCE.getSignature_Type();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.GenericTypeImpl <em>Generic Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.GenericTypeImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getGenericType()
+     * @generated
+     */
+    EClass GENERIC_TYPE = eINSTANCE.getGenericType();
+
+    /**
+     * The meta object literal for the '<em><b>Operation Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_TYPE__OPERATION_TYPE = eINSTANCE.getGenericType_OperationType();
+
+    /**
+     * The meta object literal for the '<em><b>Operation Type Parameters</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GENERIC_TYPE__OPERATION_TYPE_PARAMETERS = eINSTANCE.getGenericType_OperationTypeParameters();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.OperationTypeImpl <em>Operation Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.OperationTypeImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getOperationType()
+     * @generated
+     */
+    EClass OPERATION_TYPE = eINSTANCE.getOperationType();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATION_TYPE__NAME = eINSTANCE.getOperationType_Name();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.OperationTypeParametersImpl <em>Operation Type Parameters</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.OperationTypeParametersImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getOperationTypeParameters()
+     * @generated
+     */
+    EClass OPERATION_TYPE_PARAMETERS = eINSTANCE.getOperationTypeParameters();
+
+    /**
+     * The meta object literal for the '<em><b>Type Parameter</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPERATION_TYPE_PARAMETERS__TYPE_PARAMETER = eINSTANCE.getOperationTypeParameters_TypeParameter();
+
+    /**
+     * The meta object literal for the '<em><b>Type Parameters</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPERATION_TYPE_PARAMETERS__TYPE_PARAMETERS = eINSTANCE.getOperationTypeParameters_TypeParameters();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.TypeParameterImpl <em>Type Parameter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.TypeParameterImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getTypeParameter()
+     * @generated
+     */
+    EClass TYPE_PARAMETER = eINSTANCE.getTypeParameter();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.CSTypeParameterImpl <em>CS Type Parameter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.CSTypeParameterImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getCSTypeParameter()
+     * @generated
+     */
+    EClass CS_TYPE_PARAMETER = eINSTANCE.getCSTypeParameter();
+
+    /**
+     * The meta object literal for the '<em><b>Type Parameter</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CS_TYPE_PARAMETER__TYPE_PARAMETER = eINSTANCE.getCSTypeParameter_TypeParameter();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.TypeImpl <em>Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.TypeImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getType()
+     * @generated
+     */
+    EClass TYPE = eINSTANCE.getType();
+
+    /**
+     * The meta object literal for the '<em><b>Reference</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE__REFERENCE = eINSTANCE.getType_Reference();
 
     /**
      * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.NativeMethodImpl <em>Native Method</em>}' class.

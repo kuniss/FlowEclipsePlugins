@@ -85,8 +85,37 @@ NativeClass:
 
 
 MethodOperation:
-	'method' name=ID '=' class=NativeClass '#' method=NativeMethod
+	'method' name=ID '=' class=NativeClass '#' method=NativeMethod signature=Signature
 ;
+
+Signature:
+	'as' type=GenericType
+;
+
+GenericType:
+	operationType=OperationType operationTypeParameters=OperationTypeParameters?
+;
+
+OperationType:
+	name=('Action'| 'Func')
+;
+
+OperationTypeParameters:
+	'<' typeParameter=TypeParameter typeParameters+=CSTypeParameter* '>'
+;
+
+TypeParameter:
+	GenericType | Type 
+;
+
+CSTypeParameter:
+	',' typeParameter=TypeParameter
+;
+
+Type:
+	reference=QualifiedName
+;
+
 
 NativeMethod:
 	name=ID

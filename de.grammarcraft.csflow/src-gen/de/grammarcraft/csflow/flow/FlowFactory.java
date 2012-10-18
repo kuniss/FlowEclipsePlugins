@@ -171,6 +171,69 @@ public interface FlowFactory extends EFactory
   MethodOperation createMethodOperation();
 
   /**
+   * Returns a new object of class '<em>Signature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Signature</em>'.
+   * @generated
+   */
+  Signature createSignature();
+
+  /**
+   * Returns a new object of class '<em>Generic Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Generic Type</em>'.
+   * @generated
+   */
+  GenericType createGenericType();
+
+  /**
+   * Returns a new object of class '<em>Operation Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operation Type</em>'.
+   * @generated
+   */
+  OperationType createOperationType();
+
+  /**
+   * Returns a new object of class '<em>Operation Type Parameters</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operation Type Parameters</em>'.
+   * @generated
+   */
+  OperationTypeParameters createOperationTypeParameters();
+
+  /**
+   * Returns a new object of class '<em>Type Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Parameter</em>'.
+   * @generated
+   */
+  TypeParameter createTypeParameter();
+
+  /**
+   * Returns a new object of class '<em>CS Type Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>CS Type Parameter</em>'.
+   * @generated
+   */
+  CSTypeParameter createCSTypeParameter();
+
+  /**
+   * Returns a new object of class '<em>Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type</em>'.
+   * @generated
+   */
+  Type createType();
+
+  /**
    * Returns a new object of class '<em>Native Method</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -13,9 +13,14 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFlowLexer extends Lexer {
     public static final int RULE_ID=4;
+    public static final int T__27=27;
+    public static final int T__26=26;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
     public static final int T__22=22;
-    public static final int T__21=21;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__21=21;
     public static final int T__20=20;
     public static final int EOF=-1;
     public static final int RULE_SL_COMMENT=8;
@@ -51,10 +56,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:11:7: ( 'package' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:11:9: 'package'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:11:7: ( 'Action' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:11:9: 'Action'
             {
-            match("package"); 
+            match("Action"); 
 
 
             }
@@ -72,10 +77,11 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:12:7: ( '.' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:12:9: '.'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:12:7: ( 'Func' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:12:9: 'Func'
             {
-            match('.'); 
+            match("Func"); 
+
 
             }
 
@@ -92,10 +98,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:13:7: ( 'import' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:13:9: 'import'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:13:7: ( 'package' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:13:9: 'package'
             {
-            match("import"); 
+            match("package"); 
 
 
             }
@@ -113,11 +119,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:14:7: ( 'flow' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:14:9: 'flow'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:14:7: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:14:9: '.'
             {
-            match("flow"); 
-
+            match('.'); 
 
             }
 
@@ -134,10 +139,11 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:15:7: ( '>' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:15:9: '>'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:15:7: ( 'import' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:15:9: 'import'
             {
-            match('>'); 
+            match("import"); 
+
 
             }
 
@@ -154,10 +160,11 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:16:7: ( ';' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:16:9: ';'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:16:7: ( 'flow' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:16:9: 'flow'
             {
-            match(';'); 
+            match("flow"); 
+
 
             }
 
@@ -174,11 +181,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:17:7: ( 'in' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:17:9: 'in'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:17:7: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:17:9: '>'
             {
-            match("in"); 
-
+            match('>'); 
 
             }
 
@@ -195,11 +201,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:18:7: ( 'out' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:18:9: 'out'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:18:7: ( ';' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:18:9: ';'
             {
-            match("out"); 
-
+            match(';'); 
 
             }
 
@@ -216,10 +221,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:19:7: ( 'ebc' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:19:9: 'ebc'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:19:7: ( 'in' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:19:9: 'in'
             {
-            match("ebc"); 
+            match("in"); 
 
 
             }
@@ -237,10 +242,11 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:20:7: ( '=' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:20:9: '='
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:20:7: ( 'out' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:20:9: 'out'
             {
-            match('='); 
+            match("out"); 
+
 
             }
 
@@ -257,10 +263,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:21:7: ( 'method' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:21:9: 'method'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:21:7: ( 'ebc' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:21:9: 'ebc'
             {
-            match("method"); 
+            match("ebc"); 
 
 
             }
@@ -278,10 +284,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:22:7: ( '#' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:22:9: '#'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:22:7: ( '=' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:22:9: '='
             {
-            match('#'); 
+            match('='); 
 
             }
 
@@ -293,15 +299,117 @@ public class InternalFlowLexer extends Lexer {
     }
     // $ANTLR end "T__22"
 
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
+        try {
+            int _type = T__23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:23:7: ( 'method' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:23:9: 'method'
+            {
+            match("method"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__23"
+
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
+        try {
+            int _type = T__24;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:24:7: ( '#' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:24:9: '#'
+            {
+            match('#'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__24"
+
+    // $ANTLR start "T__25"
+    public final void mT__25() throws RecognitionException {
+        try {
+            int _type = T__25;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:25:7: ( 'as' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:25:9: 'as'
+            {
+            match("as"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:26:7: ( '<' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:26:9: '<'
+            {
+            match('<'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:27:7: ( ',' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:27:9: ','
+            {
+            match(','); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3012:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3012:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:11: ( '^' )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3012:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -310,7 +418,7 @@ public class InternalFlowLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:11: '^'
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3012:11: '^'
                     {
                     match('^'); 
 
@@ -328,7 +436,7 @@ public class InternalFlowLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3012:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -377,10 +485,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2289:10: ( ( '0' .. '9' )+ )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2289:12: ( '0' .. '9' )+
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3014:10: ( ( '0' .. '9' )+ )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3014:12: ( '0' .. '9' )+
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2289:12: ( '0' .. '9' )+
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3014:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -394,7 +502,7 @@ public class InternalFlowLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2289:13: '0' .. '9'
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3014:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -426,10 +534,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -447,10 +555,10 @@ public class InternalFlowLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -466,7 +574,7 @@ public class InternalFlowLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -482,7 +590,7 @@ public class InternalFlowLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -507,10 +615,10 @@ public class InternalFlowLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -526,7 +634,7 @@ public class InternalFlowLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -542,7 +650,7 @@ public class InternalFlowLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2291:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3016:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -585,12 +693,12 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2293:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2293:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3018:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3018:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2293:24: ( options {greedy=false; } : . )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3018:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -615,7 +723,7 @@ public class InternalFlowLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2293:52: .
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3018:52: .
             	    {
             	    matchAny(); 
 
@@ -645,12 +753,12 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -663,7 +771,7 @@ public class InternalFlowLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -683,7 +791,7 @@ public class InternalFlowLexer extends Lexer {
                 }
             } while (true);
 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:40: ( ( '\\r' )? '\\n' )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -692,9 +800,9 @@ public class InternalFlowLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:41: ( '\\r' )? '\\n'
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:41: ( '\\r' )?
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -703,7 +811,7 @@ public class InternalFlowLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2295:41: '\\r'
+                            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3020:41: '\\r'
                             {
                             match('\r'); 
 
@@ -735,10 +843,10 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2297:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2297:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3022:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3022:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2297:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3022:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -792,8 +900,8 @@ public class InternalFlowLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2299:16: ( . )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2299:18: .
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3024:16: ( . )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3024:18: .
             {
             matchAny(); 
 
@@ -808,8 +916,8 @@ public class InternalFlowLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=19;
+        // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=24;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -897,49 +1005,84 @@ public class InternalFlowLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:82: RULE_ID
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:82: T__23
+                {
+                mT__23(); 
+
+                }
+                break;
+            case 14 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:88: T__24
+                {
+                mT__24(); 
+
+                }
+                break;
+            case 15 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:94: T__25
+                {
+                mT__25(); 
+
+                }
+                break;
+            case 16 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:100: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 17 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:106: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 18 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:112: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 14 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:90: RULE_INT
+            case 19 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:120: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 15 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:99: RULE_STRING
+            case 20 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:129: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 16 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:111: RULE_ML_COMMENT
+            case 21 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:141: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 17 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:127: RULE_SL_COMMENT
+            case 22 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:157: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 18 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:143: RULE_WS
+            case 23 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:173: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 19 :
-                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:151: RULE_ANY_OTHER
+            case 24 :
+                // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1:181: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -953,94 +1096,120 @@ public class InternalFlowLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\25\1\uffff\2\25\2\uffff\2\25\1\uffff\1\25\1\uffff\1"+
-        "\23\2\uffff\3\23\2\uffff\1\25\2\uffff\1\25\1\50\1\25\2\uffff\2\25"+
-        "\1\uffff\1\25\6\uffff\2\25\1\uffff\1\25\1\60\1\61\3\25\1\65\2\uffff"+
-        "\3\25\1\uffff\2\25\1\73\1\74\1\75\3\uffff";
+        "\1\uffff\3\32\1\uffff\2\32\2\uffff\2\32\1\uffff\1\32\1\uffff\1"+
+        "\32\2\uffff\1\30\2\uffff\3\30\2\uffff\1\32\1\uffff\2\32\1\uffff"+
+        "\1\32\1\64\1\32\2\uffff\2\32\1\uffff\1\32\1\uffff\1\71\7\uffff\4"+
+        "\32\1\uffff\1\32\1\77\1\100\1\32\1\uffff\1\32\1\103\2\32\1\106\2"+
+        "\uffff\2\32\1\uffff\2\32\1\uffff\1\32\1\114\1\32\1\116\1\117\1\uffff"+
+        "\1\120\3\uffff";
     static final String DFA12_eofS =
-        "\76\uffff";
+        "\121\uffff";
     static final String DFA12_minS =
-        "\1\0\1\141\1\uffff\1\155\1\154\2\uffff\1\165\1\142\1\uffff\1\145"+
-        "\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\143\2\uffff\1\160\1\60"+
-        "\1\157\2\uffff\1\164\1\143\1\uffff\1\164\6\uffff\1\153\1\157\1\uffff"+
-        "\1\167\2\60\1\150\1\141\1\162\1\60\2\uffff\1\157\1\147\1\164\1\uffff"+
-        "\1\144\1\145\3\60\3\uffff";
+        "\1\0\1\143\1\165\1\141\1\uffff\1\155\1\154\2\uffff\1\165\1\142"+
+        "\1\uffff\1\145\1\uffff\1\163\2\uffff\1\101\2\uffff\2\0\1\52\2\uffff"+
+        "\1\164\1\uffff\1\156\1\143\1\uffff\1\160\1\60\1\157\2\uffff\1\164"+
+        "\1\143\1\uffff\1\164\1\uffff\1\60\7\uffff\1\151\1\143\1\153\1\157"+
+        "\1\uffff\1\167\2\60\1\150\1\uffff\1\157\1\60\1\141\1\162\1\60\2"+
+        "\uffff\1\157\1\156\1\uffff\1\147\1\164\1\uffff\1\144\1\60\1\145"+
+        "\2\60\1\uffff\1\60\3\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\141\1\uffff\1\156\1\154\2\uffff\1\165\1\142\1\uffff"+
-        "\1\145\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\143\2\uffff"+
-        "\1\160\1\172\1\157\2\uffff\1\164\1\143\1\uffff\1\164\6\uffff\1\153"+
-        "\1\157\1\uffff\1\167\2\172\1\150\1\141\1\162\1\172\2\uffff\1\157"+
-        "\1\147\1\164\1\uffff\1\144\1\145\3\172\3\uffff";
+        "\1\uffff\1\143\1\165\1\141\1\uffff\1\156\1\154\2\uffff\1\165\1"+
+        "\142\1\uffff\1\145\1\uffff\1\163\2\uffff\1\172\2\uffff\2\uffff\1"+
+        "\57\2\uffff\1\164\1\uffff\1\156\1\143\1\uffff\1\160\1\172\1\157"+
+        "\2\uffff\1\164\1\143\1\uffff\1\164\1\uffff\1\172\7\uffff\1\151\1"+
+        "\143\1\153\1\157\1\uffff\1\167\2\172\1\150\1\uffff\1\157\1\172\1"+
+        "\141\1\162\1\172\2\uffff\1\157\1\156\1\uffff\1\147\1\164\1\uffff"+
+        "\1\144\1\172\1\145\2\172\1\uffff\1\172\3\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\2\uffff\1\5\1\6\2\uffff\1\12\1\uffff\1\14\1\uffff"+
-        "\1\15\1\16\3\uffff\1\22\1\23\1\uffff\1\15\1\2\3\uffff\1\5\1\6\2"+
-        "\uffff\1\12\1\uffff\1\14\1\16\1\17\1\20\1\21\1\22\2\uffff\1\7\7"+
-        "\uffff\1\10\1\11\3\uffff\1\4\5\uffff\1\3\1\13\1\1";
+        "\4\uffff\1\4\2\uffff\1\7\1\10\2\uffff\1\14\1\uffff\1\16\1\uffff"+
+        "\1\20\1\21\1\uffff\1\22\1\23\3\uffff\1\27\1\30\1\uffff\1\22\2\uffff"+
+        "\1\4\3\uffff\1\7\1\10\2\uffff\1\14\1\uffff\1\16\1\uffff\1\20\1\21"+
+        "\1\23\1\24\1\25\1\26\1\27\4\uffff\1\11\4\uffff\1\17\5\uffff\1\12"+
+        "\1\13\2\uffff\1\2\2\uffff\1\6\5\uffff\1\1\1\uffff\1\5\1\15\1\3";
     static final String DFA12_specialS =
-        "\1\2\16\uffff\1\1\1\0\55\uffff}>";
+        "\1\0\23\uffff\1\2\1\1\73\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\23\2\22\2\23\1\22\22\23\1\22\1\23\1\17\1\13\3\23\1\20\6"+
-            "\23\1\2\1\21\12\16\1\23\1\6\1\23\1\11\1\5\2\23\32\15\3\23\1"+
-            "\14\1\15\1\23\4\15\1\10\1\4\2\15\1\3\3\15\1\12\1\15\1\7\1\1"+
-            "\12\15\uff85\23",
-            "\1\24",
-            "",
-            "\1\27\1\30",
+            "\11\30\2\27\2\30\1\27\22\30\1\27\1\30\1\24\1\15\3\30\1\25\4"+
+            "\30\1\20\1\30\1\4\1\26\12\23\1\30\1\10\1\17\1\13\1\7\2\30\1"+
+            "\1\4\22\1\2\24\22\3\30\1\21\1\22\1\30\1\16\3\22\1\12\1\6\2\22"+
+            "\1\5\3\22\1\14\1\22\1\11\1\3\12\22\uff85\30",
             "\1\31",
-            "",
-            "",
+            "\1\33",
             "\1\34",
-            "\1\35",
             "",
-            "\1\37",
-            "",
-            "\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\36\1\37",
+            "\1\40",
             "",
             "",
-            "\0\42",
-            "\0\42",
-            "\1\43\4\uffff\1\44",
-            "",
+            "\1\43",
+            "\1\44",
             "",
             "\1\46",
             "",
-            "",
-            "\1\47",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\1\51",
+            "\1\50",
             "",
             "",
-            "\1\52",
-            "\1\53",
-            "",
-            "\1\54",
+            "\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
+            "\0\54",
+            "\0\54",
+            "\1\55\4\uffff\1\56",
             "",
             "",
+            "\1\60",
             "",
-            "",
-            "\1\55",
-            "\1\56",
-            "",
-            "\1\57",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\61",
             "\1\62",
+            "",
             "\1\63",
-            "\1\64",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\65",
             "",
             "",
             "\1\66",
             "\1\67",
+            "",
             "\1\70",
             "",
-            "\1\71",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\72",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
-            "\12\25\7\uffff\32\25\4\uffff\1\25\1\uffff\32\25",
+            "\1\73",
+            "\1\74",
+            "\1\75",
+            "",
+            "\1\76",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\101",
+            "",
+            "\1\102",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\104",
+            "\1\105",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "",
+            "",
+            "\1\107",
+            "\1\110",
+            "",
+            "\1\111",
+            "\1\112",
+            "",
+            "\1\113",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\1\115",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
+            "",
+            "\12\32\7\uffff\32\32\4\uffff\1\32\1\uffff\32\32",
             "",
             "",
             ""
@@ -1076,73 +1245,83 @@ public class InternalFlowLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_16 = input.LA(1);
+                        int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_16>='\u0000' && LA12_16<='\uFFFF')) ) {s = 34;}
+                        if ( (LA12_0=='A') ) {s = 1;}
 
-                        else s = 19;
+                        else if ( (LA12_0=='F') ) {s = 2;}
+
+                        else if ( (LA12_0=='p') ) {s = 3;}
+
+                        else if ( (LA12_0=='.') ) {s = 4;}
+
+                        else if ( (LA12_0=='i') ) {s = 5;}
+
+                        else if ( (LA12_0=='f') ) {s = 6;}
+
+                        else if ( (LA12_0=='>') ) {s = 7;}
+
+                        else if ( (LA12_0==';') ) {s = 8;}
+
+                        else if ( (LA12_0=='o') ) {s = 9;}
+
+                        else if ( (LA12_0=='e') ) {s = 10;}
+
+                        else if ( (LA12_0=='=') ) {s = 11;}
+
+                        else if ( (LA12_0=='m') ) {s = 12;}
+
+                        else if ( (LA12_0=='#') ) {s = 13;}
+
+                        else if ( (LA12_0=='a') ) {s = 14;}
+
+                        else if ( (LA12_0=='<') ) {s = 15;}
+
+                        else if ( (LA12_0==',') ) {s = 16;}
+
+                        else if ( (LA12_0=='^') ) {s = 17;}
+
+                        else if ( ((LA12_0>='B' && LA12_0<='E')||(LA12_0>='G' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='b' && LA12_0<='d')||(LA12_0>='g' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='l')||LA12_0=='n'||(LA12_0>='q' && LA12_0<='z')) ) {s = 18;}
+
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 19;}
+
+                        else if ( (LA12_0=='\"') ) {s = 20;}
+
+                        else if ( (LA12_0=='\'') ) {s = 21;}
+
+                        else if ( (LA12_0=='/') ) {s = 22;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 23;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='$' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||LA12_0=='-'||LA12_0==':'||(LA12_0>='?' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 24;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_15 = input.LA(1);
+                        int LA12_21 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_15>='\u0000' && LA12_15<='\uFFFF')) ) {s = 34;}
+                        if ( ((LA12_21>='\u0000' && LA12_21<='\uFFFF')) ) {s = 44;}
 
-                        else s = 19;
+                        else s = 24;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_0 = input.LA(1);
+                        int LA12_20 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='p') ) {s = 1;}
+                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 44;}
 
-                        else if ( (LA12_0=='.') ) {s = 2;}
-
-                        else if ( (LA12_0=='i') ) {s = 3;}
-
-                        else if ( (LA12_0=='f') ) {s = 4;}
-
-                        else if ( (LA12_0=='>') ) {s = 5;}
-
-                        else if ( (LA12_0==';') ) {s = 6;}
-
-                        else if ( (LA12_0=='o') ) {s = 7;}
-
-                        else if ( (LA12_0=='e') ) {s = 8;}
-
-                        else if ( (LA12_0=='=') ) {s = 9;}
-
-                        else if ( (LA12_0=='m') ) {s = 10;}
-
-                        else if ( (LA12_0=='#') ) {s = 11;}
-
-                        else if ( (LA12_0=='^') ) {s = 12;}
-
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='d')||(LA12_0>='g' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='l')||LA12_0=='n'||(LA12_0>='q' && LA12_0<='z')) ) {s = 13;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 14;}
-
-                        else if ( (LA12_0=='\"') ) {s = 15;}
-
-                        else if ( (LA12_0=='\'') ) {s = 16;}
-
-                        else if ( (LA12_0=='/') ) {s = 17;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 18;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='$' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||LA12_0==':'||LA12_0=='<'||(LA12_0>='?' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 19;}
+                        else s = 24;
 
                         if ( s>=0 ) return s;
                         break;

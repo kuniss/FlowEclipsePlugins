@@ -21,9 +21,14 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFlowParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'.'", "'import'", "'flow'", "'>'", "';'", "'in'", "'out'", "'ebc'", "'='", "'method'", "'#'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'.'", "'import'", "'flow'", "'>'", "';'", "'in'", "'out'", "'ebc'", "'='", "'method'", "'#'", "'as'", "'Action'", "'Func'", "'<'", "','"
     };
     public static final int RULE_ID=4;
+    public static final int T__27=27;
+    public static final int T__26=26;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
     public static final int T__22=22;
     public static final int RULE_ANY_OTHER=10;
     public static final int T__21=21;
@@ -2228,7 +2233,7 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMethodOperation"
-    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:867:1: ruleMethodOperation returns [EObject current=null] : (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ) ;
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:867:1: ruleMethodOperation returns [EObject current=null] : (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ( (lv_signature_6_0= ruleSignature ) ) ) ;
     public final EObject ruleMethodOperation() throws RecognitionException {
         EObject current = null;
 
@@ -2240,15 +2245,17 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
 
         EObject lv_method_5_0 = null;
 
+        EObject lv_signature_6_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:870:28: ( (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ) )
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:871:1: (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:870:28: ( (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ( (lv_signature_6_0= ruleSignature ) ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:871:1: (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ( (lv_signature_6_0= ruleSignature ) ) )
             {
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:871:1: (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) )
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:871:3: otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:871:1: (otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ( (lv_signature_6_0= ruleSignature ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:871:3: otherlv_0= 'method' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_class_3_0= ruleNativeClass ) ) otherlv_4= '#' ( (lv_method_5_0= ruleNativeMethod ) ) ( (lv_signature_6_0= ruleSignature ) )
             {
             otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleMethodOperation2083); 
 
@@ -2350,6 +2357,37 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
 
             }
 
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:937:2: ( (lv_signature_6_0= ruleSignature ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:938:1: (lv_signature_6_0= ruleSignature )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:938:1: (lv_signature_6_0= ruleSignature )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:939:3: lv_signature_6_0= ruleSignature
+            {
+             
+            	        newCompositeNode(grammarAccess.getMethodOperationAccess().getSignatureSignatureParserRuleCall_6_0()); 
+            	    
+            pushFollow(FOLLOW_ruleSignature_in_ruleMethodOperation2192);
+            lv_signature_6_0=ruleSignature();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getMethodOperationRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"signature",
+                    		lv_signature_6_0, 
+                    		"Signature");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
 
             }
 
@@ -2370,8 +2408,893 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleMethodOperation"
 
 
+    // $ANTLR start "entryRuleSignature"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:963:1: entryRuleSignature returns [EObject current=null] : iv_ruleSignature= ruleSignature EOF ;
+    public final EObject entryRuleSignature() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleSignature = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:964:2: (iv_ruleSignature= ruleSignature EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:965:2: iv_ruleSignature= ruleSignature EOF
+            {
+             newCompositeNode(grammarAccess.getSignatureRule()); 
+            pushFollow(FOLLOW_ruleSignature_in_entryRuleSignature2228);
+            iv_ruleSignature=ruleSignature();
+
+            state._fsp--;
+
+             current =iv_ruleSignature; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSignature2238); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleSignature"
+
+
+    // $ANTLR start "ruleSignature"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:972:1: ruleSignature returns [EObject current=null] : (otherlv_0= 'as' ( (lv_type_1_0= ruleGenericType ) ) ) ;
+    public final EObject ruleSignature() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        EObject lv_type_1_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:975:28: ( (otherlv_0= 'as' ( (lv_type_1_0= ruleGenericType ) ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:976:1: (otherlv_0= 'as' ( (lv_type_1_0= ruleGenericType ) ) )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:976:1: (otherlv_0= 'as' ( (lv_type_1_0= ruleGenericType ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:976:3: otherlv_0= 'as' ( (lv_type_1_0= ruleGenericType ) )
+            {
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleSignature2275); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getSignatureAccess().getAsKeyword_0());
+                
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:980:1: ( (lv_type_1_0= ruleGenericType ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:981:1: (lv_type_1_0= ruleGenericType )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:981:1: (lv_type_1_0= ruleGenericType )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:982:3: lv_type_1_0= ruleGenericType
+            {
+             
+            	        newCompositeNode(grammarAccess.getSignatureAccess().getTypeGenericTypeParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleGenericType_in_ruleSignature2296);
+            lv_type_1_0=ruleGenericType();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getSignatureRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"type",
+                    		lv_type_1_0, 
+                    		"GenericType");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleSignature"
+
+
+    // $ANTLR start "entryRuleGenericType"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1006:1: entryRuleGenericType returns [EObject current=null] : iv_ruleGenericType= ruleGenericType EOF ;
+    public final EObject entryRuleGenericType() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleGenericType = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1007:2: (iv_ruleGenericType= ruleGenericType EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1008:2: iv_ruleGenericType= ruleGenericType EOF
+            {
+             newCompositeNode(grammarAccess.getGenericTypeRule()); 
+            pushFollow(FOLLOW_ruleGenericType_in_entryRuleGenericType2332);
+            iv_ruleGenericType=ruleGenericType();
+
+            state._fsp--;
+
+             current =iv_ruleGenericType; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericType2342); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleGenericType"
+
+
+    // $ANTLR start "ruleGenericType"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1015:1: ruleGenericType returns [EObject current=null] : ( ( (lv_operationType_0_0= ruleOperationType ) ) ( (lv_operationTypeParameters_1_0= ruleOperationTypeParameters ) )? ) ;
+    public final EObject ruleGenericType() throws RecognitionException {
+        EObject current = null;
+
+        EObject lv_operationType_0_0 = null;
+
+        EObject lv_operationTypeParameters_1_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1018:28: ( ( ( (lv_operationType_0_0= ruleOperationType ) ) ( (lv_operationTypeParameters_1_0= ruleOperationTypeParameters ) )? ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1019:1: ( ( (lv_operationType_0_0= ruleOperationType ) ) ( (lv_operationTypeParameters_1_0= ruleOperationTypeParameters ) )? )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1019:1: ( ( (lv_operationType_0_0= ruleOperationType ) ) ( (lv_operationTypeParameters_1_0= ruleOperationTypeParameters ) )? )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1019:2: ( (lv_operationType_0_0= ruleOperationType ) ) ( (lv_operationTypeParameters_1_0= ruleOperationTypeParameters ) )?
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1019:2: ( (lv_operationType_0_0= ruleOperationType ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1020:1: (lv_operationType_0_0= ruleOperationType )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1020:1: (lv_operationType_0_0= ruleOperationType )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1021:3: lv_operationType_0_0= ruleOperationType
+            {
+             
+            	        newCompositeNode(grammarAccess.getGenericTypeAccess().getOperationTypeOperationTypeParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleOperationType_in_ruleGenericType2388);
+            lv_operationType_0_0=ruleOperationType();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getGenericTypeRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"operationType",
+                    		lv_operationType_0_0, 
+                    		"OperationType");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1037:2: ( (lv_operationTypeParameters_1_0= ruleOperationTypeParameters ) )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
+
+            if ( (LA11_0==26) ) {
+                alt11=1;
+            }
+            switch (alt11) {
+                case 1 :
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1038:1: (lv_operationTypeParameters_1_0= ruleOperationTypeParameters )
+                    {
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1038:1: (lv_operationTypeParameters_1_0= ruleOperationTypeParameters )
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1039:3: lv_operationTypeParameters_1_0= ruleOperationTypeParameters
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getGenericTypeAccess().getOperationTypeParametersOperationTypeParametersParserRuleCall_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleOperationTypeParameters_in_ruleGenericType2409);
+                    lv_operationTypeParameters_1_0=ruleOperationTypeParameters();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getGenericTypeRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"operationTypeParameters",
+                            		lv_operationTypeParameters_1_0, 
+                            		"OperationTypeParameters");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleGenericType"
+
+
+    // $ANTLR start "entryRuleOperationType"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1063:1: entryRuleOperationType returns [EObject current=null] : iv_ruleOperationType= ruleOperationType EOF ;
+    public final EObject entryRuleOperationType() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleOperationType = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1064:2: (iv_ruleOperationType= ruleOperationType EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1065:2: iv_ruleOperationType= ruleOperationType EOF
+            {
+             newCompositeNode(grammarAccess.getOperationTypeRule()); 
+            pushFollow(FOLLOW_ruleOperationType_in_entryRuleOperationType2446);
+            iv_ruleOperationType=ruleOperationType();
+
+            state._fsp--;
+
+             current =iv_ruleOperationType; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOperationType2456); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleOperationType"
+
+
+    // $ANTLR start "ruleOperationType"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1072:1: ruleOperationType returns [EObject current=null] : ( ( (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' ) ) ) ;
+    public final EObject ruleOperationType() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_1=null;
+        Token lv_name_0_2=null;
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1075:28: ( ( ( (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' ) ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1076:1: ( ( (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' ) ) )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1076:1: ( ( (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1077:1: ( (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' ) )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1077:1: ( (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1078:1: (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1078:1: (lv_name_0_1= 'Action' | lv_name_0_2= 'Func' )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==24) ) {
+                alt12=1;
+            }
+            else if ( (LA12_0==25) ) {
+                alt12=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 12, 0, input);
+
+                throw nvae;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1079:3: lv_name_0_1= 'Action'
+                    {
+                    lv_name_0_1=(Token)match(input,24,FOLLOW_24_in_ruleOperationType2500); 
+
+                            newLeafNode(lv_name_0_1, grammarAccess.getOperationTypeAccess().getNameActionKeyword_0_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getOperationTypeRule());
+                    	        }
+                           		setWithLastConsumed(current, "name", lv_name_0_1, null);
+                    	    
+
+                    }
+                    break;
+                case 2 :
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1091:8: lv_name_0_2= 'Func'
+                    {
+                    lv_name_0_2=(Token)match(input,25,FOLLOW_25_in_ruleOperationType2529); 
+
+                            newLeafNode(lv_name_0_2, grammarAccess.getOperationTypeAccess().getNameFuncKeyword_0_1());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getOperationTypeRule());
+                    	        }
+                           		setWithLastConsumed(current, "name", lv_name_0_2, null);
+                    	    
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleOperationType"
+
+
+    // $ANTLR start "entryRuleOperationTypeParameters"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1114:1: entryRuleOperationTypeParameters returns [EObject current=null] : iv_ruleOperationTypeParameters= ruleOperationTypeParameters EOF ;
+    public final EObject entryRuleOperationTypeParameters() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleOperationTypeParameters = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1115:2: (iv_ruleOperationTypeParameters= ruleOperationTypeParameters EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1116:2: iv_ruleOperationTypeParameters= ruleOperationTypeParameters EOF
+            {
+             newCompositeNode(grammarAccess.getOperationTypeParametersRule()); 
+            pushFollow(FOLLOW_ruleOperationTypeParameters_in_entryRuleOperationTypeParameters2580);
+            iv_ruleOperationTypeParameters=ruleOperationTypeParameters();
+
+            state._fsp--;
+
+             current =iv_ruleOperationTypeParameters; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOperationTypeParameters2590); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleOperationTypeParameters"
+
+
+    // $ANTLR start "ruleOperationTypeParameters"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1123:1: ruleOperationTypeParameters returns [EObject current=null] : (otherlv_0= '<' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ( (lv_typeParameters_2_0= ruleCSTypeParameter ) )* otherlv_3= '>' ) ;
+    public final EObject ruleOperationTypeParameters() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_3=null;
+        EObject lv_typeParameter_1_0 = null;
+
+        EObject lv_typeParameters_2_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1126:28: ( (otherlv_0= '<' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ( (lv_typeParameters_2_0= ruleCSTypeParameter ) )* otherlv_3= '>' ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1127:1: (otherlv_0= '<' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ( (lv_typeParameters_2_0= ruleCSTypeParameter ) )* otherlv_3= '>' )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1127:1: (otherlv_0= '<' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ( (lv_typeParameters_2_0= ruleCSTypeParameter ) )* otherlv_3= '>' )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1127:3: otherlv_0= '<' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ( (lv_typeParameters_2_0= ruleCSTypeParameter ) )* otherlv_3= '>'
+            {
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleOperationTypeParameters2627); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getOperationTypeParametersAccess().getLessThanSignKeyword_0());
+                
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1131:1: ( (lv_typeParameter_1_0= ruleTypeParameter ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1132:1: (lv_typeParameter_1_0= ruleTypeParameter )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1132:1: (lv_typeParameter_1_0= ruleTypeParameter )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1133:3: lv_typeParameter_1_0= ruleTypeParameter
+            {
+             
+            	        newCompositeNode(grammarAccess.getOperationTypeParametersAccess().getTypeParameterTypeParameterParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleTypeParameter_in_ruleOperationTypeParameters2648);
+            lv_typeParameter_1_0=ruleTypeParameter();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getOperationTypeParametersRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"typeParameter",
+                    		lv_typeParameter_1_0, 
+                    		"TypeParameter");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1149:2: ( (lv_typeParameters_2_0= ruleCSTypeParameter ) )*
+            loop13:
+            do {
+                int alt13=2;
+                int LA13_0 = input.LA(1);
+
+                if ( (LA13_0==27) ) {
+                    alt13=1;
+                }
+
+
+                switch (alt13) {
+            	case 1 :
+            	    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1150:1: (lv_typeParameters_2_0= ruleCSTypeParameter )
+            	    {
+            	    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1150:1: (lv_typeParameters_2_0= ruleCSTypeParameter )
+            	    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1151:3: lv_typeParameters_2_0= ruleCSTypeParameter
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getOperationTypeParametersAccess().getTypeParametersCSTypeParameterParserRuleCall_2_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleCSTypeParameter_in_ruleOperationTypeParameters2669);
+            	    lv_typeParameters_2_0=ruleCSTypeParameter();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getOperationTypeParametersRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"typeParameters",
+            	            		lv_typeParameters_2_0, 
+            	            		"CSTypeParameter");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop13;
+                }
+            } while (true);
+
+            otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleOperationTypeParameters2682); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getOperationTypeParametersAccess().getGreaterThanSignKeyword_3());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleOperationTypeParameters"
+
+
+    // $ANTLR start "entryRuleTypeParameter"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1179:1: entryRuleTypeParameter returns [EObject current=null] : iv_ruleTypeParameter= ruleTypeParameter EOF ;
+    public final EObject entryRuleTypeParameter() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTypeParameter = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1180:2: (iv_ruleTypeParameter= ruleTypeParameter EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1181:2: iv_ruleTypeParameter= ruleTypeParameter EOF
+            {
+             newCompositeNode(grammarAccess.getTypeParameterRule()); 
+            pushFollow(FOLLOW_ruleTypeParameter_in_entryRuleTypeParameter2718);
+            iv_ruleTypeParameter=ruleTypeParameter();
+
+            state._fsp--;
+
+             current =iv_ruleTypeParameter; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeParameter2728); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTypeParameter"
+
+
+    // $ANTLR start "ruleTypeParameter"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1188:1: ruleTypeParameter returns [EObject current=null] : (this_GenericType_0= ruleGenericType | this_Type_1= ruleType ) ;
+    public final EObject ruleTypeParameter() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_GenericType_0 = null;
+
+        EObject this_Type_1 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1191:28: ( (this_GenericType_0= ruleGenericType | this_Type_1= ruleType ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1192:1: (this_GenericType_0= ruleGenericType | this_Type_1= ruleType )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1192:1: (this_GenericType_0= ruleGenericType | this_Type_1= ruleType )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( ((LA14_0>=24 && LA14_0<=25)) ) {
+                alt14=1;
+            }
+            else if ( (LA14_0==RULE_ID) ) {
+                alt14=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 14, 0, input);
+
+                throw nvae;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1193:5: this_GenericType_0= ruleGenericType
+                    {
+                     
+                            newCompositeNode(grammarAccess.getTypeParameterAccess().getGenericTypeParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleGenericType_in_ruleTypeParameter2775);
+                    this_GenericType_0=ruleGenericType();
+
+                    state._fsp--;
+
+                     
+                            current = this_GenericType_0; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1203:5: this_Type_1= ruleType
+                    {
+                     
+                            newCompositeNode(grammarAccess.getTypeParameterAccess().getTypeParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleType_in_ruleTypeParameter2802);
+                    this_Type_1=ruleType();
+
+                    state._fsp--;
+
+                     
+                            current = this_Type_1; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleTypeParameter"
+
+
+    // $ANTLR start "entryRuleCSTypeParameter"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1219:1: entryRuleCSTypeParameter returns [EObject current=null] : iv_ruleCSTypeParameter= ruleCSTypeParameter EOF ;
+    public final EObject entryRuleCSTypeParameter() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleCSTypeParameter = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1220:2: (iv_ruleCSTypeParameter= ruleCSTypeParameter EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1221:2: iv_ruleCSTypeParameter= ruleCSTypeParameter EOF
+            {
+             newCompositeNode(grammarAccess.getCSTypeParameterRule()); 
+            pushFollow(FOLLOW_ruleCSTypeParameter_in_entryRuleCSTypeParameter2837);
+            iv_ruleCSTypeParameter=ruleCSTypeParameter();
+
+            state._fsp--;
+
+             current =iv_ruleCSTypeParameter; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCSTypeParameter2847); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleCSTypeParameter"
+
+
+    // $ANTLR start "ruleCSTypeParameter"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1228:1: ruleCSTypeParameter returns [EObject current=null] : (otherlv_0= ',' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ) ;
+    public final EObject ruleCSTypeParameter() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        EObject lv_typeParameter_1_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1231:28: ( (otherlv_0= ',' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1232:1: (otherlv_0= ',' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1232:1: (otherlv_0= ',' ( (lv_typeParameter_1_0= ruleTypeParameter ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1232:3: otherlv_0= ',' ( (lv_typeParameter_1_0= ruleTypeParameter ) )
+            {
+            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleCSTypeParameter2884); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getCSTypeParameterAccess().getCommaKeyword_0());
+                
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1236:1: ( (lv_typeParameter_1_0= ruleTypeParameter ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1237:1: (lv_typeParameter_1_0= ruleTypeParameter )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1237:1: (lv_typeParameter_1_0= ruleTypeParameter )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1238:3: lv_typeParameter_1_0= ruleTypeParameter
+            {
+             
+            	        newCompositeNode(grammarAccess.getCSTypeParameterAccess().getTypeParameterTypeParameterParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleTypeParameter_in_ruleCSTypeParameter2905);
+            lv_typeParameter_1_0=ruleTypeParameter();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getCSTypeParameterRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"typeParameter",
+                    		lv_typeParameter_1_0, 
+                    		"TypeParameter");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleCSTypeParameter"
+
+
+    // $ANTLR start "entryRuleType"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1262:1: entryRuleType returns [EObject current=null] : iv_ruleType= ruleType EOF ;
+    public final EObject entryRuleType() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleType = null;
+
+
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1263:2: (iv_ruleType= ruleType EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1264:2: iv_ruleType= ruleType EOF
+            {
+             newCompositeNode(grammarAccess.getTypeRule()); 
+            pushFollow(FOLLOW_ruleType_in_entryRuleType2941);
+            iv_ruleType=ruleType();
+
+            state._fsp--;
+
+             current =iv_ruleType; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType2951); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleType"
+
+
+    // $ANTLR start "ruleType"
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1271:1: ruleType returns [EObject current=null] : ( (lv_reference_0_0= ruleQualifiedName ) ) ;
+    public final EObject ruleType() throws RecognitionException {
+        EObject current = null;
+
+        AntlrDatatypeRuleToken lv_reference_0_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1274:28: ( ( (lv_reference_0_0= ruleQualifiedName ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1275:1: ( (lv_reference_0_0= ruleQualifiedName ) )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1275:1: ( (lv_reference_0_0= ruleQualifiedName ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1276:1: (lv_reference_0_0= ruleQualifiedName )
+            {
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1276:1: (lv_reference_0_0= ruleQualifiedName )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1277:3: lv_reference_0_0= ruleQualifiedName
+            {
+             
+            	        newCompositeNode(grammarAccess.getTypeAccess().getReferenceQualifiedNameParserRuleCall_0()); 
+            	    
+            pushFollow(FOLLOW_ruleQualifiedName_in_ruleType2996);
+            lv_reference_0_0=ruleQualifiedName();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getTypeRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"reference",
+                    		lv_reference_0_0, 
+                    		"QualifiedName");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleType"
+
+
     // $ANTLR start "entryRuleNativeMethod"
-    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:945:1: entryRuleNativeMethod returns [EObject current=null] : iv_ruleNativeMethod= ruleNativeMethod EOF ;
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1301:1: entryRuleNativeMethod returns [EObject current=null] : iv_ruleNativeMethod= ruleNativeMethod EOF ;
     public final EObject entryRuleNativeMethod() throws RecognitionException {
         EObject current = null;
 
@@ -2379,17 +3302,17 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:946:2: (iv_ruleNativeMethod= ruleNativeMethod EOF )
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:947:2: iv_ruleNativeMethod= ruleNativeMethod EOF
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1302:2: (iv_ruleNativeMethod= ruleNativeMethod EOF )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1303:2: iv_ruleNativeMethod= ruleNativeMethod EOF
             {
              newCompositeNode(grammarAccess.getNativeMethodRule()); 
-            pushFollow(FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod2207);
+            pushFollow(FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod3031);
             iv_ruleNativeMethod=ruleNativeMethod();
 
             state._fsp--;
 
              current =iv_ruleNativeMethod; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNativeMethod2217); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNativeMethod3041); 
 
             }
 
@@ -2407,7 +3330,7 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNativeMethod"
-    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:954:1: ruleNativeMethod returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1310:1: ruleNativeMethod returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleNativeMethod() throws RecognitionException {
         EObject current = null;
 
@@ -2416,16 +3339,16 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:957:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:958:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1313:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1314:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:958:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:959:1: (lv_name_0_0= RULE_ID )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1314:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1315:1: (lv_name_0_0= RULE_ID )
             {
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:959:1: (lv_name_0_0= RULE_ID )
-            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:960:3: lv_name_0_0= RULE_ID
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1315:1: (lv_name_0_0= RULE_ID )
+            // ../de.grammarcraft.csflow/src-gen/de/grammarcraft/csflow/parser/antlr/internal/InternalFlow.g:1316:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNativeMethod2258); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNativeMethod3082); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getNativeMethodAccess().getNameIDTerminalRuleCall_0()); 
             		
@@ -2547,9 +3470,39 @@ public class InternalFlowParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20_in_ruleMethodOperation2117 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_ruleNativeClass_in_ruleMethodOperation2138 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_22_in_ruleMethodOperation2150 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleNativeMethod_in_ruleMethodOperation2171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod2207 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNativeMethod2217 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleNativeMethod2258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeMethod_in_ruleMethodOperation2171 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ruleSignature_in_ruleMethodOperation2192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignature_in_entryRuleSignature2228 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSignature2238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleSignature2275 = new BitSet(new long[]{0x0000000003000000L});
+    public static final BitSet FOLLOW_ruleGenericType_in_ruleSignature2296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericType_in_entryRuleGenericType2332 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGenericType2342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationType_in_ruleGenericType2388 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_ruleOperationTypeParameters_in_ruleGenericType2409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationType_in_entryRuleOperationType2446 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOperationType2456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleOperationType2500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleOperationType2529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationTypeParameters_in_entryRuleOperationTypeParameters2580 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOperationTypeParameters2590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleOperationTypeParameters2627 = new BitSet(new long[]{0x0000000003000010L});
+    public static final BitSet FOLLOW_ruleTypeParameter_in_ruleOperationTypeParameters2648 = new BitSet(new long[]{0x0000000008008000L});
+    public static final BitSet FOLLOW_ruleCSTypeParameter_in_ruleOperationTypeParameters2669 = new BitSet(new long[]{0x0000000008008000L});
+    public static final BitSet FOLLOW_15_in_ruleOperationTypeParameters2682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeParameter_in_entryRuleTypeParameter2718 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeParameter2728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericType_in_ruleTypeParameter2775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_ruleTypeParameter2802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCSTypeParameter_in_entryRuleCSTypeParameter2837 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCSTypeParameter2847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleCSTypeParameter2884 = new BitSet(new long[]{0x0000000003000010L});
+    public static final BitSet FOLLOW_ruleTypeParameter_in_ruleCSTypeParameter2905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType2941 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType2951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_ruleType2996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod3031 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNativeMethod3041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNativeMethod3082 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -159,6 +159,41 @@ public class FlowAdapterFactory extends AdapterFactoryImpl
         return createMethodOperationAdapter();
       }
       @Override
+      public Adapter caseSignature(Signature object)
+      {
+        return createSignatureAdapter();
+      }
+      @Override
+      public Adapter caseGenericType(GenericType object)
+      {
+        return createGenericTypeAdapter();
+      }
+      @Override
+      public Adapter caseOperationType(OperationType object)
+      {
+        return createOperationTypeAdapter();
+      }
+      @Override
+      public Adapter caseOperationTypeParameters(OperationTypeParameters object)
+      {
+        return createOperationTypeParametersAdapter();
+      }
+      @Override
+      public Adapter caseTypeParameter(TypeParameter object)
+      {
+        return createTypeParameterAdapter();
+      }
+      @Override
+      public Adapter caseCSTypeParameter(CSTypeParameter object)
+      {
+        return createCSTypeParameterAdapter();
+      }
+      @Override
+      public Adapter caseType(Type object)
+      {
+        return createTypeAdapter();
+      }
+      @Override
       public Adapter caseNativeMethod(NativeMethod object)
       {
         return createNativeMethodAdapter();
@@ -421,6 +456,111 @@ public class FlowAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMethodOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.Signature <em>Signature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.Signature
+   * @generated
+   */
+  public Adapter createSignatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.GenericType <em>Generic Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.GenericType
+   * @generated
+   */
+  public Adapter createGenericTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.OperationType <em>Operation Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.OperationType
+   * @generated
+   */
+  public Adapter createOperationTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.OperationTypeParameters <em>Operation Type Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.OperationTypeParameters
+   * @generated
+   */
+  public Adapter createOperationTypeParametersAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.TypeParameter <em>Type Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.TypeParameter
+   * @generated
+   */
+  public Adapter createTypeParameterAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.CSTypeParameter <em>CS Type Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.CSTypeParameter
+   * @generated
+   */
+  public Adapter createCSTypeParameterAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.Type
+   * @generated
+   */
+  public Adapter createTypeAdapter()
   {
     return null;
   }

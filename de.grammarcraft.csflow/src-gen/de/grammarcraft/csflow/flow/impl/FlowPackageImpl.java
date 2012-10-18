@@ -6,11 +6,13 @@
  */
 package de.grammarcraft.csflow.flow.impl;
 
+import de.grammarcraft.csflow.flow.CSTypeParameter;
 import de.grammarcraft.csflow.flow.EbcOperation;
 import de.grammarcraft.csflow.flow.Flow;
 import de.grammarcraft.csflow.flow.FlowFactory;
 import de.grammarcraft.csflow.flow.FlowPackage;
 import de.grammarcraft.csflow.flow.FunctionUnit;
+import de.grammarcraft.csflow.flow.GenericType;
 import de.grammarcraft.csflow.flow.GlobalInputPort;
 import de.grammarcraft.csflow.flow.GlobalOutputPort;
 import de.grammarcraft.csflow.flow.Import;
@@ -21,9 +23,14 @@ import de.grammarcraft.csflow.flow.NamedPort;
 import de.grammarcraft.csflow.flow.NativeClass;
 import de.grammarcraft.csflow.flow.NativeMethod;
 import de.grammarcraft.csflow.flow.Operation;
+import de.grammarcraft.csflow.flow.OperationType;
+import de.grammarcraft.csflow.flow.OperationTypeParameters;
 import de.grammarcraft.csflow.flow.Port;
 import de.grammarcraft.csflow.flow.RightPort;
+import de.grammarcraft.csflow.flow.Signature;
 import de.grammarcraft.csflow.flow.Stream;
+import de.grammarcraft.csflow.flow.Type;
+import de.grammarcraft.csflow.flow.TypeParameter;
 import de.grammarcraft.csflow.flow.UnnamedSubFlowPort;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -152,6 +159,55 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
    * @generated
    */
   private EClass methodOperationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass signatureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass genericTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass operationTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass operationTypeParametersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeParameterEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass csTypeParameterEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -538,6 +594,166 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMethodOperation_Signature()
+  {
+    return (EReference)methodOperationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSignature()
+  {
+    return signatureEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSignature_Type()
+  {
+    return (EReference)signatureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGenericType()
+  {
+    return genericTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGenericType_OperationType()
+  {
+    return (EReference)genericTypeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGenericType_OperationTypeParameters()
+  {
+    return (EReference)genericTypeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOperationType()
+  {
+    return operationTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getOperationType_Name()
+  {
+    return (EAttribute)operationTypeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOperationTypeParameters()
+  {
+    return operationTypeParametersEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOperationTypeParameters_TypeParameter()
+  {
+    return (EReference)operationTypeParametersEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOperationTypeParameters_TypeParameters()
+  {
+    return (EReference)operationTypeParametersEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypeParameter()
+  {
+    return typeParameterEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCSTypeParameter()
+  {
+    return csTypeParameterEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCSTypeParameter_TypeParameter()
+  {
+    return (EReference)csTypeParameterEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getType()
+  {
+    return typeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getType_Reference()
+  {
+    return (EAttribute)typeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getNativeMethod()
   {
     return nativeMethodEClass;
@@ -629,6 +845,29 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
 
     methodOperationEClass = createEClass(METHOD_OPERATION);
     createEReference(methodOperationEClass, METHOD_OPERATION__METHOD);
+    createEReference(methodOperationEClass, METHOD_OPERATION__SIGNATURE);
+
+    signatureEClass = createEClass(SIGNATURE);
+    createEReference(signatureEClass, SIGNATURE__TYPE);
+
+    genericTypeEClass = createEClass(GENERIC_TYPE);
+    createEReference(genericTypeEClass, GENERIC_TYPE__OPERATION_TYPE);
+    createEReference(genericTypeEClass, GENERIC_TYPE__OPERATION_TYPE_PARAMETERS);
+
+    operationTypeEClass = createEClass(OPERATION_TYPE);
+    createEAttribute(operationTypeEClass, OPERATION_TYPE__NAME);
+
+    operationTypeParametersEClass = createEClass(OPERATION_TYPE_PARAMETERS);
+    createEReference(operationTypeParametersEClass, OPERATION_TYPE_PARAMETERS__TYPE_PARAMETER);
+    createEReference(operationTypeParametersEClass, OPERATION_TYPE_PARAMETERS__TYPE_PARAMETERS);
+
+    typeParameterEClass = createEClass(TYPE_PARAMETER);
+
+    csTypeParameterEClass = createEClass(CS_TYPE_PARAMETER);
+    createEReference(csTypeParameterEClass, CS_TYPE_PARAMETER__TYPE_PARAMETER);
+
+    typeEClass = createEClass(TYPE);
+    createEAttribute(typeEClass, TYPE__REFERENCE);
 
     nativeMethodEClass = createEClass(NATIVE_METHOD);
     createEAttribute(nativeMethodEClass, NATIVE_METHOD__NAME);
@@ -673,6 +912,8 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
     operationEClass.getESuperTypes().add(this.getFunctionUnit());
     ebcOperationEClass.getESuperTypes().add(this.getOperation());
     methodOperationEClass.getESuperTypes().add(this.getOperation());
+    genericTypeEClass.getESuperTypes().add(this.getTypeParameter());
+    typeEClass.getESuperTypes().add(this.getTypeParameter());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -721,6 +962,29 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
 
     initEClass(methodOperationEClass, MethodOperation.class, "MethodOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMethodOperation_Method(), this.getNativeMethod(), null, "method", null, 0, 1, MethodOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMethodOperation_Signature(), this.getSignature(), null, "signature", null, 0, 1, MethodOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(signatureEClass, Signature.class, "Signature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSignature_Type(), this.getGenericType(), null, "type", null, 0, 1, Signature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(genericTypeEClass, GenericType.class, "GenericType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getGenericType_OperationType(), this.getOperationType(), null, "operationType", null, 0, 1, GenericType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGenericType_OperationTypeParameters(), this.getOperationTypeParameters(), null, "operationTypeParameters", null, 0, 1, GenericType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(operationTypeEClass, OperationType.class, "OperationType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOperationType_Name(), ecorePackage.getEString(), "name", null, 0, 1, OperationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(operationTypeParametersEClass, OperationTypeParameters.class, "OperationTypeParameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOperationTypeParameters_TypeParameter(), this.getTypeParameter(), null, "typeParameter", null, 0, 1, OperationTypeParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperationTypeParameters_TypeParameters(), this.getCSTypeParameter(), null, "typeParameters", null, 0, -1, OperationTypeParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeParameterEClass, TypeParameter.class, "TypeParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(csTypeParameterEClass, CSTypeParameter.class, "CSTypeParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCSTypeParameter_TypeParameter(), this.getTypeParameter(), null, "typeParameter", null, 0, 1, CSTypeParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getType_Reference(), ecorePackage.getEString(), "reference", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nativeMethodEClass, NativeMethod.class, "NativeMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNativeMethod_Name(), ecorePackage.getEString(), "name", null, 0, 1, NativeMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

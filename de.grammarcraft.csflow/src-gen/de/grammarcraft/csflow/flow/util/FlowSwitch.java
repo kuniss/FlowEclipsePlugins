@@ -200,6 +200,57 @@ public class FlowSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FlowPackage.SIGNATURE:
+      {
+        Signature signature = (Signature)theEObject;
+        T result = caseSignature(signature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FlowPackage.GENERIC_TYPE:
+      {
+        GenericType genericType = (GenericType)theEObject;
+        T result = caseGenericType(genericType);
+        if (result == null) result = caseTypeParameter(genericType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FlowPackage.OPERATION_TYPE:
+      {
+        OperationType operationType = (OperationType)theEObject;
+        T result = caseOperationType(operationType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FlowPackage.OPERATION_TYPE_PARAMETERS:
+      {
+        OperationTypeParameters operationTypeParameters = (OperationTypeParameters)theEObject;
+        T result = caseOperationTypeParameters(operationTypeParameters);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FlowPackage.TYPE_PARAMETER:
+      {
+        TypeParameter typeParameter = (TypeParameter)theEObject;
+        T result = caseTypeParameter(typeParameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FlowPackage.CS_TYPE_PARAMETER:
+      {
+        CSTypeParameter csTypeParameter = (CSTypeParameter)theEObject;
+        T result = caseCSTypeParameter(csTypeParameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case FlowPackage.TYPE:
+      {
+        Type type = (Type)theEObject;
+        T result = caseType(type);
+        if (result == null) result = caseTypeParameter(type);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FlowPackage.NATIVE_METHOD:
       {
         NativeMethod nativeMethod = (NativeMethod)theEObject;
@@ -463,6 +514,118 @@ public class FlowSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMethodOperation(MethodOperation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Signature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Signature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSignature(Signature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Generic Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Generic Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGenericType(GenericType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Operation Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Operation Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOperationType(OperationType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Operation Type Parameters</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Operation Type Parameters</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOperationTypeParameters(OperationTypeParameters object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeParameter(TypeParameter object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>CS Type Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>CS Type Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCSTypeParameter(CSTypeParameter object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseType(Type object)
   {
     return null;
   }

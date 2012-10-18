@@ -84,6 +84,13 @@ public class FlowFactoryImpl extends EFactoryImpl implements FlowFactory
       case FlowPackage.EBC_OPERATION: return createEbcOperation();
       case FlowPackage.NATIVE_CLASS: return createNativeClass();
       case FlowPackage.METHOD_OPERATION: return createMethodOperation();
+      case FlowPackage.SIGNATURE: return createSignature();
+      case FlowPackage.GENERIC_TYPE: return createGenericType();
+      case FlowPackage.OPERATION_TYPE: return createOperationType();
+      case FlowPackage.OPERATION_TYPE_PARAMETERS: return createOperationTypeParameters();
+      case FlowPackage.TYPE_PARAMETER: return createTypeParameter();
+      case FlowPackage.CS_TYPE_PARAMETER: return createCSTypeParameter();
+      case FlowPackage.TYPE: return createType();
       case FlowPackage.NATIVE_METHOD: return createNativeMethod();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -264,6 +271,83 @@ public class FlowFactoryImpl extends EFactoryImpl implements FlowFactory
   {
     MethodOperationImpl methodOperation = new MethodOperationImpl();
     return methodOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Signature createSignature()
+  {
+    SignatureImpl signature = new SignatureImpl();
+    return signature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GenericType createGenericType()
+  {
+    GenericTypeImpl genericType = new GenericTypeImpl();
+    return genericType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OperationType createOperationType()
+  {
+    OperationTypeImpl operationType = new OperationTypeImpl();
+    return operationType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OperationTypeParameters createOperationTypeParameters()
+  {
+    OperationTypeParametersImpl operationTypeParameters = new OperationTypeParametersImpl();
+    return operationTypeParameters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeParameter createTypeParameter()
+  {
+    TypeParameterImpl typeParameter = new TypeParameterImpl();
+    return typeParameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CSTypeParameter createCSTypeParameter()
+  {
+    CSTypeParameterImpl csTypeParameter = new CSTypeParameterImpl();
+    return csTypeParameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Type createType()
+  {
+    TypeImpl type = new TypeImpl();
+    return type;
   }
 
   /**

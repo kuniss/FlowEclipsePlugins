@@ -47,6 +47,7 @@
     <genClasses ecoreClass="Flow.ecore#//NativeClass">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Flow.ecore#//NativeClass/reference"/>
     </genClasses>
+    <genClasses ecoreClass="Flow.ecore#//ClassOperation"/>
     <genClasses ecoreClass="Flow.ecore#//MethodOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//MethodOperation/method"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Flow.ecore#//MethodOperation/signature"/>

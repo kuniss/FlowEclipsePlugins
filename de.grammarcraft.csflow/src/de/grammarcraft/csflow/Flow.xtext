@@ -69,10 +69,7 @@ NamedPort:
 
 
 Operation:
-    (
-        EbcOperation |
-        MethodOperation
-    )
+    EbcOperation |  MethodOperation | ClassOperation
 ;
 
 EbcOperation:
@@ -83,6 +80,9 @@ NativeClass:
 	reference=QualifiedName
 ;
 
+ClassOperation:
+	'operation' name=ID '=' class=NativeClass
+;
 
 MethodOperation:
 	'method' name=ID '=' class=NativeClass '#' method=NativeMethod signature=Signature

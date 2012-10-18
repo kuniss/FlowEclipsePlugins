@@ -504,6 +504,34 @@ finally {
 
 
 
+// Entry rule entryRuleClassOperation
+entryRuleClassOperation 
+:
+{ before(grammarAccess.getClassOperationRule()); }
+	 ruleClassOperation
+{ after(grammarAccess.getClassOperationRule()); } 
+	 EOF 
+;
+
+// Rule ClassOperation
+ruleClassOperation
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getClassOperationAccess().getGroup()); }
+(rule__ClassOperation__Group__0)
+{ after(grammarAccess.getClassOperationAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleMethodOperation
 entryRuleMethodOperation 
 :
@@ -850,6 +878,12 @@ rule__Operation__Alternatives
 { before(grammarAccess.getOperationAccess().getMethodOperationParserRuleCall_1()); }
 	ruleMethodOperation
 { after(grammarAccess.getOperationAccess().getMethodOperationParserRuleCall_1()); }
+)
+
+    |(
+{ before(grammarAccess.getOperationAccess().getClassOperationParserRuleCall_2()); }
+	ruleClassOperation
+{ after(grammarAccess.getOperationAccess().getClassOperationParserRuleCall_2()); }
 )
 
 ;
@@ -2046,6 +2080,133 @@ finally {
 
 
 
+rule__ClassOperation__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ClassOperation__Group__0__Impl
+	rule__ClassOperation__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ClassOperation__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassOperationAccess().getOperationKeyword_0()); }
+
+	'operation' 
+
+{ after(grammarAccess.getClassOperationAccess().getOperationKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ClassOperation__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ClassOperation__Group__1__Impl
+	rule__ClassOperation__Group__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ClassOperation__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassOperationAccess().getNameAssignment_1()); }
+(rule__ClassOperation__NameAssignment_1)
+{ after(grammarAccess.getClassOperationAccess().getNameAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ClassOperation__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ClassOperation__Group__2__Impl
+	rule__ClassOperation__Group__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ClassOperation__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassOperationAccess().getEqualsSignKeyword_2()); }
+
+	'=' 
+
+{ after(grammarAccess.getClassOperationAccess().getEqualsSignKeyword_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ClassOperation__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ClassOperation__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ClassOperation__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassOperationAccess().getClassAssignment_3()); }
+(rule__ClassOperation__ClassAssignment_3)
+{ after(grammarAccess.getClassOperationAccess().getClassAssignment_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+
+
 rule__MethodOperation__Group__0
     @init {
 		int stackSize = keepStackSize();
@@ -2805,6 +2966,36 @@ rule__NativeClass__ReferenceAssignment
 (
 { before(grammarAccess.getNativeClassAccess().getReferenceQualifiedNameParserRuleCall_0()); }
 	ruleQualifiedName{ after(grammarAccess.getNativeClassAccess().getReferenceQualifiedNameParserRuleCall_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ClassOperation__NameAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassOperationAccess().getNameIDTerminalRuleCall_1_0()); }
+	RULE_ID{ after(grammarAccess.getClassOperationAccess().getNameIDTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ClassOperation__ClassAssignment_3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getClassOperationAccess().getClassNativeClassParserRuleCall_3_0()); }
+	ruleNativeClass{ after(grammarAccess.getClassOperationAccess().getClassNativeClassParserRuleCall_3_0()); }
 )
 
 ;

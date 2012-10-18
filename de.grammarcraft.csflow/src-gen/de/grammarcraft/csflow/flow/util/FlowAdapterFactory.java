@@ -154,6 +154,11 @@ public class FlowAdapterFactory extends AdapterFactoryImpl
         return createNativeClassAdapter();
       }
       @Override
+      public Adapter caseClassOperation(ClassOperation object)
+      {
+        return createClassOperationAdapter();
+      }
+      @Override
       public Adapter caseMethodOperation(MethodOperation object)
       {
         return createMethodOperationAdapter();
@@ -441,6 +446,21 @@ public class FlowAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createNativeClassAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.grammarcraft.csflow.flow.ClassOperation <em>Class Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.grammarcraft.csflow.flow.ClassOperation
+   * @generated
+   */
+  public Adapter createClassOperationAdapter()
   {
     return null;
   }

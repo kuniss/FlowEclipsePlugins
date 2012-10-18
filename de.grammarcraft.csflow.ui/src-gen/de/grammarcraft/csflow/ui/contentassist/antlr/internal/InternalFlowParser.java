@@ -22,9 +22,10 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFlowParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Action'", "'Func'", "'package'", "'.'", "'import'", "'flow'", "'>'", "';'", "'in'", "'out'", "'ebc'", "'='", "'method'", "'#'", "'as'", "'<'", "','"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Action'", "'Func'", "'package'", "'.'", "'import'", "'flow'", "'>'", "';'", "'in'", "'out'", "'ebc'", "'='", "'operation'", "'method'", "'#'", "'as'", "'<'", "','"
     };
     public static final int RULE_ID=4;
+    public static final int T__28=28;
     public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
@@ -1319,21 +1320,98 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleNativeClass"
 
 
+    // $ANTLR start "entryRuleClassOperation"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:508:1: entryRuleClassOperation : ruleClassOperation EOF ;
+    public final void entryRuleClassOperation() throws RecognitionException {
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:509:1: ( ruleClassOperation EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:510:1: ruleClassOperation EOF
+            {
+             before(grammarAccess.getClassOperationRule()); 
+            pushFollow(FOLLOW_ruleClassOperation_in_entryRuleClassOperation1021);
+            ruleClassOperation();
+
+            state._fsp--;
+
+             after(grammarAccess.getClassOperationRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleClassOperation1028); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleClassOperation"
+
+
+    // $ANTLR start "ruleClassOperation"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:517:1: ruleClassOperation : ( ( rule__ClassOperation__Group__0 ) ) ;
+    public final void ruleClassOperation() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:521:2: ( ( ( rule__ClassOperation__Group__0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:522:1: ( ( rule__ClassOperation__Group__0 ) )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:522:1: ( ( rule__ClassOperation__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:523:1: ( rule__ClassOperation__Group__0 )
+            {
+             before(grammarAccess.getClassOperationAccess().getGroup()); 
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:524:1: ( rule__ClassOperation__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:524:2: rule__ClassOperation__Group__0
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__Group__0_in_ruleClassOperation1054);
+            rule__ClassOperation__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getClassOperationAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleClassOperation"
+
+
     // $ANTLR start "entryRuleMethodOperation"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:508:1: entryRuleMethodOperation : ruleMethodOperation EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:536:1: entryRuleMethodOperation : ruleMethodOperation EOF ;
     public final void entryRuleMethodOperation() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:509:1: ( ruleMethodOperation EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:510:1: ruleMethodOperation EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:537:1: ( ruleMethodOperation EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:538:1: ruleMethodOperation EOF
             {
              before(grammarAccess.getMethodOperationRule()); 
-            pushFollow(FOLLOW_ruleMethodOperation_in_entryRuleMethodOperation1021);
+            pushFollow(FOLLOW_ruleMethodOperation_in_entryRuleMethodOperation1081);
             ruleMethodOperation();
 
             state._fsp--;
 
              after(grammarAccess.getMethodOperationRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodOperation1028); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMethodOperation1088); 
 
             }
 
@@ -1350,23 +1428,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleMethodOperation"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:517:1: ruleMethodOperation : ( ( rule__MethodOperation__Group__0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:545:1: ruleMethodOperation : ( ( rule__MethodOperation__Group__0 ) ) ;
     public final void ruleMethodOperation() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:521:2: ( ( ( rule__MethodOperation__Group__0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:522:1: ( ( rule__MethodOperation__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:549:2: ( ( ( rule__MethodOperation__Group__0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:550:1: ( ( rule__MethodOperation__Group__0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:522:1: ( ( rule__MethodOperation__Group__0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:523:1: ( rule__MethodOperation__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:550:1: ( ( rule__MethodOperation__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:551:1: ( rule__MethodOperation__Group__0 )
             {
              before(grammarAccess.getMethodOperationAccess().getGroup()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:524:1: ( rule__MethodOperation__Group__0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:524:2: rule__MethodOperation__Group__0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:552:1: ( rule__MethodOperation__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:552:2: rule__MethodOperation__Group__0
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__0_in_ruleMethodOperation1054);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__0_in_ruleMethodOperation1114);
             rule__MethodOperation__Group__0();
 
             state._fsp--;
@@ -1397,20 +1475,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleSignature"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:536:1: entryRuleSignature : ruleSignature EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:564:1: entryRuleSignature : ruleSignature EOF ;
     public final void entryRuleSignature() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:537:1: ( ruleSignature EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:538:1: ruleSignature EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:565:1: ( ruleSignature EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:566:1: ruleSignature EOF
             {
              before(grammarAccess.getSignatureRule()); 
-            pushFollow(FOLLOW_ruleSignature_in_entryRuleSignature1081);
+            pushFollow(FOLLOW_ruleSignature_in_entryRuleSignature1141);
             ruleSignature();
 
             state._fsp--;
 
              after(grammarAccess.getSignatureRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSignature1088); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSignature1148); 
 
             }
 
@@ -1427,23 +1505,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleSignature"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:545:1: ruleSignature : ( ( rule__Signature__Group__0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:573:1: ruleSignature : ( ( rule__Signature__Group__0 ) ) ;
     public final void ruleSignature() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:549:2: ( ( ( rule__Signature__Group__0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:550:1: ( ( rule__Signature__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:577:2: ( ( ( rule__Signature__Group__0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:578:1: ( ( rule__Signature__Group__0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:550:1: ( ( rule__Signature__Group__0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:551:1: ( rule__Signature__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:578:1: ( ( rule__Signature__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:579:1: ( rule__Signature__Group__0 )
             {
              before(grammarAccess.getSignatureAccess().getGroup()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:552:1: ( rule__Signature__Group__0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:552:2: rule__Signature__Group__0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:580:1: ( rule__Signature__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:580:2: rule__Signature__Group__0
             {
-            pushFollow(FOLLOW_rule__Signature__Group__0_in_ruleSignature1114);
+            pushFollow(FOLLOW_rule__Signature__Group__0_in_ruleSignature1174);
             rule__Signature__Group__0();
 
             state._fsp--;
@@ -1474,20 +1552,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleGenericType"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:564:1: entryRuleGenericType : ruleGenericType EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:592:1: entryRuleGenericType : ruleGenericType EOF ;
     public final void entryRuleGenericType() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:565:1: ( ruleGenericType EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:566:1: ruleGenericType EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:593:1: ( ruleGenericType EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:594:1: ruleGenericType EOF
             {
              before(grammarAccess.getGenericTypeRule()); 
-            pushFollow(FOLLOW_ruleGenericType_in_entryRuleGenericType1141);
+            pushFollow(FOLLOW_ruleGenericType_in_entryRuleGenericType1201);
             ruleGenericType();
 
             state._fsp--;
 
              after(grammarAccess.getGenericTypeRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericType1148); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericType1208); 
 
             }
 
@@ -1504,23 +1582,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleGenericType"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:573:1: ruleGenericType : ( ( rule__GenericType__Group__0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:601:1: ruleGenericType : ( ( rule__GenericType__Group__0 ) ) ;
     public final void ruleGenericType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:577:2: ( ( ( rule__GenericType__Group__0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:578:1: ( ( rule__GenericType__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:605:2: ( ( ( rule__GenericType__Group__0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:606:1: ( ( rule__GenericType__Group__0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:578:1: ( ( rule__GenericType__Group__0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:579:1: ( rule__GenericType__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:606:1: ( ( rule__GenericType__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:607:1: ( rule__GenericType__Group__0 )
             {
              before(grammarAccess.getGenericTypeAccess().getGroup()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:580:1: ( rule__GenericType__Group__0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:580:2: rule__GenericType__Group__0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:608:1: ( rule__GenericType__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:608:2: rule__GenericType__Group__0
             {
-            pushFollow(FOLLOW_rule__GenericType__Group__0_in_ruleGenericType1174);
+            pushFollow(FOLLOW_rule__GenericType__Group__0_in_ruleGenericType1234);
             rule__GenericType__Group__0();
 
             state._fsp--;
@@ -1551,20 +1629,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleOperationType"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:592:1: entryRuleOperationType : ruleOperationType EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:620:1: entryRuleOperationType : ruleOperationType EOF ;
     public final void entryRuleOperationType() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:593:1: ( ruleOperationType EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:594:1: ruleOperationType EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:621:1: ( ruleOperationType EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:622:1: ruleOperationType EOF
             {
              before(grammarAccess.getOperationTypeRule()); 
-            pushFollow(FOLLOW_ruleOperationType_in_entryRuleOperationType1201);
+            pushFollow(FOLLOW_ruleOperationType_in_entryRuleOperationType1261);
             ruleOperationType();
 
             state._fsp--;
 
              after(grammarAccess.getOperationTypeRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOperationType1208); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOperationType1268); 
 
             }
 
@@ -1581,23 +1659,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleOperationType"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:601:1: ruleOperationType : ( ( rule__OperationType__NameAssignment ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:629:1: ruleOperationType : ( ( rule__OperationType__NameAssignment ) ) ;
     public final void ruleOperationType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:605:2: ( ( ( rule__OperationType__NameAssignment ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:606:1: ( ( rule__OperationType__NameAssignment ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:633:2: ( ( ( rule__OperationType__NameAssignment ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:634:1: ( ( rule__OperationType__NameAssignment ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:606:1: ( ( rule__OperationType__NameAssignment ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:607:1: ( rule__OperationType__NameAssignment )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:634:1: ( ( rule__OperationType__NameAssignment ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:635:1: ( rule__OperationType__NameAssignment )
             {
              before(grammarAccess.getOperationTypeAccess().getNameAssignment()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:608:1: ( rule__OperationType__NameAssignment )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:608:2: rule__OperationType__NameAssignment
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:636:1: ( rule__OperationType__NameAssignment )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:636:2: rule__OperationType__NameAssignment
             {
-            pushFollow(FOLLOW_rule__OperationType__NameAssignment_in_ruleOperationType1234);
+            pushFollow(FOLLOW_rule__OperationType__NameAssignment_in_ruleOperationType1294);
             rule__OperationType__NameAssignment();
 
             state._fsp--;
@@ -1628,20 +1706,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleOperationTypeParameters"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:620:1: entryRuleOperationTypeParameters : ruleOperationTypeParameters EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:648:1: entryRuleOperationTypeParameters : ruleOperationTypeParameters EOF ;
     public final void entryRuleOperationTypeParameters() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:621:1: ( ruleOperationTypeParameters EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:622:1: ruleOperationTypeParameters EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:649:1: ( ruleOperationTypeParameters EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:650:1: ruleOperationTypeParameters EOF
             {
              before(grammarAccess.getOperationTypeParametersRule()); 
-            pushFollow(FOLLOW_ruleOperationTypeParameters_in_entryRuleOperationTypeParameters1261);
+            pushFollow(FOLLOW_ruleOperationTypeParameters_in_entryRuleOperationTypeParameters1321);
             ruleOperationTypeParameters();
 
             state._fsp--;
 
              after(grammarAccess.getOperationTypeParametersRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOperationTypeParameters1268); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOperationTypeParameters1328); 
 
             }
 
@@ -1658,23 +1736,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleOperationTypeParameters"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:629:1: ruleOperationTypeParameters : ( ( rule__OperationTypeParameters__Group__0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:657:1: ruleOperationTypeParameters : ( ( rule__OperationTypeParameters__Group__0 ) ) ;
     public final void ruleOperationTypeParameters() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:633:2: ( ( ( rule__OperationTypeParameters__Group__0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:634:1: ( ( rule__OperationTypeParameters__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:661:2: ( ( ( rule__OperationTypeParameters__Group__0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:662:1: ( ( rule__OperationTypeParameters__Group__0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:634:1: ( ( rule__OperationTypeParameters__Group__0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:635:1: ( rule__OperationTypeParameters__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:662:1: ( ( rule__OperationTypeParameters__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:663:1: ( rule__OperationTypeParameters__Group__0 )
             {
              before(grammarAccess.getOperationTypeParametersAccess().getGroup()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:636:1: ( rule__OperationTypeParameters__Group__0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:636:2: rule__OperationTypeParameters__Group__0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:664:1: ( rule__OperationTypeParameters__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:664:2: rule__OperationTypeParameters__Group__0
             {
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__0_in_ruleOperationTypeParameters1294);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__0_in_ruleOperationTypeParameters1354);
             rule__OperationTypeParameters__Group__0();
 
             state._fsp--;
@@ -1705,20 +1783,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleTypeParameter"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:648:1: entryRuleTypeParameter : ruleTypeParameter EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:676:1: entryRuleTypeParameter : ruleTypeParameter EOF ;
     public final void entryRuleTypeParameter() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:649:1: ( ruleTypeParameter EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:650:1: ruleTypeParameter EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:677:1: ( ruleTypeParameter EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:678:1: ruleTypeParameter EOF
             {
              before(grammarAccess.getTypeParameterRule()); 
-            pushFollow(FOLLOW_ruleTypeParameter_in_entryRuleTypeParameter1321);
+            pushFollow(FOLLOW_ruleTypeParameter_in_entryRuleTypeParameter1381);
             ruleTypeParameter();
 
             state._fsp--;
 
              after(grammarAccess.getTypeParameterRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeParameter1328); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTypeParameter1388); 
 
             }
 
@@ -1735,23 +1813,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTypeParameter"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:657:1: ruleTypeParameter : ( ( rule__TypeParameter__Alternatives ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:685:1: ruleTypeParameter : ( ( rule__TypeParameter__Alternatives ) ) ;
     public final void ruleTypeParameter() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:661:2: ( ( ( rule__TypeParameter__Alternatives ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:662:1: ( ( rule__TypeParameter__Alternatives ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:689:2: ( ( ( rule__TypeParameter__Alternatives ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:690:1: ( ( rule__TypeParameter__Alternatives ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:662:1: ( ( rule__TypeParameter__Alternatives ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:663:1: ( rule__TypeParameter__Alternatives )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:690:1: ( ( rule__TypeParameter__Alternatives ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:691:1: ( rule__TypeParameter__Alternatives )
             {
              before(grammarAccess.getTypeParameterAccess().getAlternatives()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:664:1: ( rule__TypeParameter__Alternatives )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:664:2: rule__TypeParameter__Alternatives
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:692:1: ( rule__TypeParameter__Alternatives )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:692:2: rule__TypeParameter__Alternatives
             {
-            pushFollow(FOLLOW_rule__TypeParameter__Alternatives_in_ruleTypeParameter1354);
+            pushFollow(FOLLOW_rule__TypeParameter__Alternatives_in_ruleTypeParameter1414);
             rule__TypeParameter__Alternatives();
 
             state._fsp--;
@@ -1782,20 +1860,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleCSTypeParameter"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:676:1: entryRuleCSTypeParameter : ruleCSTypeParameter EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:704:1: entryRuleCSTypeParameter : ruleCSTypeParameter EOF ;
     public final void entryRuleCSTypeParameter() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:677:1: ( ruleCSTypeParameter EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:678:1: ruleCSTypeParameter EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:705:1: ( ruleCSTypeParameter EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:706:1: ruleCSTypeParameter EOF
             {
              before(grammarAccess.getCSTypeParameterRule()); 
-            pushFollow(FOLLOW_ruleCSTypeParameter_in_entryRuleCSTypeParameter1381);
+            pushFollow(FOLLOW_ruleCSTypeParameter_in_entryRuleCSTypeParameter1441);
             ruleCSTypeParameter();
 
             state._fsp--;
 
              after(grammarAccess.getCSTypeParameterRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCSTypeParameter1388); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCSTypeParameter1448); 
 
             }
 
@@ -1812,23 +1890,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleCSTypeParameter"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:685:1: ruleCSTypeParameter : ( ( rule__CSTypeParameter__Group__0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:713:1: ruleCSTypeParameter : ( ( rule__CSTypeParameter__Group__0 ) ) ;
     public final void ruleCSTypeParameter() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:689:2: ( ( ( rule__CSTypeParameter__Group__0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:690:1: ( ( rule__CSTypeParameter__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:717:2: ( ( ( rule__CSTypeParameter__Group__0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:718:1: ( ( rule__CSTypeParameter__Group__0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:690:1: ( ( rule__CSTypeParameter__Group__0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:691:1: ( rule__CSTypeParameter__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:718:1: ( ( rule__CSTypeParameter__Group__0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:719:1: ( rule__CSTypeParameter__Group__0 )
             {
              before(grammarAccess.getCSTypeParameterAccess().getGroup()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:692:1: ( rule__CSTypeParameter__Group__0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:692:2: rule__CSTypeParameter__Group__0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:720:1: ( rule__CSTypeParameter__Group__0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:720:2: rule__CSTypeParameter__Group__0
             {
-            pushFollow(FOLLOW_rule__CSTypeParameter__Group__0_in_ruleCSTypeParameter1414);
+            pushFollow(FOLLOW_rule__CSTypeParameter__Group__0_in_ruleCSTypeParameter1474);
             rule__CSTypeParameter__Group__0();
 
             state._fsp--;
@@ -1859,20 +1937,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleType"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:704:1: entryRuleType : ruleType EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:732:1: entryRuleType : ruleType EOF ;
     public final void entryRuleType() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:705:1: ( ruleType EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:706:1: ruleType EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:733:1: ( ruleType EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:734:1: ruleType EOF
             {
              before(grammarAccess.getTypeRule()); 
-            pushFollow(FOLLOW_ruleType_in_entryRuleType1441);
+            pushFollow(FOLLOW_ruleType_in_entryRuleType1501);
             ruleType();
 
             state._fsp--;
 
              after(grammarAccess.getTypeRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleType1448); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType1508); 
 
             }
 
@@ -1889,23 +1967,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleType"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:713:1: ruleType : ( ( rule__Type__ReferenceAssignment ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:741:1: ruleType : ( ( rule__Type__ReferenceAssignment ) ) ;
     public final void ruleType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:717:2: ( ( ( rule__Type__ReferenceAssignment ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:718:1: ( ( rule__Type__ReferenceAssignment ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:745:2: ( ( ( rule__Type__ReferenceAssignment ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:746:1: ( ( rule__Type__ReferenceAssignment ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:718:1: ( ( rule__Type__ReferenceAssignment ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:719:1: ( rule__Type__ReferenceAssignment )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:746:1: ( ( rule__Type__ReferenceAssignment ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:747:1: ( rule__Type__ReferenceAssignment )
             {
              before(grammarAccess.getTypeAccess().getReferenceAssignment()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:720:1: ( rule__Type__ReferenceAssignment )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:720:2: rule__Type__ReferenceAssignment
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:748:1: ( rule__Type__ReferenceAssignment )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:748:2: rule__Type__ReferenceAssignment
             {
-            pushFollow(FOLLOW_rule__Type__ReferenceAssignment_in_ruleType1474);
+            pushFollow(FOLLOW_rule__Type__ReferenceAssignment_in_ruleType1534);
             rule__Type__ReferenceAssignment();
 
             state._fsp--;
@@ -1936,20 +2014,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleNativeMethod"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:732:1: entryRuleNativeMethod : ruleNativeMethod EOF ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:760:1: entryRuleNativeMethod : ruleNativeMethod EOF ;
     public final void entryRuleNativeMethod() throws RecognitionException {
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:733:1: ( ruleNativeMethod EOF )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:734:1: ruleNativeMethod EOF
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:761:1: ( ruleNativeMethod EOF )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:762:1: ruleNativeMethod EOF
             {
              before(grammarAccess.getNativeMethodRule()); 
-            pushFollow(FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod1501);
+            pushFollow(FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod1561);
             ruleNativeMethod();
 
             state._fsp--;
 
              after(grammarAccess.getNativeMethodRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNativeMethod1508); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNativeMethod1568); 
 
             }
 
@@ -1966,23 +2044,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleNativeMethod"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:741:1: ruleNativeMethod : ( ( rule__NativeMethod__NameAssignment ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:769:1: ruleNativeMethod : ( ( rule__NativeMethod__NameAssignment ) ) ;
     public final void ruleNativeMethod() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:745:2: ( ( ( rule__NativeMethod__NameAssignment ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:746:1: ( ( rule__NativeMethod__NameAssignment ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:773:2: ( ( ( rule__NativeMethod__NameAssignment ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:774:1: ( ( rule__NativeMethod__NameAssignment ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:746:1: ( ( rule__NativeMethod__NameAssignment ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:747:1: ( rule__NativeMethod__NameAssignment )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:774:1: ( ( rule__NativeMethod__NameAssignment ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:775:1: ( rule__NativeMethod__NameAssignment )
             {
              before(grammarAccess.getNativeMethodAccess().getNameAssignment()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:748:1: ( rule__NativeMethod__NameAssignment )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:748:2: rule__NativeMethod__NameAssignment
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:776:1: ( rule__NativeMethod__NameAssignment )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:776:2: rule__NativeMethod__NameAssignment
             {
-            pushFollow(FOLLOW_rule__NativeMethod__NameAssignment_in_ruleNativeMethod1534);
+            pushFollow(FOLLOW_rule__NativeMethod__NameAssignment_in_ruleNativeMethod1594);
             rule__NativeMethod__NameAssignment();
 
             state._fsp--;
@@ -2013,20 +2091,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FunctionUnit__Alternatives"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:760:1: rule__FunctionUnit__Alternatives : ( ( ruleFlow ) | ( ruleOperation ) );
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:788:1: rule__FunctionUnit__Alternatives : ( ( ruleFlow ) | ( ruleOperation ) );
     public final void rule__FunctionUnit__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:764:1: ( ( ruleFlow ) | ( ruleOperation ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:792:1: ( ( ruleFlow ) | ( ruleOperation ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
             if ( (LA1_0==16) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==21||LA1_0==23) ) {
+            else if ( (LA1_0==21||(LA1_0>=23 && LA1_0<=24)) ) {
                 alt1=2;
             }
             else {
@@ -2037,13 +2115,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:765:1: ( ruleFlow )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:793:1: ( ruleFlow )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:765:1: ( ruleFlow )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:766:1: ruleFlow
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:793:1: ( ruleFlow )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:794:1: ruleFlow
                     {
                      before(grammarAccess.getFunctionUnitAccess().getFlowParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleFlow_in_rule__FunctionUnit__Alternatives1570);
+                    pushFollow(FOLLOW_ruleFlow_in_rule__FunctionUnit__Alternatives1630);
                     ruleFlow();
 
                     state._fsp--;
@@ -2056,13 +2134,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:771:6: ( ruleOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:799:6: ( ruleOperation )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:771:6: ( ruleOperation )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:772:1: ruleOperation
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:799:6: ( ruleOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:800:1: ruleOperation
                     {
                      before(grammarAccess.getFunctionUnitAccess().getOperationParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleOperation_in_rule__FunctionUnit__Alternatives1587);
+                    pushFollow(FOLLOW_ruleOperation_in_rule__FunctionUnit__Alternatives1647);
                     ruleOperation();
 
                     state._fsp--;
@@ -2092,24 +2170,24 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__LeftPort__Alternatives"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:782:1: rule__LeftPort__Alternatives : ( ( ruleGlobalInputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) );
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:810:1: rule__LeftPort__Alternatives : ( ( ruleGlobalInputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) );
     public final void rule__LeftPort__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:786:1: ( ( ruleGlobalInputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:814:1: ( ( ruleGlobalInputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) )
             int alt2=3;
             int LA2_0 = input.LA(1);
 
             if ( (LA2_0==14) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==EOF||LA2_1==17) ) {
-                    alt2=2;
-                }
-                else if ( (LA2_1==19) ) {
+                if ( (LA2_1==19) ) {
                     alt2=1;
+                }
+                else if ( (LA2_1==EOF||LA2_1==17) ) {
+                    alt2=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -2129,13 +2207,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt2) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:787:1: ( ruleGlobalInputPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:815:1: ( ruleGlobalInputPort )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:787:1: ( ruleGlobalInputPort )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:788:1: ruleGlobalInputPort
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:815:1: ( ruleGlobalInputPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:816:1: ruleGlobalInputPort
                     {
                      before(grammarAccess.getLeftPortAccess().getGlobalInputPortParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleGlobalInputPort_in_rule__LeftPort__Alternatives1619);
+                    pushFollow(FOLLOW_ruleGlobalInputPort_in_rule__LeftPort__Alternatives1679);
                     ruleGlobalInputPort();
 
                     state._fsp--;
@@ -2148,13 +2226,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:793:6: ( ruleUnnamedSubFlowPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:821:6: ( ruleUnnamedSubFlowPort )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:793:6: ( ruleUnnamedSubFlowPort )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:794:1: ruleUnnamedSubFlowPort
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:821:6: ( ruleUnnamedSubFlowPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:822:1: ruleUnnamedSubFlowPort
                     {
                      before(grammarAccess.getLeftPortAccess().getUnnamedSubFlowPortParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleUnnamedSubFlowPort_in_rule__LeftPort__Alternatives1636);
+                    pushFollow(FOLLOW_ruleUnnamedSubFlowPort_in_rule__LeftPort__Alternatives1696);
                     ruleUnnamedSubFlowPort();
 
                     state._fsp--;
@@ -2167,13 +2245,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:799:6: ( rulePort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:827:6: ( rulePort )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:799:6: ( rulePort )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:800:1: rulePort
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:827:6: ( rulePort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:828:1: rulePort
                     {
                      before(grammarAccess.getLeftPortAccess().getPortParserRuleCall_2()); 
-                    pushFollow(FOLLOW_rulePort_in_rule__LeftPort__Alternatives1653);
+                    pushFollow(FOLLOW_rulePort_in_rule__LeftPort__Alternatives1713);
                     rulePort();
 
                     state._fsp--;
@@ -2203,24 +2281,24 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__RightPort__Alternatives"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:810:1: rule__RightPort__Alternatives : ( ( ruleGlobalOutputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) );
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:838:1: rule__RightPort__Alternatives : ( ( ruleGlobalOutputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) );
     public final void rule__RightPort__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:814:1: ( ( ruleGlobalOutputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:842:1: ( ( ruleGlobalOutputPort ) | ( ruleUnnamedSubFlowPort ) | ( rulePort ) )
             int alt3=3;
             int LA3_0 = input.LA(1);
 
             if ( (LA3_0==14) ) {
                 int LA3_1 = input.LA(2);
 
-                if ( (LA3_1==EOF||LA3_1==18) ) {
-                    alt3=2;
-                }
-                else if ( (LA3_1==20) ) {
+                if ( (LA3_1==20) ) {
                     alt3=1;
+                }
+                else if ( (LA3_1==EOF||LA3_1==18) ) {
+                    alt3=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -2240,13 +2318,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:815:1: ( ruleGlobalOutputPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:843:1: ( ruleGlobalOutputPort )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:815:1: ( ruleGlobalOutputPort )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:816:1: ruleGlobalOutputPort
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:843:1: ( ruleGlobalOutputPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:844:1: ruleGlobalOutputPort
                     {
                      before(grammarAccess.getRightPortAccess().getGlobalOutputPortParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleGlobalOutputPort_in_rule__RightPort__Alternatives1685);
+                    pushFollow(FOLLOW_ruleGlobalOutputPort_in_rule__RightPort__Alternatives1745);
                     ruleGlobalOutputPort();
 
                     state._fsp--;
@@ -2259,13 +2337,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:821:6: ( ruleUnnamedSubFlowPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:849:6: ( ruleUnnamedSubFlowPort )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:821:6: ( ruleUnnamedSubFlowPort )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:822:1: ruleUnnamedSubFlowPort
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:849:6: ( ruleUnnamedSubFlowPort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:850:1: ruleUnnamedSubFlowPort
                     {
                      before(grammarAccess.getRightPortAccess().getUnnamedSubFlowPortParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleUnnamedSubFlowPort_in_rule__RightPort__Alternatives1702);
+                    pushFollow(FOLLOW_ruleUnnamedSubFlowPort_in_rule__RightPort__Alternatives1762);
                     ruleUnnamedSubFlowPort();
 
                     state._fsp--;
@@ -2278,13 +2356,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:827:6: ( rulePort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:855:6: ( rulePort )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:827:6: ( rulePort )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:828:1: rulePort
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:855:6: ( rulePort )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:856:1: rulePort
                     {
                      before(grammarAccess.getRightPortAccess().getPortParserRuleCall_2()); 
-                    pushFollow(FOLLOW_rulePort_in_rule__RightPort__Alternatives1719);
+                    pushFollow(FOLLOW_rulePort_in_rule__RightPort__Alternatives1779);
                     rulePort();
 
                     state._fsp--;
@@ -2314,37 +2392,46 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Alternatives"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:838:1: rule__Operation__Alternatives : ( ( ruleEbcOperation ) | ( ruleMethodOperation ) );
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:866:1: rule__Operation__Alternatives : ( ( ruleEbcOperation ) | ( ruleMethodOperation ) | ( ruleClassOperation ) );
     public final void rule__Operation__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:842:1: ( ( ruleEbcOperation ) | ( ruleMethodOperation ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==21) ) {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:870:1: ( ( ruleEbcOperation ) | ( ruleMethodOperation ) | ( ruleClassOperation ) )
+            int alt4=3;
+            switch ( input.LA(1) ) {
+            case 21:
+                {
                 alt4=1;
-            }
-            else if ( (LA4_0==23) ) {
+                }
+                break;
+            case 24:
+                {
                 alt4=2;
-            }
-            else {
+                }
+                break;
+            case 23:
+                {
+                alt4=3;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
+
             switch (alt4) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:843:1: ( ruleEbcOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:871:1: ( ruleEbcOperation )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:843:1: ( ruleEbcOperation )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:844:1: ruleEbcOperation
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:871:1: ( ruleEbcOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:872:1: ruleEbcOperation
                     {
                      before(grammarAccess.getOperationAccess().getEbcOperationParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleEbcOperation_in_rule__Operation__Alternatives1751);
+                    pushFollow(FOLLOW_ruleEbcOperation_in_rule__Operation__Alternatives1811);
                     ruleEbcOperation();
 
                     state._fsp--;
@@ -2357,18 +2444,37 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:849:6: ( ruleMethodOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:877:6: ( ruleMethodOperation )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:849:6: ( ruleMethodOperation )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:850:1: ruleMethodOperation
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:877:6: ( ruleMethodOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:878:1: ruleMethodOperation
                     {
                      before(grammarAccess.getOperationAccess().getMethodOperationParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleMethodOperation_in_rule__Operation__Alternatives1768);
+                    pushFollow(FOLLOW_ruleMethodOperation_in_rule__Operation__Alternatives1828);
                     ruleMethodOperation();
 
                     state._fsp--;
 
                      after(grammarAccess.getOperationAccess().getMethodOperationParserRuleCall_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:883:6: ( ruleClassOperation )
+                    {
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:883:6: ( ruleClassOperation )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:884:1: ruleClassOperation
+                    {
+                     before(grammarAccess.getOperationAccess().getClassOperationParserRuleCall_2()); 
+                    pushFollow(FOLLOW_ruleClassOperation_in_rule__Operation__Alternatives1845);
+                    ruleClassOperation();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getOperationAccess().getClassOperationParserRuleCall_2()); 
 
                     }
 
@@ -2393,13 +2499,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationType__NameAlternatives_0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:860:1: rule__OperationType__NameAlternatives_0 : ( ( 'Action' ) | ( 'Func' ) );
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:894:1: rule__OperationType__NameAlternatives_0 : ( ( 'Action' ) | ( 'Func' ) );
     public final void rule__OperationType__NameAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:864:1: ( ( 'Action' ) | ( 'Func' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:898:1: ( ( 'Action' ) | ( 'Func' ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -2417,13 +2523,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:865:1: ( 'Action' )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:899:1: ( 'Action' )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:865:1: ( 'Action' )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:866:1: 'Action'
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:899:1: ( 'Action' )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:900:1: 'Action'
                     {
                      before(grammarAccess.getOperationTypeAccess().getNameActionKeyword_0_0()); 
-                    match(input,11,FOLLOW_11_in_rule__OperationType__NameAlternatives_01801); 
+                    match(input,11,FOLLOW_11_in_rule__OperationType__NameAlternatives_01878); 
                      after(grammarAccess.getOperationTypeAccess().getNameActionKeyword_0_0()); 
 
                     }
@@ -2432,13 +2538,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:873:6: ( 'Func' )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:907:6: ( 'Func' )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:873:6: ( 'Func' )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:874:1: 'Func'
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:907:6: ( 'Func' )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:908:1: 'Func'
                     {
                      before(grammarAccess.getOperationTypeAccess().getNameFuncKeyword_0_1()); 
-                    match(input,12,FOLLOW_12_in_rule__OperationType__NameAlternatives_01821); 
+                    match(input,12,FOLLOW_12_in_rule__OperationType__NameAlternatives_01898); 
                      after(grammarAccess.getOperationTypeAccess().getNameFuncKeyword_0_1()); 
 
                     }
@@ -2464,13 +2570,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TypeParameter__Alternatives"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:886:1: rule__TypeParameter__Alternatives : ( ( ruleGenericType ) | ( ruleType ) );
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:920:1: rule__TypeParameter__Alternatives : ( ( ruleGenericType ) | ( ruleType ) );
     public final void rule__TypeParameter__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:890:1: ( ( ruleGenericType ) | ( ruleType ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:924:1: ( ( ruleGenericType ) | ( ruleType ) )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2488,13 +2594,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:891:1: ( ruleGenericType )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:925:1: ( ruleGenericType )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:891:1: ( ruleGenericType )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:892:1: ruleGenericType
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:925:1: ( ruleGenericType )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:926:1: ruleGenericType
                     {
                      before(grammarAccess.getTypeParameterAccess().getGenericTypeParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleGenericType_in_rule__TypeParameter__Alternatives1855);
+                    pushFollow(FOLLOW_ruleGenericType_in_rule__TypeParameter__Alternatives1932);
                     ruleGenericType();
 
                     state._fsp--;
@@ -2507,13 +2613,13 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:897:6: ( ruleType )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:931:6: ( ruleType )
                     {
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:897:6: ( ruleType )
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:898:1: ruleType
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:931:6: ( ruleType )
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:932:1: ruleType
                     {
                      before(grammarAccess.getTypeParameterAccess().getTypeParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleType_in_rule__TypeParameter__Alternatives1872);
+                    pushFollow(FOLLOW_ruleType_in_rule__TypeParameter__Alternatives1949);
                     ruleType();
 
                     state._fsp--;
@@ -2543,21 +2649,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:910:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:944:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:914:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:915:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:948:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:949:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01902);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01979);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01905);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01982);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -2581,20 +2687,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:922:1: rule__Model__Group__0__Impl : ( ( rule__Model__Group_0__0 )? ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:956:1: rule__Model__Group__0__Impl : ( ( rule__Model__Group_0__0 )? ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:926:1: ( ( ( rule__Model__Group_0__0 )? ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:927:1: ( ( rule__Model__Group_0__0 )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:960:1: ( ( ( rule__Model__Group_0__0 )? ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:961:1: ( ( rule__Model__Group_0__0 )? )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:927:1: ( ( rule__Model__Group_0__0 )? )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:928:1: ( rule__Model__Group_0__0 )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:961:1: ( ( rule__Model__Group_0__0 )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:962:1: ( rule__Model__Group_0__0 )?
             {
              before(grammarAccess.getModelAccess().getGroup_0()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:929:1: ( rule__Model__Group_0__0 )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:963:1: ( rule__Model__Group_0__0 )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2603,9 +2709,9 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:929:2: rule__Model__Group_0__0
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:963:2: rule__Model__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__Model__Group_0__0_in_rule__Model__Group__0__Impl1932);
+                    pushFollow(FOLLOW_rule__Model__Group_0__0_in_rule__Model__Group__0__Impl2009);
                     rule__Model__Group_0__0();
 
                     state._fsp--;
@@ -2639,21 +2745,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:939:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:973:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:943:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:944:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:977:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:978:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11963);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12040);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11966);
+            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__12043);
             rule__Model__Group__2();
 
             state._fsp--;
@@ -2677,20 +2783,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:951:1: rule__Model__Group__1__Impl : ( ( rule__Model__ImportsAssignment_1 )* ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:985:1: rule__Model__Group__1__Impl : ( ( rule__Model__ImportsAssignment_1 )* ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:955:1: ( ( ( rule__Model__ImportsAssignment_1 )* ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:956:1: ( ( rule__Model__ImportsAssignment_1 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:989:1: ( ( ( rule__Model__ImportsAssignment_1 )* ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:990:1: ( ( rule__Model__ImportsAssignment_1 )* )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:956:1: ( ( rule__Model__ImportsAssignment_1 )* )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:957:1: ( rule__Model__ImportsAssignment_1 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:990:1: ( ( rule__Model__ImportsAssignment_1 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:991:1: ( rule__Model__ImportsAssignment_1 )*
             {
              before(grammarAccess.getModelAccess().getImportsAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:958:1: ( rule__Model__ImportsAssignment_1 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:992:1: ( rule__Model__ImportsAssignment_1 )*
             loop8:
             do {
                 int alt8=2;
@@ -2703,9 +2809,9 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:958:2: rule__Model__ImportsAssignment_1
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:992:2: rule__Model__ImportsAssignment_1
             	    {
-            	    pushFollow(FOLLOW_rule__Model__ImportsAssignment_1_in_rule__Model__Group__1__Impl1993);
+            	    pushFollow(FOLLOW_rule__Model__ImportsAssignment_1_in_rule__Model__Group__1__Impl2070);
             	    rule__Model__ImportsAssignment_1();
 
             	    state._fsp--;
@@ -2742,16 +2848,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:968:1: rule__Model__Group__2 : rule__Model__Group__2__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1002:1: rule__Model__Group__2 : rule__Model__Group__2__Impl ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:972:1: ( rule__Model__Group__2__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:973:2: rule__Model__Group__2__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1006:1: ( rule__Model__Group__2__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1007:2: rule__Model__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22024);
+            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22101);
             rule__Model__Group__2__Impl();
 
             state._fsp--;
@@ -2775,35 +2881,35 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:979:1: rule__Model__Group__2__Impl : ( ( rule__Model__FunctionUnitsAssignment_2 )* ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1013:1: rule__Model__Group__2__Impl : ( ( rule__Model__FunctionUnitsAssignment_2 )* ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:983:1: ( ( ( rule__Model__FunctionUnitsAssignment_2 )* ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:984:1: ( ( rule__Model__FunctionUnitsAssignment_2 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1017:1: ( ( ( rule__Model__FunctionUnitsAssignment_2 )* ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1018:1: ( ( rule__Model__FunctionUnitsAssignment_2 )* )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:984:1: ( ( rule__Model__FunctionUnitsAssignment_2 )* )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:985:1: ( rule__Model__FunctionUnitsAssignment_2 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1018:1: ( ( rule__Model__FunctionUnitsAssignment_2 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1019:1: ( rule__Model__FunctionUnitsAssignment_2 )*
             {
              before(grammarAccess.getModelAccess().getFunctionUnitsAssignment_2()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:986:1: ( rule__Model__FunctionUnitsAssignment_2 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1020:1: ( rule__Model__FunctionUnitsAssignment_2 )*
             loop9:
             do {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==16||LA9_0==21||LA9_0==23) ) {
+                if ( (LA9_0==16||LA9_0==21||(LA9_0>=23 && LA9_0<=24)) ) {
                     alt9=1;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:986:2: rule__Model__FunctionUnitsAssignment_2
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1020:2: rule__Model__FunctionUnitsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Model__FunctionUnitsAssignment_2_in_rule__Model__Group__2__Impl2051);
+            	    pushFollow(FOLLOW_rule__Model__FunctionUnitsAssignment_2_in_rule__Model__Group__2__Impl2128);
             	    rule__Model__FunctionUnitsAssignment_2();
 
             	    state._fsp--;
@@ -2840,21 +2946,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_0__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1002:1: rule__Model__Group_0__0 : rule__Model__Group_0__0__Impl rule__Model__Group_0__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1036:1: rule__Model__Group_0__0 : rule__Model__Group_0__0__Impl rule__Model__Group_0__1 ;
     public final void rule__Model__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1006:1: ( rule__Model__Group_0__0__Impl rule__Model__Group_0__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1007:2: rule__Model__Group_0__0__Impl rule__Model__Group_0__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1040:1: ( rule__Model__Group_0__0__Impl rule__Model__Group_0__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1041:2: rule__Model__Group_0__0__Impl rule__Model__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Model__Group_0__0__Impl_in_rule__Model__Group_0__02088);
+            pushFollow(FOLLOW_rule__Model__Group_0__0__Impl_in_rule__Model__Group_0__02165);
             rule__Model__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group_0__1_in_rule__Model__Group_0__02091);
+            pushFollow(FOLLOW_rule__Model__Group_0__1_in_rule__Model__Group_0__02168);
             rule__Model__Group_0__1();
 
             state._fsp--;
@@ -2878,20 +2984,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_0__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1014:1: rule__Model__Group_0__0__Impl : ( 'package' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1048:1: rule__Model__Group_0__0__Impl : ( 'package' ) ;
     public final void rule__Model__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1018:1: ( ( 'package' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1019:1: ( 'package' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1052:1: ( ( 'package' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1053:1: ( 'package' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1019:1: ( 'package' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1020:1: 'package'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1053:1: ( 'package' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1054:1: 'package'
             {
              before(grammarAccess.getModelAccess().getPackageKeyword_0_0()); 
-            match(input,13,FOLLOW_13_in_rule__Model__Group_0__0__Impl2119); 
+            match(input,13,FOLLOW_13_in_rule__Model__Group_0__0__Impl2196); 
              after(grammarAccess.getModelAccess().getPackageKeyword_0_0()); 
 
             }
@@ -2915,16 +3021,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_0__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1033:1: rule__Model__Group_0__1 : rule__Model__Group_0__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1067:1: rule__Model__Group_0__1 : rule__Model__Group_0__1__Impl ;
     public final void rule__Model__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1037:1: ( rule__Model__Group_0__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1038:2: rule__Model__Group_0__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1071:1: ( rule__Model__Group_0__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1072:2: rule__Model__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group_0__1__Impl_in_rule__Model__Group_0__12150);
+            pushFollow(FOLLOW_rule__Model__Group_0__1__Impl_in_rule__Model__Group_0__12227);
             rule__Model__Group_0__1__Impl();
 
             state._fsp--;
@@ -2948,23 +3054,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group_0__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1044:1: rule__Model__Group_0__1__Impl : ( ( rule__Model__NameAssignment_0_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1078:1: rule__Model__Group_0__1__Impl : ( ( rule__Model__NameAssignment_0_1 ) ) ;
     public final void rule__Model__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1048:1: ( ( ( rule__Model__NameAssignment_0_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1049:1: ( ( rule__Model__NameAssignment_0_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1082:1: ( ( ( rule__Model__NameAssignment_0_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1083:1: ( ( rule__Model__NameAssignment_0_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1049:1: ( ( rule__Model__NameAssignment_0_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1050:1: ( rule__Model__NameAssignment_0_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1083:1: ( ( rule__Model__NameAssignment_0_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1084:1: ( rule__Model__NameAssignment_0_1 )
             {
              before(grammarAccess.getModelAccess().getNameAssignment_0_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1051:1: ( rule__Model__NameAssignment_0_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1051:2: rule__Model__NameAssignment_0_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1085:1: ( rule__Model__NameAssignment_0_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1085:2: rule__Model__NameAssignment_0_1
             {
-            pushFollow(FOLLOW_rule__Model__NameAssignment_0_1_in_rule__Model__Group_0__1__Impl2177);
+            pushFollow(FOLLOW_rule__Model__NameAssignment_0_1_in_rule__Model__Group_0__1__Impl2254);
             rule__Model__NameAssignment_0_1();
 
             state._fsp--;
@@ -2995,21 +3101,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1065:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1099:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1069:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1070:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1103:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1104:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02211);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02288);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02214);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02291);
             rule__QualifiedName__Group__1();
 
             state._fsp--;
@@ -3033,20 +3139,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1077:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1111:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1081:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1082:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1115:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1116:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1082:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1083:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1116:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1117:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2241); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2318); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -3070,16 +3176,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1094:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1128:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1098:1: ( rule__QualifiedName__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1099:2: rule__QualifiedName__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1132:1: ( rule__QualifiedName__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1133:2: rule__QualifiedName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12270);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12347);
             rule__QualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -3103,20 +3209,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1105:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1139:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1109:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1110:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1143:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1144:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1110:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1111:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1144:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1145:1: ( rule__QualifiedName__Group_1__0 )*
             {
              before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1112:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1146:1: ( rule__QualifiedName__Group_1__0 )*
             loop10:
             do {
                 int alt10=2;
@@ -3129,9 +3235,9 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1112:2: rule__QualifiedName__Group_1__0
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1146:2: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2297);
+            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2374);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -3168,21 +3274,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1126:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1160:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1130:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1131:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1164:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1165:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02332);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02409);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02335);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02412);
             rule__QualifiedName__Group_1__1();
 
             state._fsp--;
@@ -3206,20 +3312,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1138:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1172:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1142:1: ( ( '.' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1143:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1176:1: ( ( '.' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1177:1: ( '.' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1143:1: ( '.' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1144:1: '.'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1177:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1178:1: '.'
             {
              before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
-            match(input,14,FOLLOW_14_in_rule__QualifiedName__Group_1__0__Impl2363); 
+            match(input,14,FOLLOW_14_in_rule__QualifiedName__Group_1__0__Impl2440); 
              after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -3243,16 +3349,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1157:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1191:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1161:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1162:2: rule__QualifiedName__Group_1__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1195:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1196:2: rule__QualifiedName__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12394);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12471);
             rule__QualifiedName__Group_1__1__Impl();
 
             state._fsp--;
@@ -3276,20 +3382,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1168:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1202:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1172:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1173:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1206:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1207:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1173:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1174:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1207:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1208:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2421); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2498); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
 
             }
@@ -3313,21 +3419,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1189:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1223:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
     public final void rule__Import__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1193:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1194:2: rule__Import__Group__0__Impl rule__Import__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1227:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1228:2: rule__Import__Group__0__Impl rule__Import__Group__1
             {
-            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__02454);
+            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__02531);
             rule__Import__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__02457);
+            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__02534);
             rule__Import__Group__1();
 
             state._fsp--;
@@ -3351,20 +3457,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1201:1: rule__Import__Group__0__Impl : ( 'import' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1235:1: rule__Import__Group__0__Impl : ( 'import' ) ;
     public final void rule__Import__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1205:1: ( ( 'import' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1206:1: ( 'import' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1239:1: ( ( 'import' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1240:1: ( 'import' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1206:1: ( 'import' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1207:1: 'import'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1240:1: ( 'import' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1241:1: 'import'
             {
              before(grammarAccess.getImportAccess().getImportKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__Import__Group__0__Impl2485); 
+            match(input,15,FOLLOW_15_in_rule__Import__Group__0__Impl2562); 
              after(grammarAccess.getImportAccess().getImportKeyword_0()); 
 
             }
@@ -3388,16 +3494,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1220:1: rule__Import__Group__1 : rule__Import__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1254:1: rule__Import__Group__1 : rule__Import__Group__1__Impl ;
     public final void rule__Import__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1224:1: ( rule__Import__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1225:2: rule__Import__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1258:1: ( rule__Import__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1259:2: rule__Import__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__12516);
+            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__12593);
             rule__Import__Group__1__Impl();
 
             state._fsp--;
@@ -3421,23 +3527,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1231:1: rule__Import__Group__1__Impl : ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1265:1: rule__Import__Group__1__Impl : ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) ;
     public final void rule__Import__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1235:1: ( ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1236:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1269:1: ( ( ( rule__Import__ImportedNamespaceAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1270:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1236:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1237:1: ( rule__Import__ImportedNamespaceAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1270:1: ( ( rule__Import__ImportedNamespaceAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1271:1: ( rule__Import__ImportedNamespaceAssignment_1 )
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1238:1: ( rule__Import__ImportedNamespaceAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1238:2: rule__Import__ImportedNamespaceAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1272:1: ( rule__Import__ImportedNamespaceAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1272:2: rule__Import__ImportedNamespaceAssignment_1
             {
-            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl2543);
+            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl2620);
             rule__Import__ImportedNamespaceAssignment_1();
 
             state._fsp--;
@@ -3468,21 +3574,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1252:1: rule__Flow__Group__0 : rule__Flow__Group__0__Impl rule__Flow__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1286:1: rule__Flow__Group__0 : rule__Flow__Group__0__Impl rule__Flow__Group__1 ;
     public final void rule__Flow__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1256:1: ( rule__Flow__Group__0__Impl rule__Flow__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1257:2: rule__Flow__Group__0__Impl rule__Flow__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1290:1: ( rule__Flow__Group__0__Impl rule__Flow__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1291:2: rule__Flow__Group__0__Impl rule__Flow__Group__1
             {
-            pushFollow(FOLLOW_rule__Flow__Group__0__Impl_in_rule__Flow__Group__02577);
+            pushFollow(FOLLOW_rule__Flow__Group__0__Impl_in_rule__Flow__Group__02654);
             rule__Flow__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Flow__Group__1_in_rule__Flow__Group__02580);
+            pushFollow(FOLLOW_rule__Flow__Group__1_in_rule__Flow__Group__02657);
             rule__Flow__Group__1();
 
             state._fsp--;
@@ -3506,20 +3612,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1264:1: rule__Flow__Group__0__Impl : ( 'flow' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1298:1: rule__Flow__Group__0__Impl : ( 'flow' ) ;
     public final void rule__Flow__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1268:1: ( ( 'flow' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1269:1: ( 'flow' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1302:1: ( ( 'flow' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1303:1: ( 'flow' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1269:1: ( 'flow' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1270:1: 'flow'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1303:1: ( 'flow' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1304:1: 'flow'
             {
              before(grammarAccess.getFlowAccess().getFlowKeyword_0()); 
-            match(input,16,FOLLOW_16_in_rule__Flow__Group__0__Impl2608); 
+            match(input,16,FOLLOW_16_in_rule__Flow__Group__0__Impl2685); 
              after(grammarAccess.getFlowAccess().getFlowKeyword_0()); 
 
             }
@@ -3543,21 +3649,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1283:1: rule__Flow__Group__1 : rule__Flow__Group__1__Impl rule__Flow__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1317:1: rule__Flow__Group__1 : rule__Flow__Group__1__Impl rule__Flow__Group__2 ;
     public final void rule__Flow__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1287:1: ( rule__Flow__Group__1__Impl rule__Flow__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1288:2: rule__Flow__Group__1__Impl rule__Flow__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1321:1: ( rule__Flow__Group__1__Impl rule__Flow__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1322:2: rule__Flow__Group__1__Impl rule__Flow__Group__2
             {
-            pushFollow(FOLLOW_rule__Flow__Group__1__Impl_in_rule__Flow__Group__12639);
+            pushFollow(FOLLOW_rule__Flow__Group__1__Impl_in_rule__Flow__Group__12716);
             rule__Flow__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Flow__Group__2_in_rule__Flow__Group__12642);
+            pushFollow(FOLLOW_rule__Flow__Group__2_in_rule__Flow__Group__12719);
             rule__Flow__Group__2();
 
             state._fsp--;
@@ -3581,23 +3687,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1295:1: rule__Flow__Group__1__Impl : ( ( rule__Flow__NameAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1329:1: rule__Flow__Group__1__Impl : ( ( rule__Flow__NameAssignment_1 ) ) ;
     public final void rule__Flow__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1299:1: ( ( ( rule__Flow__NameAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1300:1: ( ( rule__Flow__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1333:1: ( ( ( rule__Flow__NameAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1334:1: ( ( rule__Flow__NameAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1300:1: ( ( rule__Flow__NameAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1301:1: ( rule__Flow__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1334:1: ( ( rule__Flow__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1335:1: ( rule__Flow__NameAssignment_1 )
             {
              before(grammarAccess.getFlowAccess().getNameAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1302:1: ( rule__Flow__NameAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1302:2: rule__Flow__NameAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1336:1: ( rule__Flow__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1336:2: rule__Flow__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Flow__NameAssignment_1_in_rule__Flow__Group__1__Impl2669);
+            pushFollow(FOLLOW_rule__Flow__NameAssignment_1_in_rule__Flow__Group__1__Impl2746);
             rule__Flow__NameAssignment_1();
 
             state._fsp--;
@@ -3628,16 +3734,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1312:1: rule__Flow__Group__2 : rule__Flow__Group__2__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1346:1: rule__Flow__Group__2 : rule__Flow__Group__2__Impl ;
     public final void rule__Flow__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1316:1: ( rule__Flow__Group__2__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1317:2: rule__Flow__Group__2__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1350:1: ( rule__Flow__Group__2__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1351:2: rule__Flow__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Flow__Group__2__Impl_in_rule__Flow__Group__22699);
+            pushFollow(FOLLOW_rule__Flow__Group__2__Impl_in_rule__Flow__Group__22776);
             rule__Flow__Group__2__Impl();
 
             state._fsp--;
@@ -3661,20 +3767,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1323:1: rule__Flow__Group__2__Impl : ( ( rule__Flow__StreamsAssignment_2 )* ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1357:1: rule__Flow__Group__2__Impl : ( ( rule__Flow__StreamsAssignment_2 )* ) ;
     public final void rule__Flow__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1327:1: ( ( ( rule__Flow__StreamsAssignment_2 )* ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1328:1: ( ( rule__Flow__StreamsAssignment_2 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1361:1: ( ( ( rule__Flow__StreamsAssignment_2 )* ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1362:1: ( ( rule__Flow__StreamsAssignment_2 )* )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1328:1: ( ( rule__Flow__StreamsAssignment_2 )* )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1329:1: ( rule__Flow__StreamsAssignment_2 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1362:1: ( ( rule__Flow__StreamsAssignment_2 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1363:1: ( rule__Flow__StreamsAssignment_2 )*
             {
              before(grammarAccess.getFlowAccess().getStreamsAssignment_2()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1330:1: ( rule__Flow__StreamsAssignment_2 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1364:1: ( rule__Flow__StreamsAssignment_2 )*
             loop11:
             do {
                 int alt11=2;
@@ -3687,9 +3793,9 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1330:2: rule__Flow__StreamsAssignment_2
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1364:2: rule__Flow__StreamsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Flow__StreamsAssignment_2_in_rule__Flow__Group__2__Impl2726);
+            	    pushFollow(FOLLOW_rule__Flow__StreamsAssignment_2_in_rule__Flow__Group__2__Impl2803);
             	    rule__Flow__StreamsAssignment_2();
 
             	    state._fsp--;
@@ -3726,21 +3832,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1346:1: rule__Stream__Group__0 : rule__Stream__Group__0__Impl rule__Stream__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1380:1: rule__Stream__Group__0 : rule__Stream__Group__0__Impl rule__Stream__Group__1 ;
     public final void rule__Stream__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1350:1: ( rule__Stream__Group__0__Impl rule__Stream__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1351:2: rule__Stream__Group__0__Impl rule__Stream__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1384:1: ( rule__Stream__Group__0__Impl rule__Stream__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1385:2: rule__Stream__Group__0__Impl rule__Stream__Group__1
             {
-            pushFollow(FOLLOW_rule__Stream__Group__0__Impl_in_rule__Stream__Group__02763);
+            pushFollow(FOLLOW_rule__Stream__Group__0__Impl_in_rule__Stream__Group__02840);
             rule__Stream__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Stream__Group__1_in_rule__Stream__Group__02766);
+            pushFollow(FOLLOW_rule__Stream__Group__1_in_rule__Stream__Group__02843);
             rule__Stream__Group__1();
 
             state._fsp--;
@@ -3764,23 +3870,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1358:1: rule__Stream__Group__0__Impl : ( ( rule__Stream__LeftPortAssignment_0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1392:1: rule__Stream__Group__0__Impl : ( ( rule__Stream__LeftPortAssignment_0 ) ) ;
     public final void rule__Stream__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1362:1: ( ( ( rule__Stream__LeftPortAssignment_0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1363:1: ( ( rule__Stream__LeftPortAssignment_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1396:1: ( ( ( rule__Stream__LeftPortAssignment_0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1397:1: ( ( rule__Stream__LeftPortAssignment_0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1363:1: ( ( rule__Stream__LeftPortAssignment_0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1364:1: ( rule__Stream__LeftPortAssignment_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1397:1: ( ( rule__Stream__LeftPortAssignment_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1398:1: ( rule__Stream__LeftPortAssignment_0 )
             {
              before(grammarAccess.getStreamAccess().getLeftPortAssignment_0()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1365:1: ( rule__Stream__LeftPortAssignment_0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1365:2: rule__Stream__LeftPortAssignment_0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1399:1: ( rule__Stream__LeftPortAssignment_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1399:2: rule__Stream__LeftPortAssignment_0
             {
-            pushFollow(FOLLOW_rule__Stream__LeftPortAssignment_0_in_rule__Stream__Group__0__Impl2793);
+            pushFollow(FOLLOW_rule__Stream__LeftPortAssignment_0_in_rule__Stream__Group__0__Impl2870);
             rule__Stream__LeftPortAssignment_0();
 
             state._fsp--;
@@ -3811,21 +3917,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1375:1: rule__Stream__Group__1 : rule__Stream__Group__1__Impl rule__Stream__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1409:1: rule__Stream__Group__1 : rule__Stream__Group__1__Impl rule__Stream__Group__2 ;
     public final void rule__Stream__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1379:1: ( rule__Stream__Group__1__Impl rule__Stream__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1380:2: rule__Stream__Group__1__Impl rule__Stream__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1413:1: ( rule__Stream__Group__1__Impl rule__Stream__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1414:2: rule__Stream__Group__1__Impl rule__Stream__Group__2
             {
-            pushFollow(FOLLOW_rule__Stream__Group__1__Impl_in_rule__Stream__Group__12823);
+            pushFollow(FOLLOW_rule__Stream__Group__1__Impl_in_rule__Stream__Group__12900);
             rule__Stream__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Stream__Group__2_in_rule__Stream__Group__12826);
+            pushFollow(FOLLOW_rule__Stream__Group__2_in_rule__Stream__Group__12903);
             rule__Stream__Group__2();
 
             state._fsp--;
@@ -3849,20 +3955,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1387:1: rule__Stream__Group__1__Impl : ( '>' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1421:1: rule__Stream__Group__1__Impl : ( '>' ) ;
     public final void rule__Stream__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1391:1: ( ( '>' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1392:1: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1425:1: ( ( '>' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1426:1: ( '>' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1392:1: ( '>' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1393:1: '>'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1426:1: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1427:1: '>'
             {
              before(grammarAccess.getStreamAccess().getGreaterThanSignKeyword_1()); 
-            match(input,17,FOLLOW_17_in_rule__Stream__Group__1__Impl2854); 
+            match(input,17,FOLLOW_17_in_rule__Stream__Group__1__Impl2931); 
              after(grammarAccess.getStreamAccess().getGreaterThanSignKeyword_1()); 
 
             }
@@ -3886,21 +3992,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1406:1: rule__Stream__Group__2 : rule__Stream__Group__2__Impl rule__Stream__Group__3 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1440:1: rule__Stream__Group__2 : rule__Stream__Group__2__Impl rule__Stream__Group__3 ;
     public final void rule__Stream__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1410:1: ( rule__Stream__Group__2__Impl rule__Stream__Group__3 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1411:2: rule__Stream__Group__2__Impl rule__Stream__Group__3
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1444:1: ( rule__Stream__Group__2__Impl rule__Stream__Group__3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1445:2: rule__Stream__Group__2__Impl rule__Stream__Group__3
             {
-            pushFollow(FOLLOW_rule__Stream__Group__2__Impl_in_rule__Stream__Group__22885);
+            pushFollow(FOLLOW_rule__Stream__Group__2__Impl_in_rule__Stream__Group__22962);
             rule__Stream__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Stream__Group__3_in_rule__Stream__Group__22888);
+            pushFollow(FOLLOW_rule__Stream__Group__3_in_rule__Stream__Group__22965);
             rule__Stream__Group__3();
 
             state._fsp--;
@@ -3924,23 +4030,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1418:1: rule__Stream__Group__2__Impl : ( ( rule__Stream__MessageAssignment_2 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1452:1: rule__Stream__Group__2__Impl : ( ( rule__Stream__MessageAssignment_2 ) ) ;
     public final void rule__Stream__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1422:1: ( ( ( rule__Stream__MessageAssignment_2 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1423:1: ( ( rule__Stream__MessageAssignment_2 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1456:1: ( ( ( rule__Stream__MessageAssignment_2 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1457:1: ( ( rule__Stream__MessageAssignment_2 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1423:1: ( ( rule__Stream__MessageAssignment_2 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1424:1: ( rule__Stream__MessageAssignment_2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1457:1: ( ( rule__Stream__MessageAssignment_2 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1458:1: ( rule__Stream__MessageAssignment_2 )
             {
              before(grammarAccess.getStreamAccess().getMessageAssignment_2()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1425:1: ( rule__Stream__MessageAssignment_2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1425:2: rule__Stream__MessageAssignment_2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1459:1: ( rule__Stream__MessageAssignment_2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1459:2: rule__Stream__MessageAssignment_2
             {
-            pushFollow(FOLLOW_rule__Stream__MessageAssignment_2_in_rule__Stream__Group__2__Impl2915);
+            pushFollow(FOLLOW_rule__Stream__MessageAssignment_2_in_rule__Stream__Group__2__Impl2992);
             rule__Stream__MessageAssignment_2();
 
             state._fsp--;
@@ -3971,21 +4077,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__3"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1435:1: rule__Stream__Group__3 : rule__Stream__Group__3__Impl rule__Stream__Group__4 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1469:1: rule__Stream__Group__3 : rule__Stream__Group__3__Impl rule__Stream__Group__4 ;
     public final void rule__Stream__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1439:1: ( rule__Stream__Group__3__Impl rule__Stream__Group__4 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1440:2: rule__Stream__Group__3__Impl rule__Stream__Group__4
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1473:1: ( rule__Stream__Group__3__Impl rule__Stream__Group__4 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1474:2: rule__Stream__Group__3__Impl rule__Stream__Group__4
             {
-            pushFollow(FOLLOW_rule__Stream__Group__3__Impl_in_rule__Stream__Group__32945);
+            pushFollow(FOLLOW_rule__Stream__Group__3__Impl_in_rule__Stream__Group__33022);
             rule__Stream__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Stream__Group__4_in_rule__Stream__Group__32948);
+            pushFollow(FOLLOW_rule__Stream__Group__4_in_rule__Stream__Group__33025);
             rule__Stream__Group__4();
 
             state._fsp--;
@@ -4009,20 +4115,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__3__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1447:1: rule__Stream__Group__3__Impl : ( '>' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1481:1: rule__Stream__Group__3__Impl : ( '>' ) ;
     public final void rule__Stream__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1451:1: ( ( '>' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1452:1: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1485:1: ( ( '>' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1486:1: ( '>' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1452:1: ( '>' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1453:1: '>'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1486:1: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1487:1: '>'
             {
              before(grammarAccess.getStreamAccess().getGreaterThanSignKeyword_3()); 
-            match(input,17,FOLLOW_17_in_rule__Stream__Group__3__Impl2976); 
+            match(input,17,FOLLOW_17_in_rule__Stream__Group__3__Impl3053); 
              after(grammarAccess.getStreamAccess().getGreaterThanSignKeyword_3()); 
 
             }
@@ -4046,21 +4152,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__4"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1466:1: rule__Stream__Group__4 : rule__Stream__Group__4__Impl rule__Stream__Group__5 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1500:1: rule__Stream__Group__4 : rule__Stream__Group__4__Impl rule__Stream__Group__5 ;
     public final void rule__Stream__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1470:1: ( rule__Stream__Group__4__Impl rule__Stream__Group__5 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1471:2: rule__Stream__Group__4__Impl rule__Stream__Group__5
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1504:1: ( rule__Stream__Group__4__Impl rule__Stream__Group__5 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1505:2: rule__Stream__Group__4__Impl rule__Stream__Group__5
             {
-            pushFollow(FOLLOW_rule__Stream__Group__4__Impl_in_rule__Stream__Group__43007);
+            pushFollow(FOLLOW_rule__Stream__Group__4__Impl_in_rule__Stream__Group__43084);
             rule__Stream__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Stream__Group__5_in_rule__Stream__Group__43010);
+            pushFollow(FOLLOW_rule__Stream__Group__5_in_rule__Stream__Group__43087);
             rule__Stream__Group__5();
 
             state._fsp--;
@@ -4084,23 +4190,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__4__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1478:1: rule__Stream__Group__4__Impl : ( ( rule__Stream__RightPortAssignment_4 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1512:1: rule__Stream__Group__4__Impl : ( ( rule__Stream__RightPortAssignment_4 ) ) ;
     public final void rule__Stream__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1482:1: ( ( ( rule__Stream__RightPortAssignment_4 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1483:1: ( ( rule__Stream__RightPortAssignment_4 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1516:1: ( ( ( rule__Stream__RightPortAssignment_4 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1517:1: ( ( rule__Stream__RightPortAssignment_4 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1483:1: ( ( rule__Stream__RightPortAssignment_4 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1484:1: ( rule__Stream__RightPortAssignment_4 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1517:1: ( ( rule__Stream__RightPortAssignment_4 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1518:1: ( rule__Stream__RightPortAssignment_4 )
             {
              before(grammarAccess.getStreamAccess().getRightPortAssignment_4()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1485:1: ( rule__Stream__RightPortAssignment_4 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1485:2: rule__Stream__RightPortAssignment_4
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1519:1: ( rule__Stream__RightPortAssignment_4 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1519:2: rule__Stream__RightPortAssignment_4
             {
-            pushFollow(FOLLOW_rule__Stream__RightPortAssignment_4_in_rule__Stream__Group__4__Impl3037);
+            pushFollow(FOLLOW_rule__Stream__RightPortAssignment_4_in_rule__Stream__Group__4__Impl3114);
             rule__Stream__RightPortAssignment_4();
 
             state._fsp--;
@@ -4131,16 +4237,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__5"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1495:1: rule__Stream__Group__5 : rule__Stream__Group__5__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1529:1: rule__Stream__Group__5 : rule__Stream__Group__5__Impl ;
     public final void rule__Stream__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1499:1: ( rule__Stream__Group__5__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1500:2: rule__Stream__Group__5__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1533:1: ( rule__Stream__Group__5__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1534:2: rule__Stream__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Stream__Group__5__Impl_in_rule__Stream__Group__53067);
+            pushFollow(FOLLOW_rule__Stream__Group__5__Impl_in_rule__Stream__Group__53144);
             rule__Stream__Group__5__Impl();
 
             state._fsp--;
@@ -4164,20 +4270,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__Group__5__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1506:1: rule__Stream__Group__5__Impl : ( ';' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1540:1: rule__Stream__Group__5__Impl : ( ';' ) ;
     public final void rule__Stream__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1510:1: ( ( ';' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1511:1: ( ';' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1544:1: ( ( ';' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1545:1: ( ';' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1511:1: ( ';' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1512:1: ';'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1545:1: ( ';' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1546:1: ';'
             {
              before(grammarAccess.getStreamAccess().getSemicolonKeyword_5()); 
-            match(input,18,FOLLOW_18_in_rule__Stream__Group__5__Impl3095); 
+            match(input,18,FOLLOW_18_in_rule__Stream__Group__5__Impl3172); 
              after(grammarAccess.getStreamAccess().getSemicolonKeyword_5()); 
 
             }
@@ -4201,21 +4307,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalInputPort__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1537:1: rule__GlobalInputPort__Group__0 : rule__GlobalInputPort__Group__0__Impl rule__GlobalInputPort__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1571:1: rule__GlobalInputPort__Group__0 : rule__GlobalInputPort__Group__0__Impl rule__GlobalInputPort__Group__1 ;
     public final void rule__GlobalInputPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1541:1: ( rule__GlobalInputPort__Group__0__Impl rule__GlobalInputPort__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1542:2: rule__GlobalInputPort__Group__0__Impl rule__GlobalInputPort__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1575:1: ( rule__GlobalInputPort__Group__0__Impl rule__GlobalInputPort__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1576:2: rule__GlobalInputPort__Group__0__Impl rule__GlobalInputPort__Group__1
             {
-            pushFollow(FOLLOW_rule__GlobalInputPort__Group__0__Impl_in_rule__GlobalInputPort__Group__03138);
+            pushFollow(FOLLOW_rule__GlobalInputPort__Group__0__Impl_in_rule__GlobalInputPort__Group__03215);
             rule__GlobalInputPort__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GlobalInputPort__Group__1_in_rule__GlobalInputPort__Group__03141);
+            pushFollow(FOLLOW_rule__GlobalInputPort__Group__1_in_rule__GlobalInputPort__Group__03218);
             rule__GlobalInputPort__Group__1();
 
             state._fsp--;
@@ -4239,20 +4345,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalInputPort__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1549:1: rule__GlobalInputPort__Group__0__Impl : ( '.' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1583:1: rule__GlobalInputPort__Group__0__Impl : ( '.' ) ;
     public final void rule__GlobalInputPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1553:1: ( ( '.' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1554:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1587:1: ( ( '.' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1588:1: ( '.' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1554:1: ( '.' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1555:1: '.'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1588:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1589:1: '.'
             {
              before(grammarAccess.getGlobalInputPortAccess().getFullStopKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__GlobalInputPort__Group__0__Impl3169); 
+            match(input,14,FOLLOW_14_in_rule__GlobalInputPort__Group__0__Impl3246); 
              after(grammarAccess.getGlobalInputPortAccess().getFullStopKeyword_0()); 
 
             }
@@ -4276,21 +4382,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalInputPort__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1568:1: rule__GlobalInputPort__Group__1 : rule__GlobalInputPort__Group__1__Impl rule__GlobalInputPort__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1602:1: rule__GlobalInputPort__Group__1 : rule__GlobalInputPort__Group__1__Impl rule__GlobalInputPort__Group__2 ;
     public final void rule__GlobalInputPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1572:1: ( rule__GlobalInputPort__Group__1__Impl rule__GlobalInputPort__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1573:2: rule__GlobalInputPort__Group__1__Impl rule__GlobalInputPort__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1606:1: ( rule__GlobalInputPort__Group__1__Impl rule__GlobalInputPort__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1607:2: rule__GlobalInputPort__Group__1__Impl rule__GlobalInputPort__Group__2
             {
-            pushFollow(FOLLOW_rule__GlobalInputPort__Group__1__Impl_in_rule__GlobalInputPort__Group__13200);
+            pushFollow(FOLLOW_rule__GlobalInputPort__Group__1__Impl_in_rule__GlobalInputPort__Group__13277);
             rule__GlobalInputPort__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GlobalInputPort__Group__2_in_rule__GlobalInputPort__Group__13203);
+            pushFollow(FOLLOW_rule__GlobalInputPort__Group__2_in_rule__GlobalInputPort__Group__13280);
             rule__GlobalInputPort__Group__2();
 
             state._fsp--;
@@ -4314,20 +4420,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalInputPort__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1580:1: rule__GlobalInputPort__Group__1__Impl : ( 'in' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1614:1: rule__GlobalInputPort__Group__1__Impl : ( 'in' ) ;
     public final void rule__GlobalInputPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1584:1: ( ( 'in' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1585:1: ( 'in' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1618:1: ( ( 'in' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1619:1: ( 'in' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1585:1: ( 'in' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1586:1: 'in'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1619:1: ( 'in' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1620:1: 'in'
             {
              before(grammarAccess.getGlobalInputPortAccess().getInKeyword_1()); 
-            match(input,19,FOLLOW_19_in_rule__GlobalInputPort__Group__1__Impl3231); 
+            match(input,19,FOLLOW_19_in_rule__GlobalInputPort__Group__1__Impl3308); 
              after(grammarAccess.getGlobalInputPortAccess().getInKeyword_1()); 
 
             }
@@ -4351,16 +4457,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalInputPort__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1599:1: rule__GlobalInputPort__Group__2 : rule__GlobalInputPort__Group__2__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1633:1: rule__GlobalInputPort__Group__2 : rule__GlobalInputPort__Group__2__Impl ;
     public final void rule__GlobalInputPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1603:1: ( rule__GlobalInputPort__Group__2__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1604:2: rule__GlobalInputPort__Group__2__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1637:1: ( rule__GlobalInputPort__Group__2__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1638:2: rule__GlobalInputPort__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__GlobalInputPort__Group__2__Impl_in_rule__GlobalInputPort__Group__23262);
+            pushFollow(FOLLOW_rule__GlobalInputPort__Group__2__Impl_in_rule__GlobalInputPort__Group__23339);
             rule__GlobalInputPort__Group__2__Impl();
 
             state._fsp--;
@@ -4384,21 +4490,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalInputPort__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1610:1: rule__GlobalInputPort__Group__2__Impl : ( () ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1644:1: rule__GlobalInputPort__Group__2__Impl : ( () ) ;
     public final void rule__GlobalInputPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1614:1: ( ( () ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1615:1: ( () )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1648:1: ( ( () ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1649:1: ( () )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1615:1: ( () )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1616:1: ()
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1649:1: ( () )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1650:1: ()
             {
              before(grammarAccess.getGlobalInputPortAccess().getGlobalInputPortAction_2()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1617:1: ()
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1619:1: 
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1651:1: ()
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1653:1: 
             {
             }
 
@@ -4421,21 +4527,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnnamedSubFlowPort__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1635:1: rule__UnnamedSubFlowPort__Group__0 : rule__UnnamedSubFlowPort__Group__0__Impl rule__UnnamedSubFlowPort__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1669:1: rule__UnnamedSubFlowPort__Group__0 : rule__UnnamedSubFlowPort__Group__0__Impl rule__UnnamedSubFlowPort__Group__1 ;
     public final void rule__UnnamedSubFlowPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1639:1: ( rule__UnnamedSubFlowPort__Group__0__Impl rule__UnnamedSubFlowPort__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1640:2: rule__UnnamedSubFlowPort__Group__0__Impl rule__UnnamedSubFlowPort__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1673:1: ( rule__UnnamedSubFlowPort__Group__0__Impl rule__UnnamedSubFlowPort__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1674:2: rule__UnnamedSubFlowPort__Group__0__Impl rule__UnnamedSubFlowPort__Group__1
             {
-            pushFollow(FOLLOW_rule__UnnamedSubFlowPort__Group__0__Impl_in_rule__UnnamedSubFlowPort__Group__03326);
+            pushFollow(FOLLOW_rule__UnnamedSubFlowPort__Group__0__Impl_in_rule__UnnamedSubFlowPort__Group__03403);
             rule__UnnamedSubFlowPort__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnnamedSubFlowPort__Group__1_in_rule__UnnamedSubFlowPort__Group__03329);
+            pushFollow(FOLLOW_rule__UnnamedSubFlowPort__Group__1_in_rule__UnnamedSubFlowPort__Group__03406);
             rule__UnnamedSubFlowPort__Group__1();
 
             state._fsp--;
@@ -4459,20 +4565,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnnamedSubFlowPort__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1647:1: rule__UnnamedSubFlowPort__Group__0__Impl : ( '.' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1681:1: rule__UnnamedSubFlowPort__Group__0__Impl : ( '.' ) ;
     public final void rule__UnnamedSubFlowPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1651:1: ( ( '.' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1652:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1685:1: ( ( '.' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1686:1: ( '.' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1652:1: ( '.' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1653:1: '.'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1686:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1687:1: '.'
             {
              before(grammarAccess.getUnnamedSubFlowPortAccess().getFullStopKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__UnnamedSubFlowPort__Group__0__Impl3357); 
+            match(input,14,FOLLOW_14_in_rule__UnnamedSubFlowPort__Group__0__Impl3434); 
              after(grammarAccess.getUnnamedSubFlowPortAccess().getFullStopKeyword_0()); 
 
             }
@@ -4496,16 +4602,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnnamedSubFlowPort__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1666:1: rule__UnnamedSubFlowPort__Group__1 : rule__UnnamedSubFlowPort__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1700:1: rule__UnnamedSubFlowPort__Group__1 : rule__UnnamedSubFlowPort__Group__1__Impl ;
     public final void rule__UnnamedSubFlowPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1670:1: ( rule__UnnamedSubFlowPort__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1671:2: rule__UnnamedSubFlowPort__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1704:1: ( rule__UnnamedSubFlowPort__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1705:2: rule__UnnamedSubFlowPort__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__UnnamedSubFlowPort__Group__1__Impl_in_rule__UnnamedSubFlowPort__Group__13388);
+            pushFollow(FOLLOW_rule__UnnamedSubFlowPort__Group__1__Impl_in_rule__UnnamedSubFlowPort__Group__13465);
             rule__UnnamedSubFlowPort__Group__1__Impl();
 
             state._fsp--;
@@ -4529,21 +4635,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnnamedSubFlowPort__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1677:1: rule__UnnamedSubFlowPort__Group__1__Impl : ( () ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1711:1: rule__UnnamedSubFlowPort__Group__1__Impl : ( () ) ;
     public final void rule__UnnamedSubFlowPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1681:1: ( ( () ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1682:1: ( () )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1715:1: ( ( () ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1716:1: ( () )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1682:1: ( () )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1683:1: ()
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1716:1: ( () )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1717:1: ()
             {
              before(grammarAccess.getUnnamedSubFlowPortAccess().getUnnamedSubFlowPortAction_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1684:1: ()
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1686:1: 
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1718:1: ()
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1720:1: 
             {
             }
 
@@ -4566,21 +4672,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalOutputPort__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1700:1: rule__GlobalOutputPort__Group__0 : rule__GlobalOutputPort__Group__0__Impl rule__GlobalOutputPort__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1734:1: rule__GlobalOutputPort__Group__0 : rule__GlobalOutputPort__Group__0__Impl rule__GlobalOutputPort__Group__1 ;
     public final void rule__GlobalOutputPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1704:1: ( rule__GlobalOutputPort__Group__0__Impl rule__GlobalOutputPort__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1705:2: rule__GlobalOutputPort__Group__0__Impl rule__GlobalOutputPort__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1738:1: ( rule__GlobalOutputPort__Group__0__Impl rule__GlobalOutputPort__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1739:2: rule__GlobalOutputPort__Group__0__Impl rule__GlobalOutputPort__Group__1
             {
-            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__0__Impl_in_rule__GlobalOutputPort__Group__03450);
+            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__0__Impl_in_rule__GlobalOutputPort__Group__03527);
             rule__GlobalOutputPort__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__1_in_rule__GlobalOutputPort__Group__03453);
+            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__1_in_rule__GlobalOutputPort__Group__03530);
             rule__GlobalOutputPort__Group__1();
 
             state._fsp--;
@@ -4604,20 +4710,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalOutputPort__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1712:1: rule__GlobalOutputPort__Group__0__Impl : ( '.' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1746:1: rule__GlobalOutputPort__Group__0__Impl : ( '.' ) ;
     public final void rule__GlobalOutputPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1716:1: ( ( '.' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1717:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1750:1: ( ( '.' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1751:1: ( '.' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1717:1: ( '.' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1718:1: '.'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1751:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1752:1: '.'
             {
              before(grammarAccess.getGlobalOutputPortAccess().getFullStopKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__GlobalOutputPort__Group__0__Impl3481); 
+            match(input,14,FOLLOW_14_in_rule__GlobalOutputPort__Group__0__Impl3558); 
              after(grammarAccess.getGlobalOutputPortAccess().getFullStopKeyword_0()); 
 
             }
@@ -4641,21 +4747,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalOutputPort__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1731:1: rule__GlobalOutputPort__Group__1 : rule__GlobalOutputPort__Group__1__Impl rule__GlobalOutputPort__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1765:1: rule__GlobalOutputPort__Group__1 : rule__GlobalOutputPort__Group__1__Impl rule__GlobalOutputPort__Group__2 ;
     public final void rule__GlobalOutputPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1735:1: ( rule__GlobalOutputPort__Group__1__Impl rule__GlobalOutputPort__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1736:2: rule__GlobalOutputPort__Group__1__Impl rule__GlobalOutputPort__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1769:1: ( rule__GlobalOutputPort__Group__1__Impl rule__GlobalOutputPort__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1770:2: rule__GlobalOutputPort__Group__1__Impl rule__GlobalOutputPort__Group__2
             {
-            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__1__Impl_in_rule__GlobalOutputPort__Group__13512);
+            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__1__Impl_in_rule__GlobalOutputPort__Group__13589);
             rule__GlobalOutputPort__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__2_in_rule__GlobalOutputPort__Group__13515);
+            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__2_in_rule__GlobalOutputPort__Group__13592);
             rule__GlobalOutputPort__Group__2();
 
             state._fsp--;
@@ -4679,20 +4785,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalOutputPort__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1743:1: rule__GlobalOutputPort__Group__1__Impl : ( 'out' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1777:1: rule__GlobalOutputPort__Group__1__Impl : ( 'out' ) ;
     public final void rule__GlobalOutputPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1747:1: ( ( 'out' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1748:1: ( 'out' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1781:1: ( ( 'out' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1782:1: ( 'out' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1748:1: ( 'out' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1749:1: 'out'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1782:1: ( 'out' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1783:1: 'out'
             {
              before(grammarAccess.getGlobalOutputPortAccess().getOutKeyword_1()); 
-            match(input,20,FOLLOW_20_in_rule__GlobalOutputPort__Group__1__Impl3543); 
+            match(input,20,FOLLOW_20_in_rule__GlobalOutputPort__Group__1__Impl3620); 
              after(grammarAccess.getGlobalOutputPortAccess().getOutKeyword_1()); 
 
             }
@@ -4716,16 +4822,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalOutputPort__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1762:1: rule__GlobalOutputPort__Group__2 : rule__GlobalOutputPort__Group__2__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1796:1: rule__GlobalOutputPort__Group__2 : rule__GlobalOutputPort__Group__2__Impl ;
     public final void rule__GlobalOutputPort__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1766:1: ( rule__GlobalOutputPort__Group__2__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1767:2: rule__GlobalOutputPort__Group__2__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1800:1: ( rule__GlobalOutputPort__Group__2__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1801:2: rule__GlobalOutputPort__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__2__Impl_in_rule__GlobalOutputPort__Group__23574);
+            pushFollow(FOLLOW_rule__GlobalOutputPort__Group__2__Impl_in_rule__GlobalOutputPort__Group__23651);
             rule__GlobalOutputPort__Group__2__Impl();
 
             state._fsp--;
@@ -4749,21 +4855,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GlobalOutputPort__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1773:1: rule__GlobalOutputPort__Group__2__Impl : ( () ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1807:1: rule__GlobalOutputPort__Group__2__Impl : ( () ) ;
     public final void rule__GlobalOutputPort__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1777:1: ( ( () ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1778:1: ( () )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1811:1: ( ( () ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1812:1: ( () )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1778:1: ( () )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1779:1: ()
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1812:1: ( () )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1813:1: ()
             {
              before(grammarAccess.getGlobalOutputPortAccess().getGlobalOutputPortAction_2()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1780:1: ()
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1782:1: 
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1814:1: ()
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1816:1: 
             {
             }
 
@@ -4786,21 +4892,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1798:1: rule__Port__Group__0 : rule__Port__Group__0__Impl rule__Port__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1832:1: rule__Port__Group__0 : rule__Port__Group__0__Impl rule__Port__Group__1 ;
     public final void rule__Port__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1802:1: ( rule__Port__Group__0__Impl rule__Port__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1803:2: rule__Port__Group__0__Impl rule__Port__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1836:1: ( rule__Port__Group__0__Impl rule__Port__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1837:2: rule__Port__Group__0__Impl rule__Port__Group__1
             {
-            pushFollow(FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__03638);
+            pushFollow(FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__03715);
             rule__Port__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Port__Group__1_in_rule__Port__Group__03641);
+            pushFollow(FOLLOW_rule__Port__Group__1_in_rule__Port__Group__03718);
             rule__Port__Group__1();
 
             state._fsp--;
@@ -4824,23 +4930,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1810:1: rule__Port__Group__0__Impl : ( ( rule__Port__FunctionUnitAssignment_0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1844:1: rule__Port__Group__0__Impl : ( ( rule__Port__FunctionUnitAssignment_0 ) ) ;
     public final void rule__Port__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1814:1: ( ( ( rule__Port__FunctionUnitAssignment_0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1815:1: ( ( rule__Port__FunctionUnitAssignment_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1848:1: ( ( ( rule__Port__FunctionUnitAssignment_0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1849:1: ( ( rule__Port__FunctionUnitAssignment_0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1815:1: ( ( rule__Port__FunctionUnitAssignment_0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1816:1: ( rule__Port__FunctionUnitAssignment_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1849:1: ( ( rule__Port__FunctionUnitAssignment_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1850:1: ( rule__Port__FunctionUnitAssignment_0 )
             {
              before(grammarAccess.getPortAccess().getFunctionUnitAssignment_0()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1817:1: ( rule__Port__FunctionUnitAssignment_0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1817:2: rule__Port__FunctionUnitAssignment_0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1851:1: ( rule__Port__FunctionUnitAssignment_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1851:2: rule__Port__FunctionUnitAssignment_0
             {
-            pushFollow(FOLLOW_rule__Port__FunctionUnitAssignment_0_in_rule__Port__Group__0__Impl3668);
+            pushFollow(FOLLOW_rule__Port__FunctionUnitAssignment_0_in_rule__Port__Group__0__Impl3745);
             rule__Port__FunctionUnitAssignment_0();
 
             state._fsp--;
@@ -4871,16 +4977,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1827:1: rule__Port__Group__1 : rule__Port__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1861:1: rule__Port__Group__1 : rule__Port__Group__1__Impl ;
     public final void rule__Port__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1831:1: ( rule__Port__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1832:2: rule__Port__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1865:1: ( rule__Port__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1866:2: rule__Port__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__13698);
+            pushFollow(FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__13775);
             rule__Port__Group__1__Impl();
 
             state._fsp--;
@@ -4904,20 +5010,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1838:1: rule__Port__Group__1__Impl : ( ( rule__Port__PortAssignment_1 )? ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1872:1: rule__Port__Group__1__Impl : ( ( rule__Port__PortAssignment_1 )? ) ;
     public final void rule__Port__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1842:1: ( ( ( rule__Port__PortAssignment_1 )? ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1843:1: ( ( rule__Port__PortAssignment_1 )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1876:1: ( ( ( rule__Port__PortAssignment_1 )? ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1877:1: ( ( rule__Port__PortAssignment_1 )? )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1843:1: ( ( rule__Port__PortAssignment_1 )? )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1844:1: ( rule__Port__PortAssignment_1 )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1877:1: ( ( rule__Port__PortAssignment_1 )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1878:1: ( rule__Port__PortAssignment_1 )?
             {
              before(grammarAccess.getPortAccess().getPortAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1845:1: ( rule__Port__PortAssignment_1 )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1879:1: ( rule__Port__PortAssignment_1 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -4926,9 +5032,9 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1845:2: rule__Port__PortAssignment_1
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1879:2: rule__Port__PortAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Port__PortAssignment_1_in_rule__Port__Group__1__Impl3725);
+                    pushFollow(FOLLOW_rule__Port__PortAssignment_1_in_rule__Port__Group__1__Impl3802);
                     rule__Port__PortAssignment_1();
 
                     state._fsp--;
@@ -4962,21 +5068,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamedPort__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1859:1: rule__NamedPort__Group__0 : rule__NamedPort__Group__0__Impl rule__NamedPort__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1893:1: rule__NamedPort__Group__0 : rule__NamedPort__Group__0__Impl rule__NamedPort__Group__1 ;
     public final void rule__NamedPort__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1863:1: ( rule__NamedPort__Group__0__Impl rule__NamedPort__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1864:2: rule__NamedPort__Group__0__Impl rule__NamedPort__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1897:1: ( rule__NamedPort__Group__0__Impl rule__NamedPort__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1898:2: rule__NamedPort__Group__0__Impl rule__NamedPort__Group__1
             {
-            pushFollow(FOLLOW_rule__NamedPort__Group__0__Impl_in_rule__NamedPort__Group__03760);
+            pushFollow(FOLLOW_rule__NamedPort__Group__0__Impl_in_rule__NamedPort__Group__03837);
             rule__NamedPort__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NamedPort__Group__1_in_rule__NamedPort__Group__03763);
+            pushFollow(FOLLOW_rule__NamedPort__Group__1_in_rule__NamedPort__Group__03840);
             rule__NamedPort__Group__1();
 
             state._fsp--;
@@ -5000,20 +5106,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamedPort__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1871:1: rule__NamedPort__Group__0__Impl : ( '.' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1905:1: rule__NamedPort__Group__0__Impl : ( '.' ) ;
     public final void rule__NamedPort__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1875:1: ( ( '.' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1876:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1909:1: ( ( '.' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1910:1: ( '.' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1876:1: ( '.' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1877:1: '.'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1910:1: ( '.' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1911:1: '.'
             {
              before(grammarAccess.getNamedPortAccess().getFullStopKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__NamedPort__Group__0__Impl3791); 
+            match(input,14,FOLLOW_14_in_rule__NamedPort__Group__0__Impl3868); 
              after(grammarAccess.getNamedPortAccess().getFullStopKeyword_0()); 
 
             }
@@ -5037,16 +5143,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamedPort__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1890:1: rule__NamedPort__Group__1 : rule__NamedPort__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1924:1: rule__NamedPort__Group__1 : rule__NamedPort__Group__1__Impl ;
     public final void rule__NamedPort__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1894:1: ( rule__NamedPort__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1895:2: rule__NamedPort__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1928:1: ( rule__NamedPort__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1929:2: rule__NamedPort__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__NamedPort__Group__1__Impl_in_rule__NamedPort__Group__13822);
+            pushFollow(FOLLOW_rule__NamedPort__Group__1__Impl_in_rule__NamedPort__Group__13899);
             rule__NamedPort__Group__1__Impl();
 
             state._fsp--;
@@ -5070,23 +5176,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamedPort__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1901:1: rule__NamedPort__Group__1__Impl : ( ( rule__NamedPort__NameAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1935:1: rule__NamedPort__Group__1__Impl : ( ( rule__NamedPort__NameAssignment_1 ) ) ;
     public final void rule__NamedPort__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1905:1: ( ( ( rule__NamedPort__NameAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1906:1: ( ( rule__NamedPort__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1939:1: ( ( ( rule__NamedPort__NameAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1940:1: ( ( rule__NamedPort__NameAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1906:1: ( ( rule__NamedPort__NameAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1907:1: ( rule__NamedPort__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1940:1: ( ( rule__NamedPort__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1941:1: ( rule__NamedPort__NameAssignment_1 )
             {
              before(grammarAccess.getNamedPortAccess().getNameAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1908:1: ( rule__NamedPort__NameAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1908:2: rule__NamedPort__NameAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1942:1: ( rule__NamedPort__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1942:2: rule__NamedPort__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__NamedPort__NameAssignment_1_in_rule__NamedPort__Group__1__Impl3849);
+            pushFollow(FOLLOW_rule__NamedPort__NameAssignment_1_in_rule__NamedPort__Group__1__Impl3926);
             rule__NamedPort__NameAssignment_1();
 
             state._fsp--;
@@ -5117,21 +5223,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1922:1: rule__EbcOperation__Group__0 : rule__EbcOperation__Group__0__Impl rule__EbcOperation__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1956:1: rule__EbcOperation__Group__0 : rule__EbcOperation__Group__0__Impl rule__EbcOperation__Group__1 ;
     public final void rule__EbcOperation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1926:1: ( rule__EbcOperation__Group__0__Impl rule__EbcOperation__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1927:2: rule__EbcOperation__Group__0__Impl rule__EbcOperation__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1960:1: ( rule__EbcOperation__Group__0__Impl rule__EbcOperation__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1961:2: rule__EbcOperation__Group__0__Impl rule__EbcOperation__Group__1
             {
-            pushFollow(FOLLOW_rule__EbcOperation__Group__0__Impl_in_rule__EbcOperation__Group__03883);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__0__Impl_in_rule__EbcOperation__Group__03960);
             rule__EbcOperation__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EbcOperation__Group__1_in_rule__EbcOperation__Group__03886);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__1_in_rule__EbcOperation__Group__03963);
             rule__EbcOperation__Group__1();
 
             state._fsp--;
@@ -5155,20 +5261,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1934:1: rule__EbcOperation__Group__0__Impl : ( 'ebc' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1968:1: rule__EbcOperation__Group__0__Impl : ( 'ebc' ) ;
     public final void rule__EbcOperation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1938:1: ( ( 'ebc' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1939:1: ( 'ebc' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1972:1: ( ( 'ebc' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1973:1: ( 'ebc' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1939:1: ( 'ebc' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1940:1: 'ebc'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1973:1: ( 'ebc' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1974:1: 'ebc'
             {
              before(grammarAccess.getEbcOperationAccess().getEbcKeyword_0()); 
-            match(input,21,FOLLOW_21_in_rule__EbcOperation__Group__0__Impl3914); 
+            match(input,21,FOLLOW_21_in_rule__EbcOperation__Group__0__Impl3991); 
              after(grammarAccess.getEbcOperationAccess().getEbcKeyword_0()); 
 
             }
@@ -5192,21 +5298,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1953:1: rule__EbcOperation__Group__1 : rule__EbcOperation__Group__1__Impl rule__EbcOperation__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1987:1: rule__EbcOperation__Group__1 : rule__EbcOperation__Group__1__Impl rule__EbcOperation__Group__2 ;
     public final void rule__EbcOperation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1957:1: ( rule__EbcOperation__Group__1__Impl rule__EbcOperation__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1958:2: rule__EbcOperation__Group__1__Impl rule__EbcOperation__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1991:1: ( rule__EbcOperation__Group__1__Impl rule__EbcOperation__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1992:2: rule__EbcOperation__Group__1__Impl rule__EbcOperation__Group__2
             {
-            pushFollow(FOLLOW_rule__EbcOperation__Group__1__Impl_in_rule__EbcOperation__Group__13945);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__1__Impl_in_rule__EbcOperation__Group__14022);
             rule__EbcOperation__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EbcOperation__Group__2_in_rule__EbcOperation__Group__13948);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__2_in_rule__EbcOperation__Group__14025);
             rule__EbcOperation__Group__2();
 
             state._fsp--;
@@ -5230,23 +5336,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1965:1: rule__EbcOperation__Group__1__Impl : ( ( rule__EbcOperation__NameAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1999:1: rule__EbcOperation__Group__1__Impl : ( ( rule__EbcOperation__NameAssignment_1 ) ) ;
     public final void rule__EbcOperation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1969:1: ( ( ( rule__EbcOperation__NameAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1970:1: ( ( rule__EbcOperation__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2003:1: ( ( ( rule__EbcOperation__NameAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2004:1: ( ( rule__EbcOperation__NameAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1970:1: ( ( rule__EbcOperation__NameAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1971:1: ( rule__EbcOperation__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2004:1: ( ( rule__EbcOperation__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2005:1: ( rule__EbcOperation__NameAssignment_1 )
             {
              before(grammarAccess.getEbcOperationAccess().getNameAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1972:1: ( rule__EbcOperation__NameAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1972:2: rule__EbcOperation__NameAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2006:1: ( rule__EbcOperation__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2006:2: rule__EbcOperation__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__EbcOperation__NameAssignment_1_in_rule__EbcOperation__Group__1__Impl3975);
+            pushFollow(FOLLOW_rule__EbcOperation__NameAssignment_1_in_rule__EbcOperation__Group__1__Impl4052);
             rule__EbcOperation__NameAssignment_1();
 
             state._fsp--;
@@ -5277,21 +5383,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1982:1: rule__EbcOperation__Group__2 : rule__EbcOperation__Group__2__Impl rule__EbcOperation__Group__3 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2016:1: rule__EbcOperation__Group__2 : rule__EbcOperation__Group__2__Impl rule__EbcOperation__Group__3 ;
     public final void rule__EbcOperation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1986:1: ( rule__EbcOperation__Group__2__Impl rule__EbcOperation__Group__3 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1987:2: rule__EbcOperation__Group__2__Impl rule__EbcOperation__Group__3
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2020:1: ( rule__EbcOperation__Group__2__Impl rule__EbcOperation__Group__3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2021:2: rule__EbcOperation__Group__2__Impl rule__EbcOperation__Group__3
             {
-            pushFollow(FOLLOW_rule__EbcOperation__Group__2__Impl_in_rule__EbcOperation__Group__24005);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__2__Impl_in_rule__EbcOperation__Group__24082);
             rule__EbcOperation__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EbcOperation__Group__3_in_rule__EbcOperation__Group__24008);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__3_in_rule__EbcOperation__Group__24085);
             rule__EbcOperation__Group__3();
 
             state._fsp--;
@@ -5315,20 +5421,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1994:1: rule__EbcOperation__Group__2__Impl : ( '=' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2028:1: rule__EbcOperation__Group__2__Impl : ( '=' ) ;
     public final void rule__EbcOperation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1998:1: ( ( '=' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1999:1: ( '=' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2032:1: ( ( '=' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2033:1: ( '=' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:1999:1: ( '=' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2000:1: '='
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2033:1: ( '=' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2034:1: '='
             {
              before(grammarAccess.getEbcOperationAccess().getEqualsSignKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__EbcOperation__Group__2__Impl4036); 
+            match(input,22,FOLLOW_22_in_rule__EbcOperation__Group__2__Impl4113); 
              after(grammarAccess.getEbcOperationAccess().getEqualsSignKeyword_2()); 
 
             }
@@ -5352,16 +5458,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__3"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2013:1: rule__EbcOperation__Group__3 : rule__EbcOperation__Group__3__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2047:1: rule__EbcOperation__Group__3 : rule__EbcOperation__Group__3__Impl ;
     public final void rule__EbcOperation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2017:1: ( rule__EbcOperation__Group__3__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2018:2: rule__EbcOperation__Group__3__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2051:1: ( rule__EbcOperation__Group__3__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2052:2: rule__EbcOperation__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__EbcOperation__Group__3__Impl_in_rule__EbcOperation__Group__34067);
+            pushFollow(FOLLOW_rule__EbcOperation__Group__3__Impl_in_rule__EbcOperation__Group__34144);
             rule__EbcOperation__Group__3__Impl();
 
             state._fsp--;
@@ -5385,23 +5491,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__Group__3__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2024:1: rule__EbcOperation__Group__3__Impl : ( ( rule__EbcOperation__ClassAssignment_3 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2058:1: rule__EbcOperation__Group__3__Impl : ( ( rule__EbcOperation__ClassAssignment_3 ) ) ;
     public final void rule__EbcOperation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2028:1: ( ( ( rule__EbcOperation__ClassAssignment_3 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2029:1: ( ( rule__EbcOperation__ClassAssignment_3 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2062:1: ( ( ( rule__EbcOperation__ClassAssignment_3 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2063:1: ( ( rule__EbcOperation__ClassAssignment_3 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2029:1: ( ( rule__EbcOperation__ClassAssignment_3 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2030:1: ( rule__EbcOperation__ClassAssignment_3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2063:1: ( ( rule__EbcOperation__ClassAssignment_3 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2064:1: ( rule__EbcOperation__ClassAssignment_3 )
             {
              before(grammarAccess.getEbcOperationAccess().getClassAssignment_3()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2031:1: ( rule__EbcOperation__ClassAssignment_3 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2031:2: rule__EbcOperation__ClassAssignment_3
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2065:1: ( rule__EbcOperation__ClassAssignment_3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2065:2: rule__EbcOperation__ClassAssignment_3
             {
-            pushFollow(FOLLOW_rule__EbcOperation__ClassAssignment_3_in_rule__EbcOperation__Group__3__Impl4094);
+            pushFollow(FOLLOW_rule__EbcOperation__ClassAssignment_3_in_rule__EbcOperation__Group__3__Impl4171);
             rule__EbcOperation__ClassAssignment_3();
 
             state._fsp--;
@@ -5431,22 +5537,337 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__EbcOperation__Group__3__Impl"
 
 
+    // $ANTLR start "rule__ClassOperation__Group__0"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2083:1: rule__ClassOperation__Group__0 : rule__ClassOperation__Group__0__Impl rule__ClassOperation__Group__1 ;
+    public final void rule__ClassOperation__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2087:1: ( rule__ClassOperation__Group__0__Impl rule__ClassOperation__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2088:2: rule__ClassOperation__Group__0__Impl rule__ClassOperation__Group__1
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__Group__0__Impl_in_rule__ClassOperation__Group__04209);
+            rule__ClassOperation__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ClassOperation__Group__1_in_rule__ClassOperation__Group__04212);
+            rule__ClassOperation__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__0"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__0__Impl"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2095:1: rule__ClassOperation__Group__0__Impl : ( 'operation' ) ;
+    public final void rule__ClassOperation__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2099:1: ( ( 'operation' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2100:1: ( 'operation' )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2100:1: ( 'operation' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2101:1: 'operation'
+            {
+             before(grammarAccess.getClassOperationAccess().getOperationKeyword_0()); 
+            match(input,23,FOLLOW_23_in_rule__ClassOperation__Group__0__Impl4240); 
+             after(grammarAccess.getClassOperationAccess().getOperationKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__0__Impl"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__1"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2114:1: rule__ClassOperation__Group__1 : rule__ClassOperation__Group__1__Impl rule__ClassOperation__Group__2 ;
+    public final void rule__ClassOperation__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2118:1: ( rule__ClassOperation__Group__1__Impl rule__ClassOperation__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2119:2: rule__ClassOperation__Group__1__Impl rule__ClassOperation__Group__2
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__Group__1__Impl_in_rule__ClassOperation__Group__14271);
+            rule__ClassOperation__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ClassOperation__Group__2_in_rule__ClassOperation__Group__14274);
+            rule__ClassOperation__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__1"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__1__Impl"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2126:1: rule__ClassOperation__Group__1__Impl : ( ( rule__ClassOperation__NameAssignment_1 ) ) ;
+    public final void rule__ClassOperation__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2130:1: ( ( ( rule__ClassOperation__NameAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2131:1: ( ( rule__ClassOperation__NameAssignment_1 ) )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2131:1: ( ( rule__ClassOperation__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2132:1: ( rule__ClassOperation__NameAssignment_1 )
+            {
+             before(grammarAccess.getClassOperationAccess().getNameAssignment_1()); 
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2133:1: ( rule__ClassOperation__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2133:2: rule__ClassOperation__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__NameAssignment_1_in_rule__ClassOperation__Group__1__Impl4301);
+            rule__ClassOperation__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getClassOperationAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__1__Impl"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__2"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2143:1: rule__ClassOperation__Group__2 : rule__ClassOperation__Group__2__Impl rule__ClassOperation__Group__3 ;
+    public final void rule__ClassOperation__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2147:1: ( rule__ClassOperation__Group__2__Impl rule__ClassOperation__Group__3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2148:2: rule__ClassOperation__Group__2__Impl rule__ClassOperation__Group__3
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__Group__2__Impl_in_rule__ClassOperation__Group__24331);
+            rule__ClassOperation__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__ClassOperation__Group__3_in_rule__ClassOperation__Group__24334);
+            rule__ClassOperation__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__2"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__2__Impl"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2155:1: rule__ClassOperation__Group__2__Impl : ( '=' ) ;
+    public final void rule__ClassOperation__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2159:1: ( ( '=' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2160:1: ( '=' )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2160:1: ( '=' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2161:1: '='
+            {
+             before(grammarAccess.getClassOperationAccess().getEqualsSignKeyword_2()); 
+            match(input,22,FOLLOW_22_in_rule__ClassOperation__Group__2__Impl4362); 
+             after(grammarAccess.getClassOperationAccess().getEqualsSignKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__2__Impl"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__3"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2174:1: rule__ClassOperation__Group__3 : rule__ClassOperation__Group__3__Impl ;
+    public final void rule__ClassOperation__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2178:1: ( rule__ClassOperation__Group__3__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2179:2: rule__ClassOperation__Group__3__Impl
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__Group__3__Impl_in_rule__ClassOperation__Group__34393);
+            rule__ClassOperation__Group__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__3"
+
+
+    // $ANTLR start "rule__ClassOperation__Group__3__Impl"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2185:1: rule__ClassOperation__Group__3__Impl : ( ( rule__ClassOperation__ClassAssignment_3 ) ) ;
+    public final void rule__ClassOperation__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2189:1: ( ( ( rule__ClassOperation__ClassAssignment_3 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2190:1: ( ( rule__ClassOperation__ClassAssignment_3 ) )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2190:1: ( ( rule__ClassOperation__ClassAssignment_3 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2191:1: ( rule__ClassOperation__ClassAssignment_3 )
+            {
+             before(grammarAccess.getClassOperationAccess().getClassAssignment_3()); 
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2192:1: ( rule__ClassOperation__ClassAssignment_3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2192:2: rule__ClassOperation__ClassAssignment_3
+            {
+            pushFollow(FOLLOW_rule__ClassOperation__ClassAssignment_3_in_rule__ClassOperation__Group__3__Impl4420);
+            rule__ClassOperation__ClassAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getClassOperationAccess().getClassAssignment_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__Group__3__Impl"
+
+
     // $ANTLR start "rule__MethodOperation__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2049:1: rule__MethodOperation__Group__0 : rule__MethodOperation__Group__0__Impl rule__MethodOperation__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2210:1: rule__MethodOperation__Group__0 : rule__MethodOperation__Group__0__Impl rule__MethodOperation__Group__1 ;
     public final void rule__MethodOperation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2053:1: ( rule__MethodOperation__Group__0__Impl rule__MethodOperation__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2054:2: rule__MethodOperation__Group__0__Impl rule__MethodOperation__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2214:1: ( rule__MethodOperation__Group__0__Impl rule__MethodOperation__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2215:2: rule__MethodOperation__Group__0__Impl rule__MethodOperation__Group__1
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__0__Impl_in_rule__MethodOperation__Group__04132);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__0__Impl_in_rule__MethodOperation__Group__04458);
             rule__MethodOperation__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodOperation__Group__1_in_rule__MethodOperation__Group__04135);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__1_in_rule__MethodOperation__Group__04461);
             rule__MethodOperation__Group__1();
 
             state._fsp--;
@@ -5470,20 +5891,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2061:1: rule__MethodOperation__Group__0__Impl : ( 'method' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2222:1: rule__MethodOperation__Group__0__Impl : ( 'method' ) ;
     public final void rule__MethodOperation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2065:1: ( ( 'method' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2066:1: ( 'method' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2226:1: ( ( 'method' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2227:1: ( 'method' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2066:1: ( 'method' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2067:1: 'method'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2227:1: ( 'method' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2228:1: 'method'
             {
              before(grammarAccess.getMethodOperationAccess().getMethodKeyword_0()); 
-            match(input,23,FOLLOW_23_in_rule__MethodOperation__Group__0__Impl4163); 
+            match(input,24,FOLLOW_24_in_rule__MethodOperation__Group__0__Impl4489); 
              after(grammarAccess.getMethodOperationAccess().getMethodKeyword_0()); 
 
             }
@@ -5507,21 +5928,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2080:1: rule__MethodOperation__Group__1 : rule__MethodOperation__Group__1__Impl rule__MethodOperation__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2241:1: rule__MethodOperation__Group__1 : rule__MethodOperation__Group__1__Impl rule__MethodOperation__Group__2 ;
     public final void rule__MethodOperation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2084:1: ( rule__MethodOperation__Group__1__Impl rule__MethodOperation__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2085:2: rule__MethodOperation__Group__1__Impl rule__MethodOperation__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2245:1: ( rule__MethodOperation__Group__1__Impl rule__MethodOperation__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2246:2: rule__MethodOperation__Group__1__Impl rule__MethodOperation__Group__2
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__1__Impl_in_rule__MethodOperation__Group__14194);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__1__Impl_in_rule__MethodOperation__Group__14520);
             rule__MethodOperation__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodOperation__Group__2_in_rule__MethodOperation__Group__14197);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__2_in_rule__MethodOperation__Group__14523);
             rule__MethodOperation__Group__2();
 
             state._fsp--;
@@ -5545,23 +5966,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2092:1: rule__MethodOperation__Group__1__Impl : ( ( rule__MethodOperation__NameAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2253:1: rule__MethodOperation__Group__1__Impl : ( ( rule__MethodOperation__NameAssignment_1 ) ) ;
     public final void rule__MethodOperation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2096:1: ( ( ( rule__MethodOperation__NameAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2097:1: ( ( rule__MethodOperation__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2257:1: ( ( ( rule__MethodOperation__NameAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2258:1: ( ( rule__MethodOperation__NameAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2097:1: ( ( rule__MethodOperation__NameAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2098:1: ( rule__MethodOperation__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2258:1: ( ( rule__MethodOperation__NameAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2259:1: ( rule__MethodOperation__NameAssignment_1 )
             {
              before(grammarAccess.getMethodOperationAccess().getNameAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2099:1: ( rule__MethodOperation__NameAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2099:2: rule__MethodOperation__NameAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2260:1: ( rule__MethodOperation__NameAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2260:2: rule__MethodOperation__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__MethodOperation__NameAssignment_1_in_rule__MethodOperation__Group__1__Impl4224);
+            pushFollow(FOLLOW_rule__MethodOperation__NameAssignment_1_in_rule__MethodOperation__Group__1__Impl4550);
             rule__MethodOperation__NameAssignment_1();
 
             state._fsp--;
@@ -5592,21 +6013,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2109:1: rule__MethodOperation__Group__2 : rule__MethodOperation__Group__2__Impl rule__MethodOperation__Group__3 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2270:1: rule__MethodOperation__Group__2 : rule__MethodOperation__Group__2__Impl rule__MethodOperation__Group__3 ;
     public final void rule__MethodOperation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2113:1: ( rule__MethodOperation__Group__2__Impl rule__MethodOperation__Group__3 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2114:2: rule__MethodOperation__Group__2__Impl rule__MethodOperation__Group__3
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2274:1: ( rule__MethodOperation__Group__2__Impl rule__MethodOperation__Group__3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2275:2: rule__MethodOperation__Group__2__Impl rule__MethodOperation__Group__3
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__2__Impl_in_rule__MethodOperation__Group__24254);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__2__Impl_in_rule__MethodOperation__Group__24580);
             rule__MethodOperation__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodOperation__Group__3_in_rule__MethodOperation__Group__24257);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__3_in_rule__MethodOperation__Group__24583);
             rule__MethodOperation__Group__3();
 
             state._fsp--;
@@ -5630,20 +6051,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2121:1: rule__MethodOperation__Group__2__Impl : ( '=' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2282:1: rule__MethodOperation__Group__2__Impl : ( '=' ) ;
     public final void rule__MethodOperation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2125:1: ( ( '=' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2126:1: ( '=' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2286:1: ( ( '=' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:1: ( '=' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2126:1: ( '=' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2127:1: '='
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:1: ( '=' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2288:1: '='
             {
              before(grammarAccess.getMethodOperationAccess().getEqualsSignKeyword_2()); 
-            match(input,22,FOLLOW_22_in_rule__MethodOperation__Group__2__Impl4285); 
+            match(input,22,FOLLOW_22_in_rule__MethodOperation__Group__2__Impl4611); 
              after(grammarAccess.getMethodOperationAccess().getEqualsSignKeyword_2()); 
 
             }
@@ -5667,21 +6088,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__3"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2140:1: rule__MethodOperation__Group__3 : rule__MethodOperation__Group__3__Impl rule__MethodOperation__Group__4 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2301:1: rule__MethodOperation__Group__3 : rule__MethodOperation__Group__3__Impl rule__MethodOperation__Group__4 ;
     public final void rule__MethodOperation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2144:1: ( rule__MethodOperation__Group__3__Impl rule__MethodOperation__Group__4 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2145:2: rule__MethodOperation__Group__3__Impl rule__MethodOperation__Group__4
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2305:1: ( rule__MethodOperation__Group__3__Impl rule__MethodOperation__Group__4 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2306:2: rule__MethodOperation__Group__3__Impl rule__MethodOperation__Group__4
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__3__Impl_in_rule__MethodOperation__Group__34316);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__3__Impl_in_rule__MethodOperation__Group__34642);
             rule__MethodOperation__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodOperation__Group__4_in_rule__MethodOperation__Group__34319);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__4_in_rule__MethodOperation__Group__34645);
             rule__MethodOperation__Group__4();
 
             state._fsp--;
@@ -5705,23 +6126,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__3__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2152:1: rule__MethodOperation__Group__3__Impl : ( ( rule__MethodOperation__ClassAssignment_3 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2313:1: rule__MethodOperation__Group__3__Impl : ( ( rule__MethodOperation__ClassAssignment_3 ) ) ;
     public final void rule__MethodOperation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2156:1: ( ( ( rule__MethodOperation__ClassAssignment_3 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2157:1: ( ( rule__MethodOperation__ClassAssignment_3 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2317:1: ( ( ( rule__MethodOperation__ClassAssignment_3 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2318:1: ( ( rule__MethodOperation__ClassAssignment_3 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2157:1: ( ( rule__MethodOperation__ClassAssignment_3 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2158:1: ( rule__MethodOperation__ClassAssignment_3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2318:1: ( ( rule__MethodOperation__ClassAssignment_3 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2319:1: ( rule__MethodOperation__ClassAssignment_3 )
             {
              before(grammarAccess.getMethodOperationAccess().getClassAssignment_3()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2159:1: ( rule__MethodOperation__ClassAssignment_3 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2159:2: rule__MethodOperation__ClassAssignment_3
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2320:1: ( rule__MethodOperation__ClassAssignment_3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2320:2: rule__MethodOperation__ClassAssignment_3
             {
-            pushFollow(FOLLOW_rule__MethodOperation__ClassAssignment_3_in_rule__MethodOperation__Group__3__Impl4346);
+            pushFollow(FOLLOW_rule__MethodOperation__ClassAssignment_3_in_rule__MethodOperation__Group__3__Impl4672);
             rule__MethodOperation__ClassAssignment_3();
 
             state._fsp--;
@@ -5752,21 +6173,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__4"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2169:1: rule__MethodOperation__Group__4 : rule__MethodOperation__Group__4__Impl rule__MethodOperation__Group__5 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2330:1: rule__MethodOperation__Group__4 : rule__MethodOperation__Group__4__Impl rule__MethodOperation__Group__5 ;
     public final void rule__MethodOperation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2173:1: ( rule__MethodOperation__Group__4__Impl rule__MethodOperation__Group__5 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2174:2: rule__MethodOperation__Group__4__Impl rule__MethodOperation__Group__5
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2334:1: ( rule__MethodOperation__Group__4__Impl rule__MethodOperation__Group__5 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2335:2: rule__MethodOperation__Group__4__Impl rule__MethodOperation__Group__5
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__4__Impl_in_rule__MethodOperation__Group__44376);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__4__Impl_in_rule__MethodOperation__Group__44702);
             rule__MethodOperation__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodOperation__Group__5_in_rule__MethodOperation__Group__44379);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__5_in_rule__MethodOperation__Group__44705);
             rule__MethodOperation__Group__5();
 
             state._fsp--;
@@ -5790,20 +6211,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__4__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2181:1: rule__MethodOperation__Group__4__Impl : ( '#' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2342:1: rule__MethodOperation__Group__4__Impl : ( '#' ) ;
     public final void rule__MethodOperation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2185:1: ( ( '#' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2186:1: ( '#' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2346:1: ( ( '#' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2347:1: ( '#' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2186:1: ( '#' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2187:1: '#'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2347:1: ( '#' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2348:1: '#'
             {
              before(grammarAccess.getMethodOperationAccess().getNumberSignKeyword_4()); 
-            match(input,24,FOLLOW_24_in_rule__MethodOperation__Group__4__Impl4407); 
+            match(input,25,FOLLOW_25_in_rule__MethodOperation__Group__4__Impl4733); 
              after(grammarAccess.getMethodOperationAccess().getNumberSignKeyword_4()); 
 
             }
@@ -5827,21 +6248,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__5"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2200:1: rule__MethodOperation__Group__5 : rule__MethodOperation__Group__5__Impl rule__MethodOperation__Group__6 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2361:1: rule__MethodOperation__Group__5 : rule__MethodOperation__Group__5__Impl rule__MethodOperation__Group__6 ;
     public final void rule__MethodOperation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2204:1: ( rule__MethodOperation__Group__5__Impl rule__MethodOperation__Group__6 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2205:2: rule__MethodOperation__Group__5__Impl rule__MethodOperation__Group__6
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2365:1: ( rule__MethodOperation__Group__5__Impl rule__MethodOperation__Group__6 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2366:2: rule__MethodOperation__Group__5__Impl rule__MethodOperation__Group__6
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__5__Impl_in_rule__MethodOperation__Group__54438);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__5__Impl_in_rule__MethodOperation__Group__54764);
             rule__MethodOperation__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MethodOperation__Group__6_in_rule__MethodOperation__Group__54441);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__6_in_rule__MethodOperation__Group__54767);
             rule__MethodOperation__Group__6();
 
             state._fsp--;
@@ -5865,23 +6286,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__5__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2212:1: rule__MethodOperation__Group__5__Impl : ( ( rule__MethodOperation__MethodAssignment_5 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2373:1: rule__MethodOperation__Group__5__Impl : ( ( rule__MethodOperation__MethodAssignment_5 ) ) ;
     public final void rule__MethodOperation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2216:1: ( ( ( rule__MethodOperation__MethodAssignment_5 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2217:1: ( ( rule__MethodOperation__MethodAssignment_5 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2377:1: ( ( ( rule__MethodOperation__MethodAssignment_5 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2378:1: ( ( rule__MethodOperation__MethodAssignment_5 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2217:1: ( ( rule__MethodOperation__MethodAssignment_5 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2218:1: ( rule__MethodOperation__MethodAssignment_5 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2378:1: ( ( rule__MethodOperation__MethodAssignment_5 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2379:1: ( rule__MethodOperation__MethodAssignment_5 )
             {
              before(grammarAccess.getMethodOperationAccess().getMethodAssignment_5()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2219:1: ( rule__MethodOperation__MethodAssignment_5 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2219:2: rule__MethodOperation__MethodAssignment_5
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2380:1: ( rule__MethodOperation__MethodAssignment_5 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2380:2: rule__MethodOperation__MethodAssignment_5
             {
-            pushFollow(FOLLOW_rule__MethodOperation__MethodAssignment_5_in_rule__MethodOperation__Group__5__Impl4468);
+            pushFollow(FOLLOW_rule__MethodOperation__MethodAssignment_5_in_rule__MethodOperation__Group__5__Impl4794);
             rule__MethodOperation__MethodAssignment_5();
 
             state._fsp--;
@@ -5912,16 +6333,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__6"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2229:1: rule__MethodOperation__Group__6 : rule__MethodOperation__Group__6__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2390:1: rule__MethodOperation__Group__6 : rule__MethodOperation__Group__6__Impl ;
     public final void rule__MethodOperation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2233:1: ( rule__MethodOperation__Group__6__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2234:2: rule__MethodOperation__Group__6__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2394:1: ( rule__MethodOperation__Group__6__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2395:2: rule__MethodOperation__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__MethodOperation__Group__6__Impl_in_rule__MethodOperation__Group__64498);
+            pushFollow(FOLLOW_rule__MethodOperation__Group__6__Impl_in_rule__MethodOperation__Group__64824);
             rule__MethodOperation__Group__6__Impl();
 
             state._fsp--;
@@ -5945,23 +6366,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__Group__6__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2240:1: rule__MethodOperation__Group__6__Impl : ( ( rule__MethodOperation__SignatureAssignment_6 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2401:1: rule__MethodOperation__Group__6__Impl : ( ( rule__MethodOperation__SignatureAssignment_6 ) ) ;
     public final void rule__MethodOperation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2244:1: ( ( ( rule__MethodOperation__SignatureAssignment_6 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2245:1: ( ( rule__MethodOperation__SignatureAssignment_6 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2405:1: ( ( ( rule__MethodOperation__SignatureAssignment_6 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2406:1: ( ( rule__MethodOperation__SignatureAssignment_6 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2245:1: ( ( rule__MethodOperation__SignatureAssignment_6 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2246:1: ( rule__MethodOperation__SignatureAssignment_6 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2406:1: ( ( rule__MethodOperation__SignatureAssignment_6 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2407:1: ( rule__MethodOperation__SignatureAssignment_6 )
             {
              before(grammarAccess.getMethodOperationAccess().getSignatureAssignment_6()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2247:1: ( rule__MethodOperation__SignatureAssignment_6 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2247:2: rule__MethodOperation__SignatureAssignment_6
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2408:1: ( rule__MethodOperation__SignatureAssignment_6 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2408:2: rule__MethodOperation__SignatureAssignment_6
             {
-            pushFollow(FOLLOW_rule__MethodOperation__SignatureAssignment_6_in_rule__MethodOperation__Group__6__Impl4525);
+            pushFollow(FOLLOW_rule__MethodOperation__SignatureAssignment_6_in_rule__MethodOperation__Group__6__Impl4851);
             rule__MethodOperation__SignatureAssignment_6();
 
             state._fsp--;
@@ -5992,21 +6413,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Signature__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2271:1: rule__Signature__Group__0 : rule__Signature__Group__0__Impl rule__Signature__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2432:1: rule__Signature__Group__0 : rule__Signature__Group__0__Impl rule__Signature__Group__1 ;
     public final void rule__Signature__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2275:1: ( rule__Signature__Group__0__Impl rule__Signature__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2276:2: rule__Signature__Group__0__Impl rule__Signature__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2436:1: ( rule__Signature__Group__0__Impl rule__Signature__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2437:2: rule__Signature__Group__0__Impl rule__Signature__Group__1
             {
-            pushFollow(FOLLOW_rule__Signature__Group__0__Impl_in_rule__Signature__Group__04569);
+            pushFollow(FOLLOW_rule__Signature__Group__0__Impl_in_rule__Signature__Group__04895);
             rule__Signature__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Signature__Group__1_in_rule__Signature__Group__04572);
+            pushFollow(FOLLOW_rule__Signature__Group__1_in_rule__Signature__Group__04898);
             rule__Signature__Group__1();
 
             state._fsp--;
@@ -6030,20 +6451,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Signature__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2283:1: rule__Signature__Group__0__Impl : ( 'as' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2444:1: rule__Signature__Group__0__Impl : ( 'as' ) ;
     public final void rule__Signature__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2287:1: ( ( 'as' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2288:1: ( 'as' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2448:1: ( ( 'as' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2449:1: ( 'as' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2288:1: ( 'as' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2289:1: 'as'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2449:1: ( 'as' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2450:1: 'as'
             {
              before(grammarAccess.getSignatureAccess().getAsKeyword_0()); 
-            match(input,25,FOLLOW_25_in_rule__Signature__Group__0__Impl4600); 
+            match(input,26,FOLLOW_26_in_rule__Signature__Group__0__Impl4926); 
              after(grammarAccess.getSignatureAccess().getAsKeyword_0()); 
 
             }
@@ -6067,16 +6488,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Signature__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2302:1: rule__Signature__Group__1 : rule__Signature__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2463:1: rule__Signature__Group__1 : rule__Signature__Group__1__Impl ;
     public final void rule__Signature__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2306:1: ( rule__Signature__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2307:2: rule__Signature__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2467:1: ( rule__Signature__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2468:2: rule__Signature__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Signature__Group__1__Impl_in_rule__Signature__Group__14631);
+            pushFollow(FOLLOW_rule__Signature__Group__1__Impl_in_rule__Signature__Group__14957);
             rule__Signature__Group__1__Impl();
 
             state._fsp--;
@@ -6100,23 +6521,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Signature__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2313:1: rule__Signature__Group__1__Impl : ( ( rule__Signature__TypeAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2474:1: rule__Signature__Group__1__Impl : ( ( rule__Signature__TypeAssignment_1 ) ) ;
     public final void rule__Signature__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2317:1: ( ( ( rule__Signature__TypeAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2318:1: ( ( rule__Signature__TypeAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2478:1: ( ( ( rule__Signature__TypeAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2479:1: ( ( rule__Signature__TypeAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2318:1: ( ( rule__Signature__TypeAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2319:1: ( rule__Signature__TypeAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2479:1: ( ( rule__Signature__TypeAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2480:1: ( rule__Signature__TypeAssignment_1 )
             {
              before(grammarAccess.getSignatureAccess().getTypeAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2320:1: ( rule__Signature__TypeAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2320:2: rule__Signature__TypeAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2481:1: ( rule__Signature__TypeAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2481:2: rule__Signature__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__Signature__TypeAssignment_1_in_rule__Signature__Group__1__Impl4658);
+            pushFollow(FOLLOW_rule__Signature__TypeAssignment_1_in_rule__Signature__Group__1__Impl4984);
             rule__Signature__TypeAssignment_1();
 
             state._fsp--;
@@ -6147,21 +6568,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericType__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2334:1: rule__GenericType__Group__0 : rule__GenericType__Group__0__Impl rule__GenericType__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2495:1: rule__GenericType__Group__0 : rule__GenericType__Group__0__Impl rule__GenericType__Group__1 ;
     public final void rule__GenericType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2338:1: ( rule__GenericType__Group__0__Impl rule__GenericType__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2339:2: rule__GenericType__Group__0__Impl rule__GenericType__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2499:1: ( rule__GenericType__Group__0__Impl rule__GenericType__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2500:2: rule__GenericType__Group__0__Impl rule__GenericType__Group__1
             {
-            pushFollow(FOLLOW_rule__GenericType__Group__0__Impl_in_rule__GenericType__Group__04692);
+            pushFollow(FOLLOW_rule__GenericType__Group__0__Impl_in_rule__GenericType__Group__05018);
             rule__GenericType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GenericType__Group__1_in_rule__GenericType__Group__04695);
+            pushFollow(FOLLOW_rule__GenericType__Group__1_in_rule__GenericType__Group__05021);
             rule__GenericType__Group__1();
 
             state._fsp--;
@@ -6185,23 +6606,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericType__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2346:1: rule__GenericType__Group__0__Impl : ( ( rule__GenericType__OperationTypeAssignment_0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2507:1: rule__GenericType__Group__0__Impl : ( ( rule__GenericType__OperationTypeAssignment_0 ) ) ;
     public final void rule__GenericType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2350:1: ( ( ( rule__GenericType__OperationTypeAssignment_0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2351:1: ( ( rule__GenericType__OperationTypeAssignment_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2511:1: ( ( ( rule__GenericType__OperationTypeAssignment_0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2512:1: ( ( rule__GenericType__OperationTypeAssignment_0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2351:1: ( ( rule__GenericType__OperationTypeAssignment_0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2352:1: ( rule__GenericType__OperationTypeAssignment_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2512:1: ( ( rule__GenericType__OperationTypeAssignment_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2513:1: ( rule__GenericType__OperationTypeAssignment_0 )
             {
              before(grammarAccess.getGenericTypeAccess().getOperationTypeAssignment_0()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2353:1: ( rule__GenericType__OperationTypeAssignment_0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2353:2: rule__GenericType__OperationTypeAssignment_0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2514:1: ( rule__GenericType__OperationTypeAssignment_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2514:2: rule__GenericType__OperationTypeAssignment_0
             {
-            pushFollow(FOLLOW_rule__GenericType__OperationTypeAssignment_0_in_rule__GenericType__Group__0__Impl4722);
+            pushFollow(FOLLOW_rule__GenericType__OperationTypeAssignment_0_in_rule__GenericType__Group__0__Impl5048);
             rule__GenericType__OperationTypeAssignment_0();
 
             state._fsp--;
@@ -6232,16 +6653,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericType__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2363:1: rule__GenericType__Group__1 : rule__GenericType__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2524:1: rule__GenericType__Group__1 : rule__GenericType__Group__1__Impl ;
     public final void rule__GenericType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2367:1: ( rule__GenericType__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2368:2: rule__GenericType__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2528:1: ( rule__GenericType__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2529:2: rule__GenericType__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__GenericType__Group__1__Impl_in_rule__GenericType__Group__14752);
+            pushFollow(FOLLOW_rule__GenericType__Group__1__Impl_in_rule__GenericType__Group__15078);
             rule__GenericType__Group__1__Impl();
 
             state._fsp--;
@@ -6265,31 +6686,31 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericType__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2374:1: rule__GenericType__Group__1__Impl : ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2535:1: rule__GenericType__Group__1__Impl : ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? ) ;
     public final void rule__GenericType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2378:1: ( ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2379:1: ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2539:1: ( ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2540:1: ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2379:1: ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2380:1: ( rule__GenericType__OperationTypeParametersAssignment_1 )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2540:1: ( ( rule__GenericType__OperationTypeParametersAssignment_1 )? )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2541:1: ( rule__GenericType__OperationTypeParametersAssignment_1 )?
             {
              before(grammarAccess.getGenericTypeAccess().getOperationTypeParametersAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2381:1: ( rule__GenericType__OperationTypeParametersAssignment_1 )?
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2542:1: ( rule__GenericType__OperationTypeParametersAssignment_1 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==26) ) {
+            if ( (LA13_0==27) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2381:2: rule__GenericType__OperationTypeParametersAssignment_1
+                    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2542:2: rule__GenericType__OperationTypeParametersAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__GenericType__OperationTypeParametersAssignment_1_in_rule__GenericType__Group__1__Impl4779);
+                    pushFollow(FOLLOW_rule__GenericType__OperationTypeParametersAssignment_1_in_rule__GenericType__Group__1__Impl5105);
                     rule__GenericType__OperationTypeParametersAssignment_1();
 
                     state._fsp--;
@@ -6323,21 +6744,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2395:1: rule__OperationTypeParameters__Group__0 : rule__OperationTypeParameters__Group__0__Impl rule__OperationTypeParameters__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2556:1: rule__OperationTypeParameters__Group__0 : rule__OperationTypeParameters__Group__0__Impl rule__OperationTypeParameters__Group__1 ;
     public final void rule__OperationTypeParameters__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2399:1: ( rule__OperationTypeParameters__Group__0__Impl rule__OperationTypeParameters__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2400:2: rule__OperationTypeParameters__Group__0__Impl rule__OperationTypeParameters__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2560:1: ( rule__OperationTypeParameters__Group__0__Impl rule__OperationTypeParameters__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2561:2: rule__OperationTypeParameters__Group__0__Impl rule__OperationTypeParameters__Group__1
             {
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__0__Impl_in_rule__OperationTypeParameters__Group__04814);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__0__Impl_in_rule__OperationTypeParameters__Group__05140);
             rule__OperationTypeParameters__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__1_in_rule__OperationTypeParameters__Group__04817);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__1_in_rule__OperationTypeParameters__Group__05143);
             rule__OperationTypeParameters__Group__1();
 
             state._fsp--;
@@ -6361,20 +6782,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2407:1: rule__OperationTypeParameters__Group__0__Impl : ( '<' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2568:1: rule__OperationTypeParameters__Group__0__Impl : ( '<' ) ;
     public final void rule__OperationTypeParameters__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2411:1: ( ( '<' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2412:1: ( '<' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2572:1: ( ( '<' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2573:1: ( '<' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2412:1: ( '<' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2413:1: '<'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2573:1: ( '<' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2574:1: '<'
             {
              before(grammarAccess.getOperationTypeParametersAccess().getLessThanSignKeyword_0()); 
-            match(input,26,FOLLOW_26_in_rule__OperationTypeParameters__Group__0__Impl4845); 
+            match(input,27,FOLLOW_27_in_rule__OperationTypeParameters__Group__0__Impl5171); 
              after(grammarAccess.getOperationTypeParametersAccess().getLessThanSignKeyword_0()); 
 
             }
@@ -6398,21 +6819,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2426:1: rule__OperationTypeParameters__Group__1 : rule__OperationTypeParameters__Group__1__Impl rule__OperationTypeParameters__Group__2 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2587:1: rule__OperationTypeParameters__Group__1 : rule__OperationTypeParameters__Group__1__Impl rule__OperationTypeParameters__Group__2 ;
     public final void rule__OperationTypeParameters__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2430:1: ( rule__OperationTypeParameters__Group__1__Impl rule__OperationTypeParameters__Group__2 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2431:2: rule__OperationTypeParameters__Group__1__Impl rule__OperationTypeParameters__Group__2
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2591:1: ( rule__OperationTypeParameters__Group__1__Impl rule__OperationTypeParameters__Group__2 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2592:2: rule__OperationTypeParameters__Group__1__Impl rule__OperationTypeParameters__Group__2
             {
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__1__Impl_in_rule__OperationTypeParameters__Group__14876);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__1__Impl_in_rule__OperationTypeParameters__Group__15202);
             rule__OperationTypeParameters__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__2_in_rule__OperationTypeParameters__Group__14879);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__2_in_rule__OperationTypeParameters__Group__15205);
             rule__OperationTypeParameters__Group__2();
 
             state._fsp--;
@@ -6436,23 +6857,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2438:1: rule__OperationTypeParameters__Group__1__Impl : ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2599:1: rule__OperationTypeParameters__Group__1__Impl : ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) ) ;
     public final void rule__OperationTypeParameters__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2442:1: ( ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2443:1: ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2603:1: ( ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2604:1: ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2443:1: ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2444:1: ( rule__OperationTypeParameters__TypeParameterAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2604:1: ( ( rule__OperationTypeParameters__TypeParameterAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2605:1: ( rule__OperationTypeParameters__TypeParameterAssignment_1 )
             {
              before(grammarAccess.getOperationTypeParametersAccess().getTypeParameterAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2445:1: ( rule__OperationTypeParameters__TypeParameterAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2445:2: rule__OperationTypeParameters__TypeParameterAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2606:1: ( rule__OperationTypeParameters__TypeParameterAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2606:2: rule__OperationTypeParameters__TypeParameterAssignment_1
             {
-            pushFollow(FOLLOW_rule__OperationTypeParameters__TypeParameterAssignment_1_in_rule__OperationTypeParameters__Group__1__Impl4906);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__TypeParameterAssignment_1_in_rule__OperationTypeParameters__Group__1__Impl5232);
             rule__OperationTypeParameters__TypeParameterAssignment_1();
 
             state._fsp--;
@@ -6483,21 +6904,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2455:1: rule__OperationTypeParameters__Group__2 : rule__OperationTypeParameters__Group__2__Impl rule__OperationTypeParameters__Group__3 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2616:1: rule__OperationTypeParameters__Group__2 : rule__OperationTypeParameters__Group__2__Impl rule__OperationTypeParameters__Group__3 ;
     public final void rule__OperationTypeParameters__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2459:1: ( rule__OperationTypeParameters__Group__2__Impl rule__OperationTypeParameters__Group__3 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2460:2: rule__OperationTypeParameters__Group__2__Impl rule__OperationTypeParameters__Group__3
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2620:1: ( rule__OperationTypeParameters__Group__2__Impl rule__OperationTypeParameters__Group__3 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2621:2: rule__OperationTypeParameters__Group__2__Impl rule__OperationTypeParameters__Group__3
             {
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__2__Impl_in_rule__OperationTypeParameters__Group__24936);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__2__Impl_in_rule__OperationTypeParameters__Group__25262);
             rule__OperationTypeParameters__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__3_in_rule__OperationTypeParameters__Group__24939);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__3_in_rule__OperationTypeParameters__Group__25265);
             rule__OperationTypeParameters__Group__3();
 
             state._fsp--;
@@ -6521,35 +6942,35 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__2__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2467:1: rule__OperationTypeParameters__Group__2__Impl : ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2628:1: rule__OperationTypeParameters__Group__2__Impl : ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* ) ;
     public final void rule__OperationTypeParameters__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2471:1: ( ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2472:1: ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2632:1: ( ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2633:1: ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2472:1: ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2473:1: ( rule__OperationTypeParameters__TypeParametersAssignment_2 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2633:1: ( ( rule__OperationTypeParameters__TypeParametersAssignment_2 )* )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2634:1: ( rule__OperationTypeParameters__TypeParametersAssignment_2 )*
             {
              before(grammarAccess.getOperationTypeParametersAccess().getTypeParametersAssignment_2()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2474:1: ( rule__OperationTypeParameters__TypeParametersAssignment_2 )*
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2635:1: ( rule__OperationTypeParameters__TypeParametersAssignment_2 )*
             loop14:
             do {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==27) ) {
+                if ( (LA14_0==28) ) {
                     alt14=1;
                 }
 
 
                 switch (alt14) {
             	case 1 :
-            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2474:2: rule__OperationTypeParameters__TypeParametersAssignment_2
+            	    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2635:2: rule__OperationTypeParameters__TypeParametersAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__OperationTypeParameters__TypeParametersAssignment_2_in_rule__OperationTypeParameters__Group__2__Impl4966);
+            	    pushFollow(FOLLOW_rule__OperationTypeParameters__TypeParametersAssignment_2_in_rule__OperationTypeParameters__Group__2__Impl5292);
             	    rule__OperationTypeParameters__TypeParametersAssignment_2();
 
             	    state._fsp--;
@@ -6586,16 +7007,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__3"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2484:1: rule__OperationTypeParameters__Group__3 : rule__OperationTypeParameters__Group__3__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2645:1: rule__OperationTypeParameters__Group__3 : rule__OperationTypeParameters__Group__3__Impl ;
     public final void rule__OperationTypeParameters__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2488:1: ( rule__OperationTypeParameters__Group__3__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2489:2: rule__OperationTypeParameters__Group__3__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2649:1: ( rule__OperationTypeParameters__Group__3__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2650:2: rule__OperationTypeParameters__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__3__Impl_in_rule__OperationTypeParameters__Group__34997);
+            pushFollow(FOLLOW_rule__OperationTypeParameters__Group__3__Impl_in_rule__OperationTypeParameters__Group__35323);
             rule__OperationTypeParameters__Group__3__Impl();
 
             state._fsp--;
@@ -6619,20 +7040,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__Group__3__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2495:1: rule__OperationTypeParameters__Group__3__Impl : ( '>' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2656:1: rule__OperationTypeParameters__Group__3__Impl : ( '>' ) ;
     public final void rule__OperationTypeParameters__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2499:1: ( ( '>' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2500:1: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2660:1: ( ( '>' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2661:1: ( '>' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2500:1: ( '>' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2501:1: '>'
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2661:1: ( '>' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2662:1: '>'
             {
              before(grammarAccess.getOperationTypeParametersAccess().getGreaterThanSignKeyword_3()); 
-            match(input,17,FOLLOW_17_in_rule__OperationTypeParameters__Group__3__Impl5025); 
+            match(input,17,FOLLOW_17_in_rule__OperationTypeParameters__Group__3__Impl5351); 
              after(grammarAccess.getOperationTypeParametersAccess().getGreaterThanSignKeyword_3()); 
 
             }
@@ -6656,21 +7077,21 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CSTypeParameter__Group__0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2522:1: rule__CSTypeParameter__Group__0 : rule__CSTypeParameter__Group__0__Impl rule__CSTypeParameter__Group__1 ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2683:1: rule__CSTypeParameter__Group__0 : rule__CSTypeParameter__Group__0__Impl rule__CSTypeParameter__Group__1 ;
     public final void rule__CSTypeParameter__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2526:1: ( rule__CSTypeParameter__Group__0__Impl rule__CSTypeParameter__Group__1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2527:2: rule__CSTypeParameter__Group__0__Impl rule__CSTypeParameter__Group__1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2687:1: ( rule__CSTypeParameter__Group__0__Impl rule__CSTypeParameter__Group__1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2688:2: rule__CSTypeParameter__Group__0__Impl rule__CSTypeParameter__Group__1
             {
-            pushFollow(FOLLOW_rule__CSTypeParameter__Group__0__Impl_in_rule__CSTypeParameter__Group__05064);
+            pushFollow(FOLLOW_rule__CSTypeParameter__Group__0__Impl_in_rule__CSTypeParameter__Group__05390);
             rule__CSTypeParameter__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CSTypeParameter__Group__1_in_rule__CSTypeParameter__Group__05067);
+            pushFollow(FOLLOW_rule__CSTypeParameter__Group__1_in_rule__CSTypeParameter__Group__05393);
             rule__CSTypeParameter__Group__1();
 
             state._fsp--;
@@ -6694,20 +7115,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CSTypeParameter__Group__0__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2534:1: rule__CSTypeParameter__Group__0__Impl : ( ',' ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2695:1: rule__CSTypeParameter__Group__0__Impl : ( ',' ) ;
     public final void rule__CSTypeParameter__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2538:1: ( ( ',' ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2539:1: ( ',' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2699:1: ( ( ',' ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2700:1: ( ',' )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2539:1: ( ',' )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2540:1: ','
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2700:1: ( ',' )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2701:1: ','
             {
              before(grammarAccess.getCSTypeParameterAccess().getCommaKeyword_0()); 
-            match(input,27,FOLLOW_27_in_rule__CSTypeParameter__Group__0__Impl5095); 
+            match(input,28,FOLLOW_28_in_rule__CSTypeParameter__Group__0__Impl5421); 
              after(grammarAccess.getCSTypeParameterAccess().getCommaKeyword_0()); 
 
             }
@@ -6731,16 +7152,16 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CSTypeParameter__Group__1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2553:1: rule__CSTypeParameter__Group__1 : rule__CSTypeParameter__Group__1__Impl ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2714:1: rule__CSTypeParameter__Group__1 : rule__CSTypeParameter__Group__1__Impl ;
     public final void rule__CSTypeParameter__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2557:1: ( rule__CSTypeParameter__Group__1__Impl )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2558:2: rule__CSTypeParameter__Group__1__Impl
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2718:1: ( rule__CSTypeParameter__Group__1__Impl )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2719:2: rule__CSTypeParameter__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__CSTypeParameter__Group__1__Impl_in_rule__CSTypeParameter__Group__15126);
+            pushFollow(FOLLOW_rule__CSTypeParameter__Group__1__Impl_in_rule__CSTypeParameter__Group__15452);
             rule__CSTypeParameter__Group__1__Impl();
 
             state._fsp--;
@@ -6764,23 +7185,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CSTypeParameter__Group__1__Impl"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2564:1: rule__CSTypeParameter__Group__1__Impl : ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2725:1: rule__CSTypeParameter__Group__1__Impl : ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) ) ;
     public final void rule__CSTypeParameter__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2568:1: ( ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2569:1: ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2729:1: ( ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2730:1: ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2569:1: ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2570:1: ( rule__CSTypeParameter__TypeParameterAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2730:1: ( ( rule__CSTypeParameter__TypeParameterAssignment_1 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2731:1: ( rule__CSTypeParameter__TypeParameterAssignment_1 )
             {
              before(grammarAccess.getCSTypeParameterAccess().getTypeParameterAssignment_1()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2571:1: ( rule__CSTypeParameter__TypeParameterAssignment_1 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2571:2: rule__CSTypeParameter__TypeParameterAssignment_1
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2732:1: ( rule__CSTypeParameter__TypeParameterAssignment_1 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2732:2: rule__CSTypeParameter__TypeParameterAssignment_1
             {
-            pushFollow(FOLLOW_rule__CSTypeParameter__TypeParameterAssignment_1_in_rule__CSTypeParameter__Group__1__Impl5153);
+            pushFollow(FOLLOW_rule__CSTypeParameter__TypeParameterAssignment_1_in_rule__CSTypeParameter__Group__1__Impl5479);
             rule__CSTypeParameter__TypeParameterAssignment_1();
 
             state._fsp--;
@@ -6811,20 +7232,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__NameAssignment_0_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2586:1: rule__Model__NameAssignment_0_1 : ( ruleQualifiedName ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2747:1: rule__Model__NameAssignment_0_1 : ( ruleQualifiedName ) ;
     public final void rule__Model__NameAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2590:1: ( ( ruleQualifiedName ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2591:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2751:1: ( ( ruleQualifiedName ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2752:1: ( ruleQualifiedName )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2591:1: ( ruleQualifiedName )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2592:1: ruleQualifiedName
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2752:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2753:1: ruleQualifiedName
             {
              before(grammarAccess.getModelAccess().getNameQualifiedNameParserRuleCall_0_1_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Model__NameAssignment_0_15192);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Model__NameAssignment_0_15518);
             ruleQualifiedName();
 
             state._fsp--;
@@ -6852,20 +7273,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__ImportsAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2601:1: rule__Model__ImportsAssignment_1 : ( ruleImport ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2762:1: rule__Model__ImportsAssignment_1 : ( ruleImport ) ;
     public final void rule__Model__ImportsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2605:1: ( ( ruleImport ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2606:1: ( ruleImport )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2766:1: ( ( ruleImport ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2767:1: ( ruleImport )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2606:1: ( ruleImport )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2607:1: ruleImport
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2767:1: ( ruleImport )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2768:1: ruleImport
             {
              before(grammarAccess.getModelAccess().getImportsImportParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_15223);
+            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_15549);
             ruleImport();
 
             state._fsp--;
@@ -6893,20 +7314,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__FunctionUnitsAssignment_2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2616:1: rule__Model__FunctionUnitsAssignment_2 : ( ruleFunctionUnit ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2777:1: rule__Model__FunctionUnitsAssignment_2 : ( ruleFunctionUnit ) ;
     public final void rule__Model__FunctionUnitsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2620:1: ( ( ruleFunctionUnit ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2621:1: ( ruleFunctionUnit )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2781:1: ( ( ruleFunctionUnit ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2782:1: ( ruleFunctionUnit )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2621:1: ( ruleFunctionUnit )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2622:1: ruleFunctionUnit
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2782:1: ( ruleFunctionUnit )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2783:1: ruleFunctionUnit
             {
              before(grammarAccess.getModelAccess().getFunctionUnitsFunctionUnitParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleFunctionUnit_in_rule__Model__FunctionUnitsAssignment_25254);
+            pushFollow(FOLLOW_ruleFunctionUnit_in_rule__Model__FunctionUnitsAssignment_25580);
             ruleFunctionUnit();
 
             state._fsp--;
@@ -6934,20 +7355,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__ImportedNamespaceAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2631:1: rule__Import__ImportedNamespaceAssignment_1 : ( ruleQualifiedName ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2792:1: rule__Import__ImportedNamespaceAssignment_1 : ( ruleQualifiedName ) ;
     public final void rule__Import__ImportedNamespaceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2635:1: ( ( ruleQualifiedName ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2636:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2796:1: ( ( ruleQualifiedName ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2797:1: ( ruleQualifiedName )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2636:1: ( ruleQualifiedName )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2637:1: ruleQualifiedName
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2797:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2798:1: ruleQualifiedName
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_15285);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_15611);
             ruleQualifiedName();
 
             state._fsp--;
@@ -6975,20 +7396,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__NameAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2646:1: rule__Flow__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2807:1: rule__Flow__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Flow__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2650:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2651:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2811:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2812:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2651:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2652:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2812:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2813:1: RULE_ID
             {
              before(grammarAccess.getFlowAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Flow__NameAssignment_15316); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Flow__NameAssignment_15642); 
              after(grammarAccess.getFlowAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7012,20 +7433,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Flow__StreamsAssignment_2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2661:1: rule__Flow__StreamsAssignment_2 : ( ruleStream ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2822:1: rule__Flow__StreamsAssignment_2 : ( ruleStream ) ;
     public final void rule__Flow__StreamsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2665:1: ( ( ruleStream ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2666:1: ( ruleStream )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2826:1: ( ( ruleStream ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2827:1: ( ruleStream )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2666:1: ( ruleStream )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2667:1: ruleStream
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2827:1: ( ruleStream )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2828:1: ruleStream
             {
              before(grammarAccess.getFlowAccess().getStreamsStreamParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleStream_in_rule__Flow__StreamsAssignment_25347);
+            pushFollow(FOLLOW_ruleStream_in_rule__Flow__StreamsAssignment_25673);
             ruleStream();
 
             state._fsp--;
@@ -7053,20 +7474,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__LeftPortAssignment_0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2676:1: rule__Stream__LeftPortAssignment_0 : ( ruleLeftPort ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2837:1: rule__Stream__LeftPortAssignment_0 : ( ruleLeftPort ) ;
     public final void rule__Stream__LeftPortAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2680:1: ( ( ruleLeftPort ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2681:1: ( ruleLeftPort )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2841:1: ( ( ruleLeftPort ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2842:1: ( ruleLeftPort )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2681:1: ( ruleLeftPort )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2682:1: ruleLeftPort
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2842:1: ( ruleLeftPort )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2843:1: ruleLeftPort
             {
              before(grammarAccess.getStreamAccess().getLeftPortLeftPortParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleLeftPort_in_rule__Stream__LeftPortAssignment_05378);
+            pushFollow(FOLLOW_ruleLeftPort_in_rule__Stream__LeftPortAssignment_05704);
             ruleLeftPort();
 
             state._fsp--;
@@ -7094,20 +7515,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__MessageAssignment_2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2691:1: rule__Stream__MessageAssignment_2 : ( ruleQualifiedName ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2852:1: rule__Stream__MessageAssignment_2 : ( ruleQualifiedName ) ;
     public final void rule__Stream__MessageAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2695:1: ( ( ruleQualifiedName ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2696:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2856:1: ( ( ruleQualifiedName ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2857:1: ( ruleQualifiedName )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2696:1: ( ruleQualifiedName )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2697:1: ruleQualifiedName
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2857:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2858:1: ruleQualifiedName
             {
              before(grammarAccess.getStreamAccess().getMessageQualifiedNameParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Stream__MessageAssignment_25409);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Stream__MessageAssignment_25735);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7135,20 +7556,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Stream__RightPortAssignment_4"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2706:1: rule__Stream__RightPortAssignment_4 : ( ruleRightPort ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2867:1: rule__Stream__RightPortAssignment_4 : ( ruleRightPort ) ;
     public final void rule__Stream__RightPortAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2710:1: ( ( ruleRightPort ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2711:1: ( ruleRightPort )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2871:1: ( ( ruleRightPort ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2872:1: ( ruleRightPort )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2711:1: ( ruleRightPort )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2712:1: ruleRightPort
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2872:1: ( ruleRightPort )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2873:1: ruleRightPort
             {
              before(grammarAccess.getStreamAccess().getRightPortRightPortParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleRightPort_in_rule__Stream__RightPortAssignment_45440);
+            pushFollow(FOLLOW_ruleRightPort_in_rule__Stream__RightPortAssignment_45766);
             ruleRightPort();
 
             state._fsp--;
@@ -7176,24 +7597,24 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__FunctionUnitAssignment_0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2721:1: rule__Port__FunctionUnitAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2882:1: rule__Port__FunctionUnitAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Port__FunctionUnitAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2725:1: ( ( ( RULE_ID ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2726:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2886:1: ( ( ( RULE_ID ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2887:1: ( ( RULE_ID ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2726:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2727:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2887:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2888:1: ( RULE_ID )
             {
              before(grammarAccess.getPortAccess().getFunctionUnitFunctionUnitCrossReference_0_0()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2728:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2729:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2889:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2890:1: RULE_ID
             {
              before(grammarAccess.getPortAccess().getFunctionUnitFunctionUnitIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Port__FunctionUnitAssignment_05475); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Port__FunctionUnitAssignment_05801); 
              after(grammarAccess.getPortAccess().getFunctionUnitFunctionUnitIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -7221,20 +7642,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Port__PortAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2740:1: rule__Port__PortAssignment_1 : ( ruleNamedPort ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2901:1: rule__Port__PortAssignment_1 : ( ruleNamedPort ) ;
     public final void rule__Port__PortAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2744:1: ( ( ruleNamedPort ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2745:1: ( ruleNamedPort )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2905:1: ( ( ruleNamedPort ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2906:1: ( ruleNamedPort )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2745:1: ( ruleNamedPort )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2746:1: ruleNamedPort
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2906:1: ( ruleNamedPort )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2907:1: ruleNamedPort
             {
              before(grammarAccess.getPortAccess().getPortNamedPortParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleNamedPort_in_rule__Port__PortAssignment_15510);
+            pushFollow(FOLLOW_ruleNamedPort_in_rule__Port__PortAssignment_15836);
             ruleNamedPort();
 
             state._fsp--;
@@ -7262,20 +7683,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NamedPort__NameAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2755:1: rule__NamedPort__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2916:1: rule__NamedPort__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__NamedPort__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2759:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2760:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2920:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2921:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2760:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2761:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2921:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2922:1: RULE_ID
             {
              before(grammarAccess.getNamedPortAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NamedPort__NameAssignment_15541); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NamedPort__NameAssignment_15867); 
              after(grammarAccess.getNamedPortAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7299,20 +7720,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__NameAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2770:1: rule__EbcOperation__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2931:1: rule__EbcOperation__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__EbcOperation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2774:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2775:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2935:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2936:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2775:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2776:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2936:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2937:1: RULE_ID
             {
              before(grammarAccess.getEbcOperationAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EbcOperation__NameAssignment_15572); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EbcOperation__NameAssignment_15898); 
              after(grammarAccess.getEbcOperationAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7336,20 +7757,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EbcOperation__ClassAssignment_3"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2785:1: rule__EbcOperation__ClassAssignment_3 : ( ruleNativeClass ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2946:1: rule__EbcOperation__ClassAssignment_3 : ( ruleNativeClass ) ;
     public final void rule__EbcOperation__ClassAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2789:1: ( ( ruleNativeClass ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2790:1: ( ruleNativeClass )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2950:1: ( ( ruleNativeClass ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2951:1: ( ruleNativeClass )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2790:1: ( ruleNativeClass )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2791:1: ruleNativeClass
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2951:1: ( ruleNativeClass )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2952:1: ruleNativeClass
             {
              before(grammarAccess.getEbcOperationAccess().getClassNativeClassParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleNativeClass_in_rule__EbcOperation__ClassAssignment_35603);
+            pushFollow(FOLLOW_ruleNativeClass_in_rule__EbcOperation__ClassAssignment_35929);
             ruleNativeClass();
 
             state._fsp--;
@@ -7377,20 +7798,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NativeClass__ReferenceAssignment"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2800:1: rule__NativeClass__ReferenceAssignment : ( ruleQualifiedName ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2961:1: rule__NativeClass__ReferenceAssignment : ( ruleQualifiedName ) ;
     public final void rule__NativeClass__ReferenceAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2804:1: ( ( ruleQualifiedName ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2805:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2965:1: ( ( ruleQualifiedName ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2966:1: ( ruleQualifiedName )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2805:1: ( ruleQualifiedName )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2806:1: ruleQualifiedName
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2966:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2967:1: ruleQualifiedName
             {
              before(grammarAccess.getNativeClassAccess().getReferenceQualifiedNameParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__NativeClass__ReferenceAssignment5634);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__NativeClass__ReferenceAssignment5960);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7417,21 +7838,99 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__NativeClass__ReferenceAssignment"
 
 
+    // $ANTLR start "rule__ClassOperation__NameAssignment_1"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2976:1: rule__ClassOperation__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__ClassOperation__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2980:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2981:1: ( RULE_ID )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2981:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2982:1: RULE_ID
+            {
+             before(grammarAccess.getClassOperationAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ClassOperation__NameAssignment_15991); 
+             after(grammarAccess.getClassOperationAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__NameAssignment_1"
+
+
+    // $ANTLR start "rule__ClassOperation__ClassAssignment_3"
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2991:1: rule__ClassOperation__ClassAssignment_3 : ( ruleNativeClass ) ;
+    public final void rule__ClassOperation__ClassAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2995:1: ( ( ruleNativeClass ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2996:1: ( ruleNativeClass )
+            {
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2996:1: ( ruleNativeClass )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2997:1: ruleNativeClass
+            {
+             before(grammarAccess.getClassOperationAccess().getClassNativeClassParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleNativeClass_in_rule__ClassOperation__ClassAssignment_36022);
+            ruleNativeClass();
+
+            state._fsp--;
+
+             after(grammarAccess.getClassOperationAccess().getClassNativeClassParserRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ClassOperation__ClassAssignment_3"
+
+
     // $ANTLR start "rule__MethodOperation__NameAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2815:1: rule__MethodOperation__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3006:1: rule__MethodOperation__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__MethodOperation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2819:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2820:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3010:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3011:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2820:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2821:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3011:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3012:1: RULE_ID
             {
              before(grammarAccess.getMethodOperationAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MethodOperation__NameAssignment_15665); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MethodOperation__NameAssignment_16053); 
              after(grammarAccess.getMethodOperationAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7455,20 +7954,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__ClassAssignment_3"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2830:1: rule__MethodOperation__ClassAssignment_3 : ( ruleNativeClass ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3021:1: rule__MethodOperation__ClassAssignment_3 : ( ruleNativeClass ) ;
     public final void rule__MethodOperation__ClassAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2834:1: ( ( ruleNativeClass ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2835:1: ( ruleNativeClass )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3025:1: ( ( ruleNativeClass ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3026:1: ( ruleNativeClass )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2835:1: ( ruleNativeClass )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2836:1: ruleNativeClass
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3026:1: ( ruleNativeClass )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3027:1: ruleNativeClass
             {
              before(grammarAccess.getMethodOperationAccess().getClassNativeClassParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleNativeClass_in_rule__MethodOperation__ClassAssignment_35696);
+            pushFollow(FOLLOW_ruleNativeClass_in_rule__MethodOperation__ClassAssignment_36084);
             ruleNativeClass();
 
             state._fsp--;
@@ -7496,20 +7995,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__MethodAssignment_5"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2845:1: rule__MethodOperation__MethodAssignment_5 : ( ruleNativeMethod ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3036:1: rule__MethodOperation__MethodAssignment_5 : ( ruleNativeMethod ) ;
     public final void rule__MethodOperation__MethodAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2849:1: ( ( ruleNativeMethod ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2850:1: ( ruleNativeMethod )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3040:1: ( ( ruleNativeMethod ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3041:1: ( ruleNativeMethod )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2850:1: ( ruleNativeMethod )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2851:1: ruleNativeMethod
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3041:1: ( ruleNativeMethod )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3042:1: ruleNativeMethod
             {
              before(grammarAccess.getMethodOperationAccess().getMethodNativeMethodParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleNativeMethod_in_rule__MethodOperation__MethodAssignment_55727);
+            pushFollow(FOLLOW_ruleNativeMethod_in_rule__MethodOperation__MethodAssignment_56115);
             ruleNativeMethod();
 
             state._fsp--;
@@ -7537,20 +8036,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__MethodOperation__SignatureAssignment_6"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2860:1: rule__MethodOperation__SignatureAssignment_6 : ( ruleSignature ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3051:1: rule__MethodOperation__SignatureAssignment_6 : ( ruleSignature ) ;
     public final void rule__MethodOperation__SignatureAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2864:1: ( ( ruleSignature ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2865:1: ( ruleSignature )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3055:1: ( ( ruleSignature ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3056:1: ( ruleSignature )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2865:1: ( ruleSignature )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2866:1: ruleSignature
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3056:1: ( ruleSignature )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3057:1: ruleSignature
             {
              before(grammarAccess.getMethodOperationAccess().getSignatureSignatureParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleSignature_in_rule__MethodOperation__SignatureAssignment_65758);
+            pushFollow(FOLLOW_ruleSignature_in_rule__MethodOperation__SignatureAssignment_66146);
             ruleSignature();
 
             state._fsp--;
@@ -7578,20 +8077,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Signature__TypeAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2875:1: rule__Signature__TypeAssignment_1 : ( ruleGenericType ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3066:1: rule__Signature__TypeAssignment_1 : ( ruleGenericType ) ;
     public final void rule__Signature__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2879:1: ( ( ruleGenericType ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2880:1: ( ruleGenericType )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3070:1: ( ( ruleGenericType ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3071:1: ( ruleGenericType )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2880:1: ( ruleGenericType )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2881:1: ruleGenericType
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3071:1: ( ruleGenericType )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3072:1: ruleGenericType
             {
              before(grammarAccess.getSignatureAccess().getTypeGenericTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleGenericType_in_rule__Signature__TypeAssignment_15789);
+            pushFollow(FOLLOW_ruleGenericType_in_rule__Signature__TypeAssignment_16177);
             ruleGenericType();
 
             state._fsp--;
@@ -7619,20 +8118,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericType__OperationTypeAssignment_0"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2890:1: rule__GenericType__OperationTypeAssignment_0 : ( ruleOperationType ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3081:1: rule__GenericType__OperationTypeAssignment_0 : ( ruleOperationType ) ;
     public final void rule__GenericType__OperationTypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2894:1: ( ( ruleOperationType ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2895:1: ( ruleOperationType )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3085:1: ( ( ruleOperationType ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3086:1: ( ruleOperationType )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2895:1: ( ruleOperationType )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2896:1: ruleOperationType
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3086:1: ( ruleOperationType )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3087:1: ruleOperationType
             {
              before(grammarAccess.getGenericTypeAccess().getOperationTypeOperationTypeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleOperationType_in_rule__GenericType__OperationTypeAssignment_05820);
+            pushFollow(FOLLOW_ruleOperationType_in_rule__GenericType__OperationTypeAssignment_06208);
             ruleOperationType();
 
             state._fsp--;
@@ -7660,20 +8159,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericType__OperationTypeParametersAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2905:1: rule__GenericType__OperationTypeParametersAssignment_1 : ( ruleOperationTypeParameters ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3096:1: rule__GenericType__OperationTypeParametersAssignment_1 : ( ruleOperationTypeParameters ) ;
     public final void rule__GenericType__OperationTypeParametersAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2909:1: ( ( ruleOperationTypeParameters ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2910:1: ( ruleOperationTypeParameters )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3100:1: ( ( ruleOperationTypeParameters ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3101:1: ( ruleOperationTypeParameters )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2910:1: ( ruleOperationTypeParameters )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2911:1: ruleOperationTypeParameters
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3101:1: ( ruleOperationTypeParameters )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3102:1: ruleOperationTypeParameters
             {
              before(grammarAccess.getGenericTypeAccess().getOperationTypeParametersOperationTypeParametersParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleOperationTypeParameters_in_rule__GenericType__OperationTypeParametersAssignment_15851);
+            pushFollow(FOLLOW_ruleOperationTypeParameters_in_rule__GenericType__OperationTypeParametersAssignment_16239);
             ruleOperationTypeParameters();
 
             state._fsp--;
@@ -7701,23 +8200,23 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationType__NameAssignment"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2920:1: rule__OperationType__NameAssignment : ( ( rule__OperationType__NameAlternatives_0 ) ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3111:1: rule__OperationType__NameAssignment : ( ( rule__OperationType__NameAlternatives_0 ) ) ;
     public final void rule__OperationType__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2924:1: ( ( ( rule__OperationType__NameAlternatives_0 ) ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2925:1: ( ( rule__OperationType__NameAlternatives_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3115:1: ( ( ( rule__OperationType__NameAlternatives_0 ) ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3116:1: ( ( rule__OperationType__NameAlternatives_0 ) )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2925:1: ( ( rule__OperationType__NameAlternatives_0 ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2926:1: ( rule__OperationType__NameAlternatives_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3116:1: ( ( rule__OperationType__NameAlternatives_0 ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3117:1: ( rule__OperationType__NameAlternatives_0 )
             {
              before(grammarAccess.getOperationTypeAccess().getNameAlternatives_0()); 
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2927:1: ( rule__OperationType__NameAlternatives_0 )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2927:2: rule__OperationType__NameAlternatives_0
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3118:1: ( rule__OperationType__NameAlternatives_0 )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3118:2: rule__OperationType__NameAlternatives_0
             {
-            pushFollow(FOLLOW_rule__OperationType__NameAlternatives_0_in_rule__OperationType__NameAssignment5882);
+            pushFollow(FOLLOW_rule__OperationType__NameAlternatives_0_in_rule__OperationType__NameAssignment6270);
             rule__OperationType__NameAlternatives_0();
 
             state._fsp--;
@@ -7748,20 +8247,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__TypeParameterAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2936:1: rule__OperationTypeParameters__TypeParameterAssignment_1 : ( ruleTypeParameter ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3127:1: rule__OperationTypeParameters__TypeParameterAssignment_1 : ( ruleTypeParameter ) ;
     public final void rule__OperationTypeParameters__TypeParameterAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2940:1: ( ( ruleTypeParameter ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2941:1: ( ruleTypeParameter )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3131:1: ( ( ruleTypeParameter ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3132:1: ( ruleTypeParameter )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2941:1: ( ruleTypeParameter )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2942:1: ruleTypeParameter
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3132:1: ( ruleTypeParameter )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3133:1: ruleTypeParameter
             {
              before(grammarAccess.getOperationTypeParametersAccess().getTypeParameterTypeParameterParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleTypeParameter_in_rule__OperationTypeParameters__TypeParameterAssignment_15915);
+            pushFollow(FOLLOW_ruleTypeParameter_in_rule__OperationTypeParameters__TypeParameterAssignment_16303);
             ruleTypeParameter();
 
             state._fsp--;
@@ -7789,20 +8288,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OperationTypeParameters__TypeParametersAssignment_2"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2951:1: rule__OperationTypeParameters__TypeParametersAssignment_2 : ( ruleCSTypeParameter ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3142:1: rule__OperationTypeParameters__TypeParametersAssignment_2 : ( ruleCSTypeParameter ) ;
     public final void rule__OperationTypeParameters__TypeParametersAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2955:1: ( ( ruleCSTypeParameter ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2956:1: ( ruleCSTypeParameter )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3146:1: ( ( ruleCSTypeParameter ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3147:1: ( ruleCSTypeParameter )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2956:1: ( ruleCSTypeParameter )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2957:1: ruleCSTypeParameter
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3147:1: ( ruleCSTypeParameter )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3148:1: ruleCSTypeParameter
             {
              before(grammarAccess.getOperationTypeParametersAccess().getTypeParametersCSTypeParameterParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleCSTypeParameter_in_rule__OperationTypeParameters__TypeParametersAssignment_25946);
+            pushFollow(FOLLOW_ruleCSTypeParameter_in_rule__OperationTypeParameters__TypeParametersAssignment_26334);
             ruleCSTypeParameter();
 
             state._fsp--;
@@ -7830,20 +8329,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__CSTypeParameter__TypeParameterAssignment_1"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2966:1: rule__CSTypeParameter__TypeParameterAssignment_1 : ( ruleTypeParameter ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3157:1: rule__CSTypeParameter__TypeParameterAssignment_1 : ( ruleTypeParameter ) ;
     public final void rule__CSTypeParameter__TypeParameterAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2970:1: ( ( ruleTypeParameter ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2971:1: ( ruleTypeParameter )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3161:1: ( ( ruleTypeParameter ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3162:1: ( ruleTypeParameter )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2971:1: ( ruleTypeParameter )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2972:1: ruleTypeParameter
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3162:1: ( ruleTypeParameter )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3163:1: ruleTypeParameter
             {
              before(grammarAccess.getCSTypeParameterAccess().getTypeParameterTypeParameterParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleTypeParameter_in_rule__CSTypeParameter__TypeParameterAssignment_15977);
+            pushFollow(FOLLOW_ruleTypeParameter_in_rule__CSTypeParameter__TypeParameterAssignment_16365);
             ruleTypeParameter();
 
             state._fsp--;
@@ -7871,20 +8370,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Type__ReferenceAssignment"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2981:1: rule__Type__ReferenceAssignment : ( ruleQualifiedName ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3172:1: rule__Type__ReferenceAssignment : ( ruleQualifiedName ) ;
     public final void rule__Type__ReferenceAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2985:1: ( ( ruleQualifiedName ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2986:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3176:1: ( ( ruleQualifiedName ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3177:1: ( ruleQualifiedName )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2986:1: ( ruleQualifiedName )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2987:1: ruleQualifiedName
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3177:1: ( ruleQualifiedName )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3178:1: ruleQualifiedName
             {
              before(grammarAccess.getTypeAccess().getReferenceQualifiedNameParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Type__ReferenceAssignment6008);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Type__ReferenceAssignment6396);
             ruleQualifiedName();
 
             state._fsp--;
@@ -7912,20 +8411,20 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NativeMethod__NameAssignment"
-    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:2996:1: rule__NativeMethod__NameAssignment : ( RULE_ID ) ;
+    // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3187:1: rule__NativeMethod__NameAssignment : ( RULE_ID ) ;
     public final void rule__NativeMethod__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3000:1: ( ( RULE_ID ) )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3001:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3191:1: ( ( RULE_ID ) )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3192:1: ( RULE_ID )
             {
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3001:1: ( RULE_ID )
-            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3002:1: RULE_ID
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3192:1: ( RULE_ID )
+            // ../de.grammarcraft.csflow.ui/src-gen/de/grammarcraft/csflow/ui/contentassist/antlr/internal/InternalFlow.g:3193:1: RULE_ID
             {
              before(grammarAccess.getNativeMethodAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NativeMethod__NameAssignment6039); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NativeMethod__NameAssignment6427); 
              after(grammarAccess.getNativeMethodAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -8000,212 +8499,229 @@ public class InternalFlowParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleNativeClass_in_entryRuleNativeClass961 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNativeClass968 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__NativeClass__ReferenceAssignment_in_ruleNativeClass994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodOperation_in_entryRuleMethodOperation1021 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethodOperation1028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__0_in_ruleMethodOperation1054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignature_in_entryRuleSignature1081 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSignature1088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Signature__Group__0_in_ruleSignature1114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGenericType_in_entryRuleGenericType1141 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGenericType1148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericType__Group__0_in_ruleGenericType1174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperationType_in_entryRuleOperationType1201 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOperationType1208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationType__NameAssignment_in_ruleOperationType1234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperationTypeParameters_in_entryRuleOperationTypeParameters1261 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOperationTypeParameters1268 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__0_in_ruleOperationTypeParameters1294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeParameter_in_entryRuleTypeParameter1321 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTypeParameter1328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeParameter__Alternatives_in_ruleTypeParameter1354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCSTypeParameter_in_entryRuleCSTypeParameter1381 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCSTypeParameter1388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__0_in_ruleCSTypeParameter1414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_entryRuleType1441 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleType1448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Type__ReferenceAssignment_in_ruleType1474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod1501 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNativeMethod1508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NativeMethod__NameAssignment_in_ruleNativeMethod1534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFlow_in_rule__FunctionUnit__Alternatives1570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperation_in_rule__FunctionUnit__Alternatives1587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGlobalInputPort_in_rule__LeftPort__Alternatives1619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnnamedSubFlowPort_in_rule__LeftPort__Alternatives1636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_rule__LeftPort__Alternatives1653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGlobalOutputPort_in_rule__RightPort__Alternatives1685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnnamedSubFlowPort_in_rule__RightPort__Alternatives1702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePort_in_rule__RightPort__Alternatives1719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEbcOperation_in_rule__Operation__Alternatives1751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodOperation_in_rule__Operation__Alternatives1768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__OperationType__NameAlternatives_01801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__OperationType__NameAlternatives_01821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGenericType_in_rule__TypeParameter__Alternatives1855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_rule__TypeParameter__Alternatives1872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01902 = new BitSet(new long[]{0x0000000000A18000L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_0__0_in_rule__Model__Group__0__Impl1932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11963 = new BitSet(new long[]{0x0000000000A18000L});
-    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__ImportsAssignment_1_in_rule__Model__Group__1__Impl1993 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__FunctionUnitsAssignment_2_in_rule__Model__Group__2__Impl2051 = new BitSet(new long[]{0x0000000000A10002L});
-    public static final BitSet FOLLOW_rule__Model__Group_0__0__Impl_in_rule__Model__Group_0__02088 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Model__Group_0__1_in_rule__Model__Group_0__02091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Model__Group_0__0__Impl2119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group_0__1__Impl_in_rule__Model__Group_0__12150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__NameAssignment_0_1_in_rule__Model__Group_0__1__Impl2177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02211 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2297 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02332 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__QualifiedName__Group_1__0__Impl2363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__02454 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__02457 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Import__Group__0__Impl2485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__12516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl2543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Flow__Group__0__Impl_in_rule__Flow__Group__02577 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Flow__Group__1_in_rule__Flow__Group__02580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Flow__Group__0__Impl2608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Flow__Group__1__Impl_in_rule__Flow__Group__12639 = new BitSet(new long[]{0x0000000000004010L});
-    public static final BitSet FOLLOW_rule__Flow__Group__2_in_rule__Flow__Group__12642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Flow__NameAssignment_1_in_rule__Flow__Group__1__Impl2669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Flow__Group__2__Impl_in_rule__Flow__Group__22699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Flow__StreamsAssignment_2_in_rule__Flow__Group__2__Impl2726 = new BitSet(new long[]{0x0000000000004012L});
-    public static final BitSet FOLLOW_rule__Stream__Group__0__Impl_in_rule__Stream__Group__02763 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Stream__Group__1_in_rule__Stream__Group__02766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__LeftPortAssignment_0_in_rule__Stream__Group__0__Impl2793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__Group__1__Impl_in_rule__Stream__Group__12823 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Stream__Group__2_in_rule__Stream__Group__12826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Stream__Group__1__Impl2854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__Group__2__Impl_in_rule__Stream__Group__22885 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Stream__Group__3_in_rule__Stream__Group__22888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__MessageAssignment_2_in_rule__Stream__Group__2__Impl2915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__Group__3__Impl_in_rule__Stream__Group__32945 = new BitSet(new long[]{0x0000000000004010L});
-    public static final BitSet FOLLOW_rule__Stream__Group__4_in_rule__Stream__Group__32948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Stream__Group__3__Impl2976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__Group__4__Impl_in_rule__Stream__Group__43007 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Stream__Group__5_in_rule__Stream__Group__43010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__RightPortAssignment_4_in_rule__Stream__Group__4__Impl3037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stream__Group__5__Impl_in_rule__Stream__Group__53067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Stream__Group__5__Impl3095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__0__Impl_in_rule__GlobalInputPort__Group__03138 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__1_in_rule__GlobalInputPort__Group__03141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__GlobalInputPort__Group__0__Impl3169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__1__Impl_in_rule__GlobalInputPort__Group__13200 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__2_in_rule__GlobalInputPort__Group__13203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__GlobalInputPort__Group__1__Impl3231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__2__Impl_in_rule__GlobalInputPort__Group__23262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnnamedSubFlowPort__Group__0__Impl_in_rule__UnnamedSubFlowPort__Group__03326 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_rule__UnnamedSubFlowPort__Group__1_in_rule__UnnamedSubFlowPort__Group__03329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__UnnamedSubFlowPort__Group__0__Impl3357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnnamedSubFlowPort__Group__1__Impl_in_rule__UnnamedSubFlowPort__Group__13388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__0__Impl_in_rule__GlobalOutputPort__Group__03450 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__1_in_rule__GlobalOutputPort__Group__03453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__GlobalOutputPort__Group__0__Impl3481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__1__Impl_in_rule__GlobalOutputPort__Group__13512 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__2_in_rule__GlobalOutputPort__Group__13515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__GlobalOutputPort__Group__1__Impl3543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__2__Impl_in_rule__GlobalOutputPort__Group__23574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__03638 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Port__Group__1_in_rule__Port__Group__03641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__FunctionUnitAssignment_0_in_rule__Port__Group__0__Impl3668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__13698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Port__PortAssignment_1_in_rule__Port__Group__1__Impl3725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamedPort__Group__0__Impl_in_rule__NamedPort__Group__03760 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NamedPort__Group__1_in_rule__NamedPort__Group__03763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__NamedPort__Group__0__Impl3791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamedPort__Group__1__Impl_in_rule__NamedPort__Group__13822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NamedPort__NameAssignment_1_in_rule__NamedPort__Group__1__Impl3849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__0__Impl_in_rule__EbcOperation__Group__03883 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__1_in_rule__EbcOperation__Group__03886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__EbcOperation__Group__0__Impl3914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__1__Impl_in_rule__EbcOperation__Group__13945 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__2_in_rule__EbcOperation__Group__13948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EbcOperation__NameAssignment_1_in_rule__EbcOperation__Group__1__Impl3975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__2__Impl_in_rule__EbcOperation__Group__24005 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__3_in_rule__EbcOperation__Group__24008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__EbcOperation__Group__2__Impl4036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EbcOperation__Group__3__Impl_in_rule__EbcOperation__Group__34067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EbcOperation__ClassAssignment_3_in_rule__EbcOperation__Group__3__Impl4094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__0__Impl_in_rule__MethodOperation__Group__04132 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__1_in_rule__MethodOperation__Group__04135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__MethodOperation__Group__0__Impl4163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__1__Impl_in_rule__MethodOperation__Group__14194 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__2_in_rule__MethodOperation__Group__14197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__NameAssignment_1_in_rule__MethodOperation__Group__1__Impl4224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__2__Impl_in_rule__MethodOperation__Group__24254 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__3_in_rule__MethodOperation__Group__24257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__MethodOperation__Group__2__Impl4285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__3__Impl_in_rule__MethodOperation__Group__34316 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__4_in_rule__MethodOperation__Group__34319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__ClassAssignment_3_in_rule__MethodOperation__Group__3__Impl4346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__4__Impl_in_rule__MethodOperation__Group__44376 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__5_in_rule__MethodOperation__Group__44379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__MethodOperation__Group__4__Impl4407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__5__Impl_in_rule__MethodOperation__Group__54438 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__6_in_rule__MethodOperation__Group__54441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__MethodAssignment_5_in_rule__MethodOperation__Group__5__Impl4468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__Group__6__Impl_in_rule__MethodOperation__Group__64498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MethodOperation__SignatureAssignment_6_in_rule__MethodOperation__Group__6__Impl4525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Signature__Group__0__Impl_in_rule__Signature__Group__04569 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_rule__Signature__Group__1_in_rule__Signature__Group__04572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Signature__Group__0__Impl4600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Signature__Group__1__Impl_in_rule__Signature__Group__14631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Signature__TypeAssignment_1_in_rule__Signature__Group__1__Impl4658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericType__Group__0__Impl_in_rule__GenericType__Group__04692 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__GenericType__Group__1_in_rule__GenericType__Group__04695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericType__OperationTypeAssignment_0_in_rule__GenericType__Group__0__Impl4722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericType__Group__1__Impl_in_rule__GenericType__Group__14752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericType__OperationTypeParametersAssignment_1_in_rule__GenericType__Group__1__Impl4779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__0__Impl_in_rule__OperationTypeParameters__Group__04814 = new BitSet(new long[]{0x0000000000001810L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__1_in_rule__OperationTypeParameters__Group__04817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__OperationTypeParameters__Group__0__Impl4845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__1__Impl_in_rule__OperationTypeParameters__Group__14876 = new BitSet(new long[]{0x0000000008020000L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__2_in_rule__OperationTypeParameters__Group__14879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__TypeParameterAssignment_1_in_rule__OperationTypeParameters__Group__1__Impl4906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__2__Impl_in_rule__OperationTypeParameters__Group__24936 = new BitSet(new long[]{0x0000000008020000L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__3_in_rule__OperationTypeParameters__Group__24939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__TypeParametersAssignment_2_in_rule__OperationTypeParameters__Group__2__Impl4966 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__3__Impl_in_rule__OperationTypeParameters__Group__34997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__OperationTypeParameters__Group__3__Impl5025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__0__Impl_in_rule__CSTypeParameter__Group__05064 = new BitSet(new long[]{0x0000000000001810L});
-    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__1_in_rule__CSTypeParameter__Group__05067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__CSTypeParameter__Group__0__Impl5095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__1__Impl_in_rule__CSTypeParameter__Group__15126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CSTypeParameter__TypeParameterAssignment_1_in_rule__CSTypeParameter__Group__1__Impl5153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Model__NameAssignment_0_15192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_15223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionUnit_in_rule__Model__FunctionUnitsAssignment_25254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_15285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Flow__NameAssignment_15316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStream_in_rule__Flow__StreamsAssignment_25347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLeftPort_in_rule__Stream__LeftPortAssignment_05378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Stream__MessageAssignment_25409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRightPort_in_rule__Stream__RightPortAssignment_45440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Port__FunctionUnitAssignment_05475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNamedPort_in_rule__Port__PortAssignment_15510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NamedPort__NameAssignment_15541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__EbcOperation__NameAssignment_15572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNativeClass_in_rule__EbcOperation__ClassAssignment_35603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__NativeClass__ReferenceAssignment5634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__MethodOperation__NameAssignment_15665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNativeClass_in_rule__MethodOperation__ClassAssignment_35696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNativeMethod_in_rule__MethodOperation__MethodAssignment_55727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignature_in_rule__MethodOperation__SignatureAssignment_65758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGenericType_in_rule__Signature__TypeAssignment_15789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperationType_in_rule__GenericType__OperationTypeAssignment_05820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperationTypeParameters_in_rule__GenericType__OperationTypeParametersAssignment_15851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationType__NameAlternatives_0_in_rule__OperationType__NameAssignment5882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeParameter_in_rule__OperationTypeParameters__TypeParameterAssignment_15915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCSTypeParameter_in_rule__OperationTypeParameters__TypeParametersAssignment_25946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeParameter_in_rule__CSTypeParameter__TypeParameterAssignment_15977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Type__ReferenceAssignment6008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NativeMethod__NameAssignment6039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClassOperation_in_entryRuleClassOperation1021 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleClassOperation1028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__0_in_ruleClassOperation1054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodOperation_in_entryRuleMethodOperation1081 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMethodOperation1088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__0_in_ruleMethodOperation1114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignature_in_entryRuleSignature1141 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSignature1148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Signature__Group__0_in_ruleSignature1174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericType_in_entryRuleGenericType1201 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGenericType1208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericType__Group__0_in_ruleGenericType1234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationType_in_entryRuleOperationType1261 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOperationType1268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationType__NameAssignment_in_ruleOperationType1294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationTypeParameters_in_entryRuleOperationTypeParameters1321 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOperationTypeParameters1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__0_in_ruleOperationTypeParameters1354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeParameter_in_entryRuleTypeParameter1381 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTypeParameter1388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeParameter__Alternatives_in_ruleTypeParameter1414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCSTypeParameter_in_entryRuleCSTypeParameter1441 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCSTypeParameter1448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__0_in_ruleCSTypeParameter1474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType1501 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType1508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__ReferenceAssignment_in_ruleType1534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeMethod_in_entryRuleNativeMethod1561 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNativeMethod1568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NativeMethod__NameAssignment_in_ruleNativeMethod1594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFlow_in_rule__FunctionUnit__Alternatives1630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperation_in_rule__FunctionUnit__Alternatives1647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGlobalInputPort_in_rule__LeftPort__Alternatives1679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnnamedSubFlowPort_in_rule__LeftPort__Alternatives1696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_rule__LeftPort__Alternatives1713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGlobalOutputPort_in_rule__RightPort__Alternatives1745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnnamedSubFlowPort_in_rule__RightPort__Alternatives1762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePort_in_rule__RightPort__Alternatives1779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEbcOperation_in_rule__Operation__Alternatives1811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodOperation_in_rule__Operation__Alternatives1828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClassOperation_in_rule__Operation__Alternatives1845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__OperationType__NameAlternatives_01878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__OperationType__NameAlternatives_01898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericType_in_rule__TypeParameter__Alternatives1932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__TypeParameter__Alternatives1949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01979 = new BitSet(new long[]{0x0000000001A18000L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_0__0_in_rule__Model__Group__0__Impl2009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__12040 = new BitSet(new long[]{0x0000000001A18000L});
+    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__12043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__ImportsAssignment_1_in_rule__Model__Group__1__Impl2070 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__22101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__FunctionUnitsAssignment_2_in_rule__Model__Group__2__Impl2128 = new BitSet(new long[]{0x0000000001A10002L});
+    public static final BitSet FOLLOW_rule__Model__Group_0__0__Impl_in_rule__Model__Group_0__02165 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Model__Group_0__1_in_rule__Model__Group_0__02168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Model__Group_0__0__Impl2196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group_0__1__Impl_in_rule__Model__Group_0__12227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__NameAssignment_0_1_in_rule__Model__Group_0__1__Impl2254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02288 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2374 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02409 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__QualifiedName__Group_1__0__Impl2440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__02531 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__02534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Import__Group__0__Impl2562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__12593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_1_in_rule__Import__Group__1__Impl2620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Flow__Group__0__Impl_in_rule__Flow__Group__02654 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Flow__Group__1_in_rule__Flow__Group__02657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Flow__Group__0__Impl2685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Flow__Group__1__Impl_in_rule__Flow__Group__12716 = new BitSet(new long[]{0x0000000000004010L});
+    public static final BitSet FOLLOW_rule__Flow__Group__2_in_rule__Flow__Group__12719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Flow__NameAssignment_1_in_rule__Flow__Group__1__Impl2746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Flow__Group__2__Impl_in_rule__Flow__Group__22776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Flow__StreamsAssignment_2_in_rule__Flow__Group__2__Impl2803 = new BitSet(new long[]{0x0000000000004012L});
+    public static final BitSet FOLLOW_rule__Stream__Group__0__Impl_in_rule__Stream__Group__02840 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Stream__Group__1_in_rule__Stream__Group__02843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__LeftPortAssignment_0_in_rule__Stream__Group__0__Impl2870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__Group__1__Impl_in_rule__Stream__Group__12900 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Stream__Group__2_in_rule__Stream__Group__12903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Stream__Group__1__Impl2931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__Group__2__Impl_in_rule__Stream__Group__22962 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Stream__Group__3_in_rule__Stream__Group__22965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__MessageAssignment_2_in_rule__Stream__Group__2__Impl2992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__Group__3__Impl_in_rule__Stream__Group__33022 = new BitSet(new long[]{0x0000000000004010L});
+    public static final BitSet FOLLOW_rule__Stream__Group__4_in_rule__Stream__Group__33025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Stream__Group__3__Impl3053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__Group__4__Impl_in_rule__Stream__Group__43084 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Stream__Group__5_in_rule__Stream__Group__43087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__RightPortAssignment_4_in_rule__Stream__Group__4__Impl3114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stream__Group__5__Impl_in_rule__Stream__Group__53144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Stream__Group__5__Impl3172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__0__Impl_in_rule__GlobalInputPort__Group__03215 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__1_in_rule__GlobalInputPort__Group__03218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__GlobalInputPort__Group__0__Impl3246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__1__Impl_in_rule__GlobalInputPort__Group__13277 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__2_in_rule__GlobalInputPort__Group__13280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__GlobalInputPort__Group__1__Impl3308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GlobalInputPort__Group__2__Impl_in_rule__GlobalInputPort__Group__23339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnnamedSubFlowPort__Group__0__Impl_in_rule__UnnamedSubFlowPort__Group__03403 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_rule__UnnamedSubFlowPort__Group__1_in_rule__UnnamedSubFlowPort__Group__03406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__UnnamedSubFlowPort__Group__0__Impl3434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnnamedSubFlowPort__Group__1__Impl_in_rule__UnnamedSubFlowPort__Group__13465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__0__Impl_in_rule__GlobalOutputPort__Group__03527 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__1_in_rule__GlobalOutputPort__Group__03530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__GlobalOutputPort__Group__0__Impl3558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__1__Impl_in_rule__GlobalOutputPort__Group__13589 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__2_in_rule__GlobalOutputPort__Group__13592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__GlobalOutputPort__Group__1__Impl3620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GlobalOutputPort__Group__2__Impl_in_rule__GlobalOutputPort__Group__23651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group__0__Impl_in_rule__Port__Group__03715 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Port__Group__1_in_rule__Port__Group__03718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__FunctionUnitAssignment_0_in_rule__Port__Group__0__Impl3745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__Group__1__Impl_in_rule__Port__Group__13775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Port__PortAssignment_1_in_rule__Port__Group__1__Impl3802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamedPort__Group__0__Impl_in_rule__NamedPort__Group__03837 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NamedPort__Group__1_in_rule__NamedPort__Group__03840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__NamedPort__Group__0__Impl3868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamedPort__Group__1__Impl_in_rule__NamedPort__Group__13899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NamedPort__NameAssignment_1_in_rule__NamedPort__Group__1__Impl3926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__0__Impl_in_rule__EbcOperation__Group__03960 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__1_in_rule__EbcOperation__Group__03963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__EbcOperation__Group__0__Impl3991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__1__Impl_in_rule__EbcOperation__Group__14022 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__2_in_rule__EbcOperation__Group__14025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EbcOperation__NameAssignment_1_in_rule__EbcOperation__Group__1__Impl4052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__2__Impl_in_rule__EbcOperation__Group__24082 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__3_in_rule__EbcOperation__Group__24085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__EbcOperation__Group__2__Impl4113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EbcOperation__Group__3__Impl_in_rule__EbcOperation__Group__34144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EbcOperation__ClassAssignment_3_in_rule__EbcOperation__Group__3__Impl4171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__0__Impl_in_rule__ClassOperation__Group__04209 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__1_in_rule__ClassOperation__Group__04212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ClassOperation__Group__0__Impl4240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__1__Impl_in_rule__ClassOperation__Group__14271 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__2_in_rule__ClassOperation__Group__14274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__NameAssignment_1_in_rule__ClassOperation__Group__1__Impl4301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__2__Impl_in_rule__ClassOperation__Group__24331 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__3_in_rule__ClassOperation__Group__24334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__ClassOperation__Group__2__Impl4362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__Group__3__Impl_in_rule__ClassOperation__Group__34393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ClassOperation__ClassAssignment_3_in_rule__ClassOperation__Group__3__Impl4420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__0__Impl_in_rule__MethodOperation__Group__04458 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__1_in_rule__MethodOperation__Group__04461 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__MethodOperation__Group__0__Impl4489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__1__Impl_in_rule__MethodOperation__Group__14520 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__2_in_rule__MethodOperation__Group__14523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__NameAssignment_1_in_rule__MethodOperation__Group__1__Impl4550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__2__Impl_in_rule__MethodOperation__Group__24580 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__3_in_rule__MethodOperation__Group__24583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__MethodOperation__Group__2__Impl4611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__3__Impl_in_rule__MethodOperation__Group__34642 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__4_in_rule__MethodOperation__Group__34645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__ClassAssignment_3_in_rule__MethodOperation__Group__3__Impl4672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__4__Impl_in_rule__MethodOperation__Group__44702 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__5_in_rule__MethodOperation__Group__44705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__MethodOperation__Group__4__Impl4733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__5__Impl_in_rule__MethodOperation__Group__54764 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__6_in_rule__MethodOperation__Group__54767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__MethodAssignment_5_in_rule__MethodOperation__Group__5__Impl4794 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__Group__6__Impl_in_rule__MethodOperation__Group__64824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MethodOperation__SignatureAssignment_6_in_rule__MethodOperation__Group__6__Impl4851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Signature__Group__0__Impl_in_rule__Signature__Group__04895 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_rule__Signature__Group__1_in_rule__Signature__Group__04898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Signature__Group__0__Impl4926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Signature__Group__1__Impl_in_rule__Signature__Group__14957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Signature__TypeAssignment_1_in_rule__Signature__Group__1__Impl4984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericType__Group__0__Impl_in_rule__GenericType__Group__05018 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__GenericType__Group__1_in_rule__GenericType__Group__05021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericType__OperationTypeAssignment_0_in_rule__GenericType__Group__0__Impl5048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericType__Group__1__Impl_in_rule__GenericType__Group__15078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericType__OperationTypeParametersAssignment_1_in_rule__GenericType__Group__1__Impl5105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__0__Impl_in_rule__OperationTypeParameters__Group__05140 = new BitSet(new long[]{0x0000000000001810L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__1_in_rule__OperationTypeParameters__Group__05143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__OperationTypeParameters__Group__0__Impl5171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__1__Impl_in_rule__OperationTypeParameters__Group__15202 = new BitSet(new long[]{0x0000000010020000L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__2_in_rule__OperationTypeParameters__Group__15205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__TypeParameterAssignment_1_in_rule__OperationTypeParameters__Group__1__Impl5232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__2__Impl_in_rule__OperationTypeParameters__Group__25262 = new BitSet(new long[]{0x0000000010020000L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__3_in_rule__OperationTypeParameters__Group__25265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__TypeParametersAssignment_2_in_rule__OperationTypeParameters__Group__2__Impl5292 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_rule__OperationTypeParameters__Group__3__Impl_in_rule__OperationTypeParameters__Group__35323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__OperationTypeParameters__Group__3__Impl5351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__0__Impl_in_rule__CSTypeParameter__Group__05390 = new BitSet(new long[]{0x0000000000001810L});
+    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__1_in_rule__CSTypeParameter__Group__05393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__CSTypeParameter__Group__0__Impl5421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CSTypeParameter__Group__1__Impl_in_rule__CSTypeParameter__Group__15452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CSTypeParameter__TypeParameterAssignment_1_in_rule__CSTypeParameter__Group__1__Impl5479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Model__NameAssignment_0_15518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_15549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionUnit_in_rule__Model__FunctionUnitsAssignment_25580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_15611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Flow__NameAssignment_15642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStream_in_rule__Flow__StreamsAssignment_25673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLeftPort_in_rule__Stream__LeftPortAssignment_05704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Stream__MessageAssignment_25735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRightPort_in_rule__Stream__RightPortAssignment_45766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Port__FunctionUnitAssignment_05801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNamedPort_in_rule__Port__PortAssignment_15836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NamedPort__NameAssignment_15867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__EbcOperation__NameAssignment_15898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeClass_in_rule__EbcOperation__ClassAssignment_35929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__NativeClass__ReferenceAssignment5960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ClassOperation__NameAssignment_15991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeClass_in_rule__ClassOperation__ClassAssignment_36022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MethodOperation__NameAssignment_16053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeClass_in_rule__MethodOperation__ClassAssignment_36084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNativeMethod_in_rule__MethodOperation__MethodAssignment_56115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignature_in_rule__MethodOperation__SignatureAssignment_66146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericType_in_rule__Signature__TypeAssignment_16177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationType_in_rule__GenericType__OperationTypeAssignment_06208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperationTypeParameters_in_rule__GenericType__OperationTypeParametersAssignment_16239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationType__NameAlternatives_0_in_rule__OperationType__NameAssignment6270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeParameter_in_rule__OperationTypeParameters__TypeParameterAssignment_16303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCSTypeParameter_in_rule__OperationTypeParameters__TypeParametersAssignment_26334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeParameter_in_rule__CSTypeParameter__TypeParameterAssignment_16365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Type__ReferenceAssignment6396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NativeMethod__NameAssignment6427 = new BitSet(new long[]{0x0000000000000002L});
 
 }

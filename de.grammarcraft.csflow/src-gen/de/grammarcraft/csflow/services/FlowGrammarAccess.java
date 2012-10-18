@@ -390,12 +390,13 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cEbcOperationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cMethodOperationParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cClassOperationParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Operation:
-		//	EbcOperation | MethodOperation;
+		//	EbcOperation | MethodOperation | ClassOperation;
 		public ParserRule getRule() { return rule; }
 
-		//EbcOperation | MethodOperation
+		//EbcOperation | MethodOperation | ClassOperation
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//EbcOperation
@@ -403,6 +404,9 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 
 		//MethodOperation
 		public RuleCall getMethodOperationParserRuleCall_1() { return cMethodOperationParserRuleCall_1; }
+
+		//ClassOperation
+		public RuleCall getClassOperationParserRuleCall_2() { return cClassOperationParserRuleCall_2; }
 	}
 
 	public class EbcOperationElements extends AbstractParserRuleElementFinder {
@@ -455,6 +459,42 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 
 		//QualifiedName
 		public RuleCall getReferenceQualifiedNameParserRuleCall_0() { return cReferenceQualifiedNameParserRuleCall_0; }
+	}
+
+	public class ClassOperationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ClassOperation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cOperationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cClassNativeClassParserRuleCall_3_0 = (RuleCall)cClassAssignment_3.eContents().get(0);
+		
+		//ClassOperation:
+		//	"operation" name=ID "=" class=NativeClass;
+		public ParserRule getRule() { return rule; }
+
+		//"operation" name=ID "=" class=NativeClass
+		public Group getGroup() { return cGroup; }
+
+		//"operation"
+		public Keyword getOperationKeyword_0() { return cOperationKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
+
+		//class=NativeClass
+		public Assignment getClassAssignment_3() { return cClassAssignment_3; }
+
+		//NativeClass
+		public RuleCall getClassNativeClassParserRuleCall_3_0() { return cClassNativeClassParserRuleCall_3_0; }
 	}
 
 	public class MethodOperationElements extends AbstractParserRuleElementFinder {
@@ -718,6 +758,7 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 	private OperationElements pOperation;
 	private EbcOperationElements pEbcOperation;
 	private NativeClassElements pNativeClass;
+	private ClassOperationElements pClassOperation;
 	private MethodOperationElements pMethodOperation;
 	private SignatureElements pSignature;
 	private GenericTypeElements pGenericType;
@@ -880,7 +921,7 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Operation:
-	//	EbcOperation | MethodOperation;
+	//	EbcOperation | MethodOperation | ClassOperation;
 	public OperationElements getOperationAccess() {
 		return (pOperation != null) ? pOperation : (pOperation = new OperationElements());
 	}
@@ -907,6 +948,16 @@ public class FlowGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getNativeClassRule() {
 		return getNativeClassAccess().getRule();
+	}
+
+	//ClassOperation:
+	//	"operation" name=ID "=" class=NativeClass;
+	public ClassOperationElements getClassOperationAccess() {
+		return (pClassOperation != null) ? pClassOperation : (pClassOperation = new ClassOperationElements());
+	}
+	
+	public ParserRule getClassOperationRule() {
+		return getClassOperationAccess().getRule();
 	}
 
 	//MethodOperation:

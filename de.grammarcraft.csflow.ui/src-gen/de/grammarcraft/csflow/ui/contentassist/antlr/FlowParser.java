@@ -56,6 +56,7 @@ public class FlowParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPortAccess().getGroup(), "rule__Port__Group__0");
 					put(grammarAccess.getNamedPortAccess().getGroup(), "rule__NamedPort__Group__0");
 					put(grammarAccess.getEbcOperationAccess().getGroup(), "rule__EbcOperation__Group__0");
+					put(grammarAccess.getClassOperationAccess().getGroup(), "rule__ClassOperation__Group__0");
 					put(grammarAccess.getMethodOperationAccess().getGroup(), "rule__MethodOperation__Group__0");
 					put(grammarAccess.getSignatureAccess().getGroup(), "rule__Signature__Group__0");
 					put(grammarAccess.getGenericTypeAccess().getGroup(), "rule__GenericType__Group__0");
@@ -76,6 +77,8 @@ public class FlowParser extends AbstractContentAssistParser {
 					put(grammarAccess.getEbcOperationAccess().getNameAssignment_1(), "rule__EbcOperation__NameAssignment_1");
 					put(grammarAccess.getEbcOperationAccess().getClassAssignment_3(), "rule__EbcOperation__ClassAssignment_3");
 					put(grammarAccess.getNativeClassAccess().getReferenceAssignment(), "rule__NativeClass__ReferenceAssignment");
+					put(grammarAccess.getClassOperationAccess().getNameAssignment_1(), "rule__ClassOperation__NameAssignment_1");
+					put(grammarAccess.getClassOperationAccess().getClassAssignment_3(), "rule__ClassOperation__ClassAssignment_3");
 					put(grammarAccess.getMethodOperationAccess().getNameAssignment_1(), "rule__MethodOperation__NameAssignment_1");
 					put(grammarAccess.getMethodOperationAccess().getClassAssignment_3(), "rule__MethodOperation__ClassAssignment_3");
 					put(grammarAccess.getMethodOperationAccess().getMethodAssignment_5(), "rule__MethodOperation__MethodAssignment_5");

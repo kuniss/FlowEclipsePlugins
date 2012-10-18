@@ -83,6 +83,7 @@ public class FlowFactoryImpl extends EFactoryImpl implements FlowFactory
       case FlowPackage.OPERATION: return createOperation();
       case FlowPackage.EBC_OPERATION: return createEbcOperation();
       case FlowPackage.NATIVE_CLASS: return createNativeClass();
+      case FlowPackage.CLASS_OPERATION: return createClassOperation();
       case FlowPackage.METHOD_OPERATION: return createMethodOperation();
       case FlowPackage.SIGNATURE: return createSignature();
       case FlowPackage.GENERIC_TYPE: return createGenericType();
@@ -260,6 +261,17 @@ public class FlowFactoryImpl extends EFactoryImpl implements FlowFactory
   {
     NativeClassImpl nativeClass = new NativeClassImpl();
     return nativeClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ClassOperation createClassOperation()
+  {
+    ClassOperationImpl classOperation = new ClassOperationImpl();
+    return classOperation;
   }
 
   /**

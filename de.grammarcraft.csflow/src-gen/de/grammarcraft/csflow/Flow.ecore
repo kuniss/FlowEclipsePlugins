@@ -48,6 +48,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="NativeClass">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassOperation" eSuperTypes="#//Operation"/>
   <eClassifiers xsi:type="ecore:EClass" name="MethodOperation" eSuperTypes="#//Operation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//NativeMethod"
         containment="true"/>

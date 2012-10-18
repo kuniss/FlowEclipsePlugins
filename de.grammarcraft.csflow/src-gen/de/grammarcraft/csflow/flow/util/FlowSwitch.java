@@ -191,6 +191,15 @@ public class FlowSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case FlowPackage.CLASS_OPERATION:
+      {
+        ClassOperation classOperation = (ClassOperation)theEObject;
+        T result = caseClassOperation(classOperation);
+        if (result == null) result = caseOperation(classOperation);
+        if (result == null) result = caseFunctionUnit(classOperation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case FlowPackage.METHOD_OPERATION:
       {
         MethodOperation methodOperation = (MethodOperation)theEObject;
@@ -498,6 +507,22 @@ public class FlowSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseNativeClass(NativeClass object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Class Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Class Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseClassOperation(ClassOperation object)
   {
     return null;
   }

@@ -162,6 +162,15 @@ public interface FlowFactory extends EFactory
   NativeClass createNativeClass();
 
   /**
+   * Returns a new object of class '<em>Class Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Class Operation</em>'.
+   * @generated
+   */
+  ClassOperation createClassOperation();
+
+  /**
    * Returns a new object of class '<em>Method Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

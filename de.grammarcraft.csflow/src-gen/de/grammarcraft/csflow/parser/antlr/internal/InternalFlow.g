@@ -743,6 +743,16 @@ ruleOperation returns [EObject current=null]
         $current = $this_MethodOperation_1.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getOperationAccess().getClassOperationParserRuleCall_2()); 
+    }
+    this_ClassOperation_2=ruleClassOperation
+    { 
+        $current = $this_ClassOperation_2.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -848,6 +858,71 @@ ruleNativeClass returns [EObject current=null]
 
 )
 )
+;
+
+
+
+
+
+// Entry rule entryRuleClassOperation
+entryRuleClassOperation returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getClassOperationRule()); }
+	 iv_ruleClassOperation=ruleClassOperation 
+	 { $current=$iv_ruleClassOperation.current; } 
+	 EOF 
+;
+
+// Rule ClassOperation
+ruleClassOperation returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='operation' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getClassOperationAccess().getOperationKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getClassOperationAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getClassOperationRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='=' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getClassOperationAccess().getEqualsSignKeyword_2());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getClassOperationAccess().getClassNativeClassParserRuleCall_3_0()); 
+	    }
+		lv_class_3_0=ruleNativeClass		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getClassOperationRule());
+	        }
+       		set(
+       			$current, 
+       			"class",
+        		lv_class_3_0, 
+        		"NativeClass");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 

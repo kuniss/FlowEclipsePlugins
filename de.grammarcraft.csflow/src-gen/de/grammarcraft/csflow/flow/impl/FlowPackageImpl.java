@@ -7,6 +7,7 @@
 package de.grammarcraft.csflow.flow.impl;
 
 import de.grammarcraft.csflow.flow.CSTypeParameter;
+import de.grammarcraft.csflow.flow.ClassOperation;
 import de.grammarcraft.csflow.flow.EbcOperation;
 import de.grammarcraft.csflow.flow.Flow;
 import de.grammarcraft.csflow.flow.FlowFactory;
@@ -152,6 +153,13 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
    * @generated
    */
   private EClass nativeClassEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass classOperationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -574,6 +582,16 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getClassOperation()
+  {
+    return classOperationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMethodOperation()
   {
     return methodOperationEClass;
@@ -843,6 +861,8 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
     nativeClassEClass = createEClass(NATIVE_CLASS);
     createEAttribute(nativeClassEClass, NATIVE_CLASS__REFERENCE);
 
+    classOperationEClass = createEClass(CLASS_OPERATION);
+
     methodOperationEClass = createEClass(METHOD_OPERATION);
     createEReference(methodOperationEClass, METHOD_OPERATION__METHOD);
     createEReference(methodOperationEClass, METHOD_OPERATION__SIGNATURE);
@@ -911,6 +931,7 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
     portEClass.getESuperTypes().add(this.getRightPort());
     operationEClass.getESuperTypes().add(this.getFunctionUnit());
     ebcOperationEClass.getESuperTypes().add(this.getOperation());
+    classOperationEClass.getESuperTypes().add(this.getOperation());
     methodOperationEClass.getESuperTypes().add(this.getOperation());
     genericTypeEClass.getESuperTypes().add(this.getTypeParameter());
     typeEClass.getESuperTypes().add(this.getTypeParameter());
@@ -959,6 +980,8 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage
 
     initEClass(nativeClassEClass, NativeClass.class, "NativeClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNativeClass_Reference(), ecorePackage.getEString(), "reference", null, 0, 1, NativeClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(classOperationEClass, ClassOperation.class, "ClassOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(methodOperationEClass, MethodOperation.class, "MethodOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMethodOperation_Method(), this.getNativeMethod(), null, "method", null, 0, 1, MethodOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -508,6 +508,43 @@ public interface FlowPackage extends EPackage
   int NATIVE_CLASS_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.ClassOperationImpl <em>Class Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.grammarcraft.csflow.flow.impl.ClassOperationImpl
+   * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getClassOperation()
+   * @generated
+   */
+  int CLASS_OPERATION = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_OPERATION__NAME = OPERATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_OPERATION__CLASS = OPERATION__CLASS;
+
+  /**
+   * The number of structural features of the '<em>Class Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_OPERATION_FEATURE_COUNT = OPERATION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link de.grammarcraft.csflow.flow.impl.MethodOperationImpl <em>Method Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -515,7 +552,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getMethodOperation()
    * @generated
    */
-  int METHOD_OPERATION = 15;
+  int METHOD_OPERATION = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -570,7 +607,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getSignature()
    * @generated
    */
-  int SIGNATURE = 16;
+  int SIGNATURE = 17;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -598,7 +635,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getTypeParameter()
    * @generated
    */
-  int TYPE_PARAMETER = 20;
+  int TYPE_PARAMETER = 21;
 
   /**
    * The number of structural features of the '<em>Type Parameter</em>' class.
@@ -617,7 +654,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getGenericType()
    * @generated
    */
-  int GENERIC_TYPE = 17;
+  int GENERIC_TYPE = 18;
 
   /**
    * The feature id for the '<em><b>Operation Type</b></em>' containment reference.
@@ -654,7 +691,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getOperationType()
    * @generated
    */
-  int OPERATION_TYPE = 18;
+  int OPERATION_TYPE = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -682,7 +719,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getOperationTypeParameters()
    * @generated
    */
-  int OPERATION_TYPE_PARAMETERS = 19;
+  int OPERATION_TYPE_PARAMETERS = 20;
 
   /**
    * The feature id for the '<em><b>Type Parameter</b></em>' containment reference.
@@ -719,7 +756,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getCSTypeParameter()
    * @generated
    */
-  int CS_TYPE_PARAMETER = 21;
+  int CS_TYPE_PARAMETER = 22;
 
   /**
    * The feature id for the '<em><b>Type Parameter</b></em>' containment reference.
@@ -747,7 +784,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getType()
    * @generated
    */
-  int TYPE = 22;
+  int TYPE = 23;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' attribute.
@@ -775,7 +812,7 @@ public interface FlowPackage extends EPackage
    * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getNativeMethod()
    * @generated
    */
-  int NATIVE_METHOD = 23;
+  int NATIVE_METHOD = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1099,6 +1136,16 @@ public interface FlowPackage extends EPackage
    * @generated
    */
   EAttribute getNativeClass_Reference();
+
+  /**
+   * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.ClassOperation <em>Class Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Class Operation</em>'.
+   * @see de.grammarcraft.csflow.flow.ClassOperation
+   * @generated
+   */
+  EClass getClassOperation();
 
   /**
    * Returns the meta object for class '{@link de.grammarcraft.csflow.flow.MethodOperation <em>Method Operation</em>}'.
@@ -1595,6 +1642,16 @@ public interface FlowPackage extends EPackage
      * @generated
      */
     EAttribute NATIVE_CLASS__REFERENCE = eINSTANCE.getNativeClass_Reference();
+
+    /**
+     * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.ClassOperationImpl <em>Class Operation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.grammarcraft.csflow.flow.impl.ClassOperationImpl
+     * @see de.grammarcraft.csflow.flow.impl.FlowPackageImpl#getClassOperation()
+     * @generated
+     */
+    EClass CLASS_OPERATION = eINSTANCE.getClassOperation();
 
     /**
      * The meta object literal for the '{@link de.grammarcraft.csflow.flow.impl.MethodOperationImpl <em>Method Operation</em>}' class.

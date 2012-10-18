@@ -3,6 +3,7 @@ package de.grammarcraft.csflow.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import de.grammarcraft.csflow.flow.CSTypeParameter;
+import de.grammarcraft.csflow.flow.ClassOperation;
 import de.grammarcraft.csflow.flow.EbcOperation;
 import de.grammarcraft.csflow.flow.Flow;
 import de.grammarcraft.csflow.flow.FlowPackage;
@@ -66,6 +67,14 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 			case FlowPackage.CS_TYPE_PARAMETER:
 				if(context == grammarAccess.getCSTypeParameterRule()) {
 					sequence_CSTypeParameter(context, (CSTypeParameter) semanticObject); 
+					return; 
+				}
+				else break;
+			case FlowPackage.CLASS_OPERATION:
+				if(context == grammarAccess.getClassOperationRule() ||
+				   context == grammarAccess.getFunctionUnitRule() ||
+				   context == grammarAccess.getOperationRule()) {
+					sequence_ClassOperation(context, (ClassOperation) semanticObject); 
 					return; 
 				}
 				else break;
@@ -206,6 +215,25 @@ public class AbstractFlowSemanticSequencer extends AbstractSemanticSequencer {
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getCSTypeParameterAccess().getTypeParameterTypeParameterParserRuleCall_1_0(), semanticObject.getTypeParameter());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID class=NativeClass)
+	 */
+	protected void sequence_ClassOperation(EObject context, ClassOperation semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.FUNCTION_UNIT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.FUNCTION_UNIT__NAME));
+			if(transientValues.isValueTransient(semanticObject, FlowPackage.Literals.OPERATION__CLASS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FlowPackage.Literals.OPERATION__CLASS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getClassOperationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getClassOperationAccess().getClassNativeClassParserRuleCall_3_0(), semanticObject.getClass_());
 		feeder.finish();
 	}
 	

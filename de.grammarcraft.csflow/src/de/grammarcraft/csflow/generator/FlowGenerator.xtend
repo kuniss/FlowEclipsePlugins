@@ -21,6 +21,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import de.grammarcraft.csflow.flow.TypeParameter
 import de.grammarcraft.csflow.flow.Type
+import de.grammarcraft.csflow.flow.ClassOperation
 
 class FlowGenerator implements IGenerator {
 	
@@ -67,6 +68,7 @@ class FlowGenerator implements IGenerator {
 			Port: '''«leftPort.functionUnit.name»'''
 			UnnamedSubFlowPort: "."
 			GlobalInputPort: ".in"
+			default: "[unknown port type]"
 		}
 	}
 
@@ -76,6 +78,7 @@ class FlowGenerator implements IGenerator {
 			Port: '''«rightPort.functionUnit.name»'''
 			UnnamedSubFlowPort: "."
 			GlobalOutputPort: ".out"
+			default: "[unknown port type]"
 		}
 	}
 	
@@ -83,14 +86,19 @@ class FlowGenerator implements IGenerator {
 		switch operation {
 			EbcOperation: operation.synthesizeRegistration
 			MethodOperation: operation.synthesizeRegistration
-			default: "unknown op type"
+			ClassOperation: operation.synthesizeRegistration
+			default: "[unknown operation type]"
 		}
 	}
 	
-	
+
+	def synthesizeRegistration(ClassOperation classOperation) {
+		'''.addOperation(new «classOperation.class_.reference»())'''
+	}
+		
 	
 	def synthesizeRegistration(EbcOperation ebcOperation) {
-		'''.addOperation("«ebcOperation.name»", new «ebcOperation.class_.reference»())'''
+		'''.addEventBasedComponent("«ebcOperation.name»", new «ebcOperation.class_.reference»())'''
 	}
 	
 	

@@ -1,0 +1,22 @@
+package de.grammarcraft.firstflow
+
+import de.grammarcraft.firstflow.messages.FlowMsg
+import de.grammarcraft.firstflow.messages.Message1
+
+flow main 
+.in > FlowMsg > toUpper.process ;
+toUpper.result > Message1 > reverse ;
+toUpper.result > Message1 > inverse ;
+toUpper.result > FlowMsg > .out ;
+
+ebc toUpper = de.grammarcraft.firstflow.operations.ToUpper
+method reverse = de.grammarcraft.firstflow.operations.StringOperations#reverseString
+
+flow inverse
+.in > String > inverse.process ;
+inverse.result > String > .out ;
+
+
+ebc toUpper = de.grammarcraft.firstflow.operations.ToUpper
+method reverse = de.grammarcraft.firstflow.operations.StringOperations#reverseString
+

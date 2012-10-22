@@ -1,0 +1,14 @@
+package de.grammarcraft.transformer
+
+flow main
+.in > String > Transform ;
+Transform > String > .out ;
+
+flow Transform
+. > String > toUpper ;
+toUpper > String > reverse ;
+reverse > String > . ;
+
+ebc toUpper = de.grammarcraft.firstflow.operations.ToUpper
+method reverse = de.grammarcraft.firstflow.operations.StringOperations#reverse
+
